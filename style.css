@@ -7,6 +7,7 @@
     --border-color: #dadce0;
     --danger-color: #d93025;
     --success-color: #1e8e3e;
+    --warning-color: #fbbc04;
 }
 
 * {
@@ -21,6 +22,50 @@ body {
     color: var(--text-primary);
     line-height: 1.5;
     padding-bottom: 50px;
+}
+
+/* Top bar for timer and user info */
+.top-bar {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.top-bar-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.student-info {
+    font-weight: 500;
+}
+
+.timer {
+    font-weight: bold;
+    font-size: 18px;
+    background: var(--primary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.timer.warning {
+    background: var(--danger-color);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
 .header {
@@ -51,6 +96,55 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    padding: 32px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.start-card h2 {
+    margin-bottom: 16px;
+}
+
+.instructions-list {
+    margin-bottom: 24px;
+    padding-left: 20px;
+}
+
+.instructions-list li {
+    margin-bottom: 8px;
+}
+
+.input-group {
+    margin-bottom: 24px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    border-width: 2px;
+    padding: 11px;
 }
 
 .question-card {
@@ -112,6 +206,11 @@ body {
     transition: background-color 0.2s ease;
 }
 
+.btn-large {
+    padding: 12px 32px;
+    font-size: 16px;
+}
+
 .btn:hover {
     background-color: #5e35b1;
 }
@@ -120,7 +219,7 @@ body {
     display: none !important;
 }
 
-/* Warning Overlay for Screen Switching */
+/* Warning Overlay */
 #warning-overlay {
     position: fixed;
     top: 0;
@@ -168,6 +267,7 @@ body {
     padding: 32px;
     text-align: center;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    margin-bottom: 30px;
 }
 
 .score-display {
@@ -179,4 +279,82 @@ body {
 
 .result-card h2 {
     color: var(--success-color);
+    margin-bottom: 10px;
+}
+
+.result-name {
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+/* Review Section */
+.review-section h3 {
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.review-item {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.review-item.correct-border {
+    border-left: 6px solid var(--success-color);
+}
+
+.review-item.incorrect-border {
+    border-left: 6px solid var(--danger-color);
+}
+
+.review-question {
+    font-weight: 500;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.review-option {
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f8f9fa;
+    border: 1px solid #e8eaed;
+}
+
+.review-option.correct-ans {
+    background-color: #e6f4ea;
+    border-color: #ceead6;
+    color: #137333;
+    font-weight: 500;
+}
+
+.review-option.wrong-ans {
+    background-color: #fce8e6;
+    border-color: #fad2cf;
+    color: #c5221f;
+}
+
+.review-status {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.status-correct {
+    color: var(--success-color);
+}
+
+.status-incorrect {
+    color: var(--danger-color);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    padding-bottom: 20px;
 }

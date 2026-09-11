@@ -1,16 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Start Screen Elements
+    const startContainer = document.getElementById('start-container');
+    const startForm = document.getElementById('start-form');
+    const studentNameInput = document.getElementById('student-name');
+    
+    // Quiz Elements
+    const quizWrapper = document.getElementById('quiz-wrapper');
     const questionsContainer = document.getElementById('questions-container');
     const quizForm = document.getElementById('quiz-form');
+    const displayName = document.getElementById('display-name');
+    const timerDisplay = document.getElementById('timer-display');
+    
+    // Warning Elements
     const warningOverlay = document.getElementById('warning-overlay');
     const warningSound = document.getElementById('warning-sound');
-    const quizContainer = document.getElementById('quiz-container');
+    
+    // Result Elements
     const resultContainer = document.getElementById('result-container');
     const scoreSpan = document.getElementById('score');
     const scoreMessage = document.getElementById('score-message');
+    const resultStudentName = document.getElementById('result-student-name');
+    const reviewList = document.getElementById('review-list');
 
+    let testStarted = false;
     let testSubmitted = false;
+    let timerInterval;
+    let timeLeft = 25 * 60; // 25 minutes in seconds
 
-    // Render questions
+    // Render questions initially
     questions.forEach((q, index) => {
         const questionCard = document.createElement('div');
         questionCard.className = 'question-card';
@@ -33,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             input.value = key;
             input.required = true;
 
-            const text = document.createTextNode(` ${value}`);
+            const text = document.createTextNode(` ${key}. ${value}`);
 
             label.appendChild(input);
             label.appendChild(text);
@@ -44,22 +61,103 @@ document.addEventListener('DOMContentLoaded', () => {
         questionsContainer.appendChild(questionCard);
     });
 
+    // Start Test
+    startForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = studentNameInput.value.trim();
+        if (name) {
+            displayName.textContent = name;
+            resultStudentName.textContent = name;
+            startContainer.classList.add('hidden');
+            quizWrapper.classList.remove('hidden');
+            testStarted = true;
+            startTimer();
+        }
+    });
+
+    function startTimer() {
+        updateTimerDisplay();
+        timerInterval = setInterval(() => {
+            timeLeft--;
+            updateTimerDisplay();
+            
+            if (timeLeft <= 60) {
+                timerDisplay.classList.add('warning');
+            }
+
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                submitTest();
+            }
+        }, 1000);
+    }
+
+    function updateTimerDisplay() {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+
     // Handle form submission
     quizForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+        if(e) e.preventDefault();
+        submitTest();
+    });
+
+    function submitTest() {
+        if (testSubmitted) return;
         testSubmitted = true;
+        clearInterval(timerInterval);
         
         let score = 0;
         const formData = new FormData(quizForm);
+        reviewList.innerHTML = ''; // clear any existing
 
         questions.forEach((q) => {
             const selected = formData.get(`q${q.id}`);
-            if (selected === q.answer) {
-                score++;
+            const isCorrect = (selected === q.answer);
+            if (isCorrect) score++;
+
+            // Create review item
+            const reviewCard = document.createElement('div');
+            reviewCard.className = `review-item ${isCorrect ? 'correct-border' : 'incorrect-border'}`;
+
+            const qTitle = document.createElement('div');
+            qTitle.className = 'review-question';
+            qTitle.textContent = `${q.id}. ${q.question}`;
+            reviewCard.appendChild(qTitle);
+
+            // Options review
+            for (const [key, value] of Object.entries(q.options)) {
+                const optDiv = document.createElement('div');
+                optDiv.className = 'review-option';
+                optDiv.textContent = `${key}. ${value}`;
+                
+                if (key === q.answer) {
+                    optDiv.classList.add('correct-ans');
+                } else if (key === selected && !isCorrect) {
+                    optDiv.classList.add('wrong-ans');
+                }
+
+                reviewCard.appendChild(optDiv);
             }
+
+            // Status message
+            const statusDiv = document.createElement('div');
+            statusDiv.className = 'review-status';
+            if (isCorrect) {
+                statusDiv.classList.add('status-correct');
+                statusDiv.textContent = '✓ Correct';
+            } else {
+                statusDiv.classList.add('status-incorrect');
+                statusDiv.textContent = selected ? `✗ Incorrect (You chose ${selected})` : '✗ Not Attempted';
+            }
+            reviewCard.appendChild(statusDiv);
+
+            reviewList.appendChild(reviewCard);
         });
 
-        quizContainer.classList.add('hidden');
+        quizWrapper.classList.add('hidden');
         resultContainer.classList.remove('hidden');
         scoreSpan.textContent = score;
 
@@ -68,47 +166,39 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (score >= 35) {
             scoreMessage.textContent = 'Good job! Review the questions you missed to improve your score.';
         } else {
-            scoreMessage.textContent = 'Keep practicing! Review the chapter carefully and try again.';
+            scoreMessage.textContent = 'Keep practicing! Review the detailed answers below.';
         }
         
-        // Ensure any warning is removed when test is over
-        warningOverlay.classList.add('hidden');
-        warningSound.pause();
-    });
+        // Disable warning
+        hideWarning();
+        window.scrollTo(0, 0);
+    }
 
     // Anti-cheat mechanism: detect tab/window switching
     document.addEventListener('visibilitychange', () => {
-        if (!testSubmitted) {
+        if (testStarted && !testSubmitted) {
             if (document.hidden) {
-                // Tab changed or window minimized
                 showWarning();
             } else {
-                // Returned to tab (maybe hide warning or keep it until acknowledged?)
-                // We'll hide it to allow them to continue, but the prompt says: 
-                // "if user swtich the screen become red and shows warning with a loud sound"
-                // Let's keep the warning on for 3 seconds after they return, or just hide it when they return.
                 setTimeout(hideWarning, 3000);
             }
         }
     });
 
-    // Also trigger on window blur
     window.addEventListener('blur', () => {
-        if (!testSubmitted) {
+        if (testStarted && !testSubmitted) {
             showWarning();
         }
     });
 
     window.addEventListener('focus', () => {
-        if (!testSubmitted) {
+        if (testStarted && !testSubmitted) {
             setTimeout(hideWarning, 3000);
         }
     });
 
     function showWarning() {
         warningOverlay.classList.remove('hidden');
-        // Play loud sound (browsers might block autoplay if no interaction, 
-        // but typically allowed if user has interacted with the page already)
         warningSound.volume = 1.0;
         warningSound.play().catch(e => console.log('Audio play prevented by browser policy'));
     }

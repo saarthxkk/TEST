@@ -27,45 +27,64 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerInterval;
     let timeLeft = 25 * 60; // 25 minutes in seconds
 
-    // Render questions initially
-    questions.forEach((q, index) => {
-        const questionCard = document.createElement('div');
-        questionCard.className = 'question-card';
+    let currentQuestions = [];
 
-        const questionText = document.createElement('div');
-        questionText.className = 'question-text';
-        questionText.textContent = `${q.id}. ${q.question}`;
-        questionCard.appendChild(questionText);
+    function renderQuestions(questionsArray) {
+        questionsContainer.innerHTML = '';
+        questionsArray.forEach((q, index) => {
+            const questionCard = document.createElement('div');
+            questionCard.className = 'question-card';
 
-        const optionsContainer = document.createElement('div');
-        optionsContainer.className = 'options-container';
+            const questionText = document.createElement('div');
+            questionText.className = 'question-text';
+            questionText.textContent = `${q.id}. ${q.question}`;
+            questionCard.appendChild(questionText);
 
-        for (const [key, value] of Object.entries(q.options)) {
-            const label = document.createElement('label');
-            label.className = 'option-label';
+            const optionsContainer = document.createElement('div');
+            optionsContainer.className = 'options-container';
 
-            const input = document.createElement('input');
-            input.type = 'radio';
-            input.name = `q${q.id}`;
-            input.value = key;
-            input.required = true;
+            for (const [key, value] of Object.entries(q.options)) {
+                const label = document.createElement('label');
+                label.className = 'option-label';
 
-            const text = document.createTextNode(` ${key}. ${value}`);
+                const input = document.createElement('input');
+                input.type = 'radio';
+                input.name = `q${q.id}`;
+                input.value = key;
+                input.required = true;
 
-            label.appendChild(input);
-            label.appendChild(text);
-            optionsContainer.appendChild(label);
-        }
+                const text = document.createTextNode(` ${key}. ${value}`);
 
-        questionCard.appendChild(optionsContainer);
-        questionsContainer.appendChild(questionCard);
-    });
+                label.appendChild(input);
+                label.appendChild(text);
+                optionsContainer.appendChild(label);
+            }
+
+            questionCard.appendChild(optionsContainer);
+            questionsContainer.appendChild(questionCard);
+        });
+    }
 
     // Start Test
     startForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const name = studentNameInput.value.trim();
-        if (name) {
+        const chapterSelect = document.getElementById('chapter-select').value;
+        
+        if (chapterSelect === 'physical') {
+            currentQuestions = questions_physical;
+        } else if (chapterSelect === 'heat') {
+            currentQuestions = questions_heat;
+        } else if (chapterSelect === 'forests') {
+            currentQuestions = questions_forests;
+        } else if (chapterSelect === 'transportation') {
+            currentQuestions = questions_transportation;
+        } else if (chapterSelect === 'transportation2') {
+            currentQuestions = questions_transportation2;
+        }
+
+        if (name && currentQuestions.length > 0) {
+            renderQuestions(currentQuestions);
             displayName.textContent = name;
             resultStudentName.textContent = name;
             startContainer.classList.add('hidden');
@@ -113,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = new FormData(quizForm);
         reviewList.innerHTML = ''; // clear any existing
 
-        questions.forEach((q) => {
+        currentQuestions.forEach((q) => {
             const selected = formData.get(`q${q.id}`);
             const isCorrect = (selected === q.answer);
             if (isCorrect) score++;
@@ -162,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scoreSpan.textContent = score;
 
         if (score >= 45) {
-            scoreMessage.textContent = 'Excellent! You have a great understanding of physical and chemical changes.';
+            scoreMessage.textContent = 'Excellent! You have a great understanding of this chapter.';
         } else if (score >= 35) {
             scoreMessage.textContent = 'Good job! Review the questions you missed to improve your score.';
         } else {

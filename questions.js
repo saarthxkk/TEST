@@ -1,4 +1,4 @@
-const questions = [
+const questions_physical = [
   {
     "id": 1,
     "question": "Which of the following is a physical property of a substance?",
@@ -548,5 +548,558 @@ const questions = [
       "D": "I, III and IV only"
     },
     "answer": "C"
+  }
+];
+
+const questions_transportation = [
+  {
+    "id": 1,
+    "question": "The septum's primary function in the heart is to:",
+    "options": {
+      "A": "Pump blood to the lungs",
+      "B": "Prevent mixing of blood between the left and right sides",
+      "C": "Control the opening of valves",
+      "D": "Store oxygenated blood"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 2,
+    "question": "Which statement correctly describes the roles of atria and ventricles?",
+    "options": {
+      "A": "Atria pump blood out; ventricles receive it",
+      "B": "Atria receive blood; ventricles pump it out",
+      "C": "Both pump blood out equally",
+      "D": "Neither chamber pumps blood"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 3,
+    "question": "While the ventricles are squeezing, the atria:",
+    "options": {
+      "A": "Also contract simultaneously",
+      "B": "Refill and prepare for the next contraction",
+      "C": "Stop functioning temporarily",
+      "D": "Send blood directly to the lungs"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 4,
+    "question": "The main function of the heart's valves is to:",
+    "options": {
+      "A": "Produce the heartbeat sound",
+      "B": "Prevent blood from flowing backward",
+      "C": "Manufacture hemoglobin",
+      "D": "Filter waste from the blood"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 5,
+    "question": "How many valves does the human heart have?",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "6"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 6,
+    "question": "The thumping sound of a heartbeat is produced by:",
+    "options": {
+      "A": "Blood flowing through arteries",
+      "B": "Contraction and relaxation of heart chambers",
+      "C": "Capillaries opening",
+      "D": "Platelets clumping together"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 7,
+    "question": "As per the text, a normal human heart beats how many times per minute?",
+    "options": {
+      "A": "60",
+      "B": "72",
+      "C": "100",
+      "D": "120"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 8,
+    "question": "Approximately how much blood does the heart pump in one beat?",
+    "options": {
+      "A": "7 mL",
+      "B": "70 mL",
+      "C": "700 mL",
+      "D": "7 L"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 9,
+    "question": "A stethoscope amplifies heart sounds mainly using:",
+    "options": {
+      "A": "The ear pieces alone",
+      "B": "The diaphragm and tube together",
+      "C": "The chest piece alone",
+      "D": "A stopwatch mechanism"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 10,
+    "question": "In the homemade stethoscope activity, the funnel's mouth is covered with:",
+    "options": {
+      "A": "A metal disc",
+      "B": "A rubber sheet or balloon",
+      "C": "A glass plate",
+      "D": "Paper"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 11,
+    "question": "According to the text, the pulse can best be felt at:",
+    "options": {
+      "A": "The chest and back",
+      "B": "The neck or wrist",
+      "C": "The ankle and knee",
+      "D": "The forehead"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 12,
+    "question": "Why does pulse rate rise after exercise?",
+    "options": {
+      "A": "The heart needs to pump less blood",
+      "B": "The body needs more oxygen-rich blood",
+      "C": "Blood vessels shrink",
+      "D": "Platelet count increases"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 13,
+    "question": "The adult human body contains approximately how much blood?",
+    "options": {
+      "A": "2 litres",
+      "B": "5 litres",
+      "C": "8 litres",
+      "D": "10 litres"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 14,
+    "question": "The watery fluid part of blood is called:",
+    "options": {
+      "A": "Serum",
+      "B": "Plasma",
+      "C": "Lymph",
+      "D": "Hemoglobin"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 15,
+    "question": "Which of these is NOT a component carried in plasma (it is found inside RBCs instead)?",
+    "options": {
+      "A": "Proteins",
+      "B": "Sugar",
+      "C": "Salts",
+      "D": "Hemoglobin"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 16,
+    "question": "Red blood cells are produced in the:",
+    "options": {
+      "A": "Liver",
+      "B": "Bone marrow",
+      "C": "Kidney",
+      "D": "Heart"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 17,
+    "question": "The shape of red blood cells is:",
+    "options": {
+      "A": "Irregular",
+      "B": "Disc-shaped",
+      "C": "Spherical",
+      "D": "Rod-shaped"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 18,
+    "question": "The main function of hemoglobin is to:",
+    "options": {
+      "A": "Fight infections",
+      "B": "Clot blood",
+      "C": "Bind and carry oxygen",
+      "D": "Produce antibodies"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 19,
+    "question": "Blood appears red because of:",
+    "options": {
+      "A": "Plasma",
+      "B": "White blood cells",
+      "C": "Hemoglobin",
+      "D": "Platelets"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 20,
+    "question": "White blood cells are described in the text as the body's:",
+    "options": {
+      "A": "Transporters",
+      "B": "Soldiers",
+      "C": "Messengers",
+      "D": "Filters"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 21,
+    "question": "Compared to red blood cells, white blood cells are generally:",
+    "options": {
+      "A": "Smaller",
+      "B": "Larger",
+      "C": "The same size",
+      "D": "Not comparable in size"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 22,
+    "question": "The main function of white blood cells is to:",
+    "options": {
+      "A": "Carry oxygen",
+      "B": "Attack disease-causing organisms",
+      "C": "Clot blood",
+      "D": "Maintain body temperature"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 23,
+    "question": "Platelets are also known as:",
+    "options": {
+      "A": "Erythrocytes",
+      "B": "Leukocytes",
+      "C": "Thrombocytes",
+      "D": "Lymphocytes"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 24,
+    "question": "The main function of platelets is:",
+    "options": {
+      "A": "Oxygen transport",
+      "B": "Fighting infection",
+      "C": "Blood clotting",
+      "D": "Carrying nutrients"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 25,
+    "question": "A disease in which blood clots very slowly or not at all is called:",
+    "options": {
+      "A": "Anaemia",
+      "B": "Hemophilia",
+      "C": "Leukemia",
+      "D": "Jaundice"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 26,
+    "question": "During clotting, platelets pile up at the wound and release a protein that:",
+    "options": {
+      "A": "Destroys bacteria",
+      "B": "Helps the blood to clot",
+      "C": "Raises blood pressure",
+      "D": "Produces hemoglobin"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 27,
+    "question": "Which of the following is NOT listed as a function of blood?",
+    "options": {
+      "A": "Transports oxygen from lungs to cells",
+      "B": "Carries nutrients from the digestive tract",
+      "C": "Carries off waste materials",
+      "D": "Produces new bone tissue"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 28,
+    "question": "Besides transport, blood also helps to:",
+    "options": {
+      "A": "Regulate digestion",
+      "B": "Maintain a constant body temperature",
+      "C": "Aid muscle contraction directly",
+      "D": "Control blood pressure alone"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 29,
+    "question": "The three types of blood vessels mentioned are:",
+    "options": {
+      "A": "Heart, lungs, kidney",
+      "B": "Arteries, veins, capillaries",
+      "C": "Plasma, serum, lymph",
+      "D": "Atria, ventricles, septum"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 30,
+    "question": "Arteries are blood vessels that:",
+    "options": {
+      "A": "Carry blood toward the heart, deoxygenated",
+      "B": "Carry blood away from the heart, generally oxygenated",
+      "C": "Function only within the lungs",
+      "D": "Function only within the kidneys"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 31,
+    "question": "The main artery of the body, originating from the left ventricle, is called the:",
+    "options": {
+      "A": "Pulmonary artery",
+      "B": "Aorta",
+      "C": "Vena cava",
+      "D": "Coronary artery"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 32,
+    "question": "Arteries have thick, elastic walls because:",
+    "options": {
+      "A": "Blood flow through them is slow and low-pressure",
+      "B": "Blood flow through them is rapid and high-pressure",
+      "C": "They carry only plasma",
+      "D": "They need to store oxygen"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 33,
+    "question": "A key structural difference that lets veins keep blood flowing in one direction is:",
+    "options": {
+      "A": "They are located deeper under the skin",
+      "B": "They have thick muscular walls",
+      "C": "They contain valves",
+      "D": "They always carry oxygenated blood"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 34,
+    "question": "The greenish-blue tubes visible under the skin of hands and legs are:",
+    "options": {
+      "A": "Arteries",
+      "B": "Veins",
+      "C": "Capillaries",
+      "D": "Lymph vessels"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 35,
+    "question": "The smallest blood vessels, with very thin walls, connecting arteries and veins are:",
+    "options": {
+      "A": "Venules",
+      "B": "Capillaries",
+      "C": "The aorta",
+      "D": "The septum"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 36,
+    "question": "The main function of capillaries is to:",
+    "options": {
+      "A": "Pump blood forcefully",
+      "B": "Allow exchange of nutrients, gases, and other materials",
+      "C": "Produce hemoglobin",
+      "D": "Store excess blood"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 37,
+    "question": "According to the comparison table, capillaries occur:",
+    "options": {
+      "A": "Deep under the skin, like arteries",
+      "B": "At the terminals of an artery and a vein",
+      "C": "Only inside the heart",
+      "D": "Only inside the lungs"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 38,
+    "question": "Which blood vessels are situated just under the skin?",
+    "options": {
+      "A": "Arteries",
+      "B": "Veins",
+      "C": "The aorta",
+      "D": "None of these"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 39,
+    "question": "\"Circulation\" refers to:",
+    "options": {
+      "A": "Formation of new blood cells",
+      "B": "Movement of blood through the heart and around the body",
+      "C": "Clotting of blood at a wound",
+      "D": "Production of hemoglobin"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 40,
+    "question": "The left side of the heart sends:",
+    "options": {
+      "A": "Deoxygenated blood to the lungs",
+      "B": "Oxygen-rich blood out to the body",
+      "C": "Waste materials to the kidneys",
+      "D": "Blood directly to the brain only"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 41,
+    "question": "When body cells use up the oxygen delivered to them, they produce:",
+    "options": {
+      "A": "More hemoglobin",
+      "B": "Carbon dioxide and other waste",
+      "C": "Platelets",
+      "D": "Plasma proteins"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 42,
+    "question": "Blood returning from the body (carbon-dioxide rich) enters which side of the heart?",
+    "options": {
+      "A": "Left side",
+      "B": "Right side",
+      "C": "Both sides equally",
+      "D": "Neither side"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 43,
+    "question": "In the lungs, which substance is removed from the blood and sent out of the body during exhalation?",
+    "options": {
+      "A": "Oxygen",
+      "B": "Nitrogen",
+      "C": "Carbon dioxide",
+      "D": "Hemoglobin"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 44,
+    "question": "As per the \"Fast Fact,\" at rest, how long does blood take to travel from the heart to the lungs and back?",
+    "options": {
+      "A": "6 seconds",
+      "B": "8 seconds",
+      "C": "16 seconds",
+      "D": "20 seconds"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 45,
+    "question": "As per the \"Fast Fact,\" how long does blood take to reach the toes and travel all the way back to the heart?",
+    "options": {
+      "A": "6 seconds",
+      "B": "8 seconds",
+      "C": "16 seconds",
+      "D": "60 seconds"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 46,
+    "question": "Which organisms, according to the text, do NOT have a circulatory system?",
+    "options": {
+      "A": "Humans and dogs",
+      "B": "Sponges and hydra",
+      "C": "Fish and frogs",
+      "D": "Birds and reptiles"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 47,
+    "question": "Sponges and hydra obtain nutrients and oxygen through:",
+    "options": {
+      "A": "Blood vessels",
+      "B": "Water entering their body",
+      "C": "Lungs",
+      "D": "Skin alone, with no water involved"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 48,
+    "question": "The sum total of all activities occurring inside a living body is called:",
+    "options": {
+      "A": "Circulation",
+      "B": "Excretion",
+      "C": "Metabolism",
+      "D": "Transportation"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 49,
+    "question": "The removal of harmful waste products from the body is called:",
+    "options": {
+      "A": "Metabolism",
+      "B": "Excretion",
+      "C": "Circulation",
+      "D": "Respiration"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 50,
+    "question": "Which sequence best represents the path of blood circulation described in the chapter?",
+    "options": {
+      "A": "Heart \u2192 Lungs \u2192 Body \u2192 Heart, in a single loop only",
+      "B": "Left heart \u2192 Body \u2192 Right heart \u2192 Lungs \u2192 back to heart",
+      "C": "Body \u2192 Heart \u2192 Body, blood never reaching the lungs",
+      "D": "Lungs \u2192 Heart \u2192 Lungs, blood never leaving the lungs"
+    },
+    "answer": "B"
   }
 ];

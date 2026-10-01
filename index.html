@@ -3,103 +3,443 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Science Chapter Tests</title>
+    <title>testiiii — Science Chapter Tests</title>
+    <meta name="description" content="testiiii is a rigorous science test platform. Challenge yourself with NCERT-level MCQs across all chapters. Track your score. Download your results.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
-    <div id="warning-overlay" class="hidden">
-        <div class="warning-content">
-            <h1>⚠️ WARNING ⚠️</h1>
-            <p>Screen switching is not allowed during the test!</p>
-            <p>Please return to the test immediately.</p>
+
+<!-- WARNING OVERLAY -->
+<div id="warning-overlay" class="hidden">
+    <div class="warning-content">
+        <div class="warning-icon">⚠</div>
+        <h2>SCREEN SWITCH DETECTED</h2>
+        <p>Return to the test immediately.</p>
+    </div>
+</div>
+
+<!-- AUTHOR SPLASH SCREEN (Appears First) -->
+<div id="author-splash" class="author-screen">
+    <div class="author-bg-grid"></div>
+    <div class="author-container">
+        
+        <header class="author-header">
+            <div class="author-tag">00 &mdash; PROLOGUE / ABOUT THE CREATOR</div>
+            <div class="author-brand">testiiii.</div>
+        </header>
+
+        <main class="author-main">
+            <div class="author-eyebrow">CREATOR &middot; DEVELOPER &middot; CS STUDENT</div>
+            <h1 class="author-headline">Know the<br><em>Author.</em></h1>
+
+            <div class="author-card">
+                <div class="author-profile-bar">
+                    <div class="author-avatar">SP</div>
+                    <div class="author-profile-text">
+                        <h2 class="author-name">Sarthak Pandey</h2>
+                        <p class="author-subtitle">Computer Science Student &middot; Rishihood University</p>
+                    </div>
+                    <div class="author-badge">DEVELOPER</div>
+                </div>
+
+                <div class="author-content-body">
+                    <p class="author-paragraph author-lead">
+                        <strong>Sarthak Pandey</strong> is a Computer Science student at <strong>Rishihood University</strong> with a strong interest in technology, software development, and problem-solving.
+                    </p>
+                    <p class="author-paragraph">
+                        He enjoys exploring <strong>Data Structures &amp; Algorithms, Web Development, AI, and Data Science</strong>, and likes turning ideas into practical projects. He has also participated in hackathons and technical events, gaining experience in teamwork, leadership, and building technology-driven solutions.
+                    </p>
+                    <p class="author-paragraph">
+                        Outside academics, Sarthak enjoys <strong>playing badminton, exploring new technologies, and learning through hands-on projects</strong>.
+                    </p>
+                    <div class="author-quote-box">
+                        <div class="author-quote-mark">&ldquo;</div>
+                        <p class="author-quote-text">This website is a reflection of his interest in technology, creativity, and continuous learning.</p>
+                    </div>
+                </div>
+
+                <div class="author-topics">
+                    <span class="topic-tag">Data Structures &amp; Algorithms</span>
+                    <span class="topic-tag">Web Development</span>
+                    <span class="topic-tag">AI &amp; Data Science</span>
+                    <span class="topic-tag">Hackathons &amp; Events</span>
+                    <span class="topic-tag">Badminton</span>
+                </div>
+            </div>
+
+            <div class="author-cta-wrap">
+                <button id="splash-continue-btn" class="btn-author-continue">
+                    <span>CONTINUE TO WEBSITE</span>
+                    <span class="btn-arrow">&rarr;</span>
+                </button>
+                <span class="author-cta-hint">Press to explore the testiiii platform &middot; NCERT Class 7 Science</span>
+            </div>
+        </main>
+
+        <footer class="author-footer">
+            <span>&copy; testiiii &middot; Designed &amp; Developed with Care</span>
+            <span>Rishihood University</span>
+        </footer>
+
+    </div>
+</div>
+
+<!-- HOME SCREEN -->
+<div id="home-screen" class="hidden">
+
+    <nav class="nav">
+        <div class="nav-brand">testiiii.</div>
+        <div class="nav-links">
+            <button class="nav-link-btn" id="nav-author-btn">AUTHOR</button>
+            <a href="#chapters-section" class="nav-link">CHAPTERS</a>
+            <a href="#how-section" class="nav-link">HOW IT WORKS</a>
+            <a href="#stats-section" class="nav-link">STATS</a>
+            <button class="nav-cta" id="nav-start-btn">START TEST</button>
         </div>
+        <button class="nav-hamburger" id="hamburger-btn" aria-label="Menu">&#9776;</button>
+    </nav>
+
+    <div class="mobile-menu hidden" id="mobile-menu">
+        <button class="mobile-link" id="mobile-author-btn" onclick="closeMobileMenu(); showAuthorSplash();">AUTHOR PROFILE</button>
+        <a href="#chapters-section" class="mobile-link" onclick="closeMobileMenu()">CHAPTERS</a>
+        <a href="#how-section" class="mobile-link" onclick="closeMobileMenu()">HOW IT WORKS</a>
+        <a href="#stats-section" class="mobile-link" onclick="closeMobileMenu()">STATS</a>
+        <button class="mobile-cta" onclick="closeMobileMenu(); document.getElementById('start-section').scrollIntoView({behavior:'smooth'})">START TEST</button>
     </div>
 
-    <!-- Start Screen -->
-    <div class="container" id="start-container">
-        <div class="header">
-            <div class="header-content">
-                <h1>Science Chapter Tests</h1>
-                <p>Level: Medium → Hard | 50 MCQs</p>
+    <section class="hero">
+        <div class="hero-grid-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-label">SCIENCE &middot; NCERT &middot; CLASS 7</div>
+            <h1 class="hero-title">Know what<br>you actually<br><em>know.</em></h1>
+            <p class="hero-sub">A rigorous, no-nonsense test platform for science students. 50 MCQs per chapter. 25-minute timer. Instant scored feedback.</p>
+            <div class="hero-actions">
+                <button class="btn-primary" id="hero-start-btn">TAKE A TEST</button>
+                <a href="#chapters-section" class="btn-ghost">VIEW CHAPTERS &rarr;</a>
             </div>
         </div>
-        <div class="card start-card">
-            <h2>Instructions</h2>
-            <ul class="instructions-list">
-                <li>This test consists of 50 Multiple Choice Questions.</li>
-                <li><strong>Time Limit:</strong> 25 minutes. The test will auto-submit when the timer reaches zero.</li>
-                <li><strong>Anti-Cheat Active:</strong> Switching tabs or leaving the screen is strictly prohibited and will trigger a warning.</li>
-                <li>All questions are compulsory.</li>
-            </ul>
-            
-            <form id="start-form">
-                <div class="input-group">
-                    <label for="student-name">Enter your full name to begin:</label>
-                    <input type="text" id="student-name" required placeholder="Your Name" autocomplete="off">
+        <div class="hero-side">
+            <div class="hero-stat-card">
+                <div class="stat-num">6</div>
+                <div class="stat-label">CHAPTERS</div>
+            </div>
+            <div class="hero-stat-card">
+                <div class="stat-num">275+</div>
+                <div class="stat-label">QUESTIONS</div>
+            </div>
+            <div class="hero-stat-card">
+                <div class="stat-num">25</div>
+                <div class="stat-label">MIN TIMER</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dark-banner">
+        <div class="banner-inner">
+            <span class="banner-item">PHYSICAL &amp; CHEMICAL CHANGES</span>
+            <span class="banner-sep">&middot;</span>
+            <span class="banner-item">HEAT</span>
+            <span class="banner-sep">&middot;</span>
+            <span class="banner-item">FORESTS &mdash; OUR LIFELINE</span>
+            <span class="banner-sep">&middot;</span>
+            <span class="banner-item">TRANSPORTATION IN ANIMALS AND PLANTS</span>
+            <span class="banner-sep">&middot;</span>
+            <span class="banner-item">REPRODUCTION IN PLANTS (VERY HARD)</span>
+            <span class="banner-sep">&middot;</span>
+        </div>
+    </section>
+
+    <section class="section" id="chapters-section">
+        <div class="section-header">
+            <div class="section-label">AVAILABLE CHAPTERS</div>
+            <h2 class="section-title">Choose your<br>battlefield.</h2>
+        </div>
+        <div class="chapters-grid">
+            <div class="chapter-card">
+                <div class="chapter-num">01</div>
+                <div class="chapter-info">
+                    <div class="chapter-tag">CH. 6</div>
+                    <h3 class="chapter-name">Physical &amp; Chemical Changes</h3>
+                    <p class="chapter-desc">Reversible vs irreversible. Rusting, burning, crystallization, and more.</p>
                 </div>
-                <div class="input-group">
-                    <label for="chapter-select">Select Chapter:</label>
-                    <select id="chapter-select" required>
-                        <option value="physical">Chapter 6: Physical and Chemical Changes</option>
-                        <option value="heat">Chapter 3: HEAT</option>
-                        <option value="forests">Chapter 12: FORESTS — OUR LIFELINE</option>
-                        <option value="transportation">Chapter 7: Transportation in Animals and Plants (Part 1)</option>
-                        <option value="transportation2">Chapter 7: Transportation in Animals and Plants (Part 2)</option>
+                <div class="chapter-meta">
+                    <span>50 MCQs</span>
+                    <button class="chapter-start-btn" data-chapter="physical">START &rarr;</button>
+                </div>
+            </div>
+            <div class="chapter-card">
+                <div class="chapter-num">02</div>
+                <div class="chapter-info">
+                    <div class="chapter-tag">CH. 3</div>
+                    <h3 class="chapter-name">Heat</h3>
+                    <p class="chapter-desc">Conduction, convection, radiation. Temperature, thermometers, insulators.</p>
+                </div>
+                <div class="chapter-meta">
+                    <span>50 MCQs</span>
+                    <button class="chapter-start-btn" data-chapter="heat">START &rarr;</button>
+                </div>
+            </div>
+            <div class="chapter-card">
+                <div class="chapter-num">03</div>
+                <div class="chapter-info">
+                    <div class="chapter-tag">CH. 12</div>
+                    <h3 class="chapter-name">Forests &mdash; Our Lifeline</h3>
+                    <p class="chapter-desc">Ecosystem, biodiversity, deforestation, and forest conservation.</p>
+                </div>
+                <div class="chapter-meta">
+                    <span>50 MCQs</span>
+                    <button class="chapter-start-btn" data-chapter="forests">START &rarr;</button>
+                </div>
+            </div>
+            <div class="chapter-card">
+                <div class="chapter-num">04</div>
+                <div class="chapter-info">
+                    <div class="chapter-tag">CH. 7 &middot; PT. 1</div>
+                    <h3 class="chapter-name">Transportation in Animals &amp; Plants</h3>
+                    <p class="chapter-desc">Blood, heart, circulatory system, xylem, phloem, transpiration.</p>
+                </div>
+                <div class="chapter-meta">
+                    <span>50 MCQs</span>
+                    <button class="chapter-start-btn" data-chapter="transportation">START &rarr;</button>
+                </div>
+            </div>
+            <div class="chapter-card">
+                <div class="chapter-num">05</div>
+                <div class="chapter-info">
+                    <div class="chapter-tag">CH. 7 &middot; PT. 2</div>
+                    <h3 class="chapter-name">Transportation in Animals &amp; Plants</h3>
+                    <p class="chapter-desc">Excretion, kidneys, dialysis, stomata, and water absorption in roots.</p>
+                </div>
+                <div class="chapter-meta">
+                    <span>50 MCQs</span>
+                    <button class="chapter-start-btn" data-chapter="transportation2">START &rarr;</button>
+                </div>
+            </div>
+            <div class="chapter-card">
+                <div class="chapter-num">06</div>
+                <div class="chapter-info">
+                    <div class="chapter-tag">CH. 8 &middot; VERY HARD</div>
+                    <h3 class="chapter-name">Reproduction in Plants</h3>
+                    <p class="chapter-desc">Budding, spore formation, fragmentation, vegetative propagation, tissue culture &amp; flower parts.</p>
+                </div>
+                <div class="chapter-meta">
+                    <span>25 MCQs</span>
+                    <button class="chapter-start-btn" data-chapter="reproduction">START &rarr;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark" id="how-section">
+        <div class="section-header light">
+            <div class="section-label" style="color:#888">HOW IT WORKS</div>
+            <h2 class="section-title" style="color:#f0ede8">Simple.<br>Strict. Fair.</h2>
+        </div>
+        <div class="how-grid">
+            <div class="how-step">
+                <div class="how-num">I.</div>
+                <h3>Enter Your Name</h3>
+                <p>No accounts. No passwords. Just your name, and you begin.</p>
+            </div>
+            <div class="how-step">
+                <div class="how-num">II.</div>
+                <h3>Choose a Chapter</h3>
+                <p>Pick from 5 chapters. Each test has 50 carefully crafted MCQs.</p>
+            </div>
+            <div class="how-step">
+                <div class="how-num">III.</div>
+                <h3>25-Minute Timer</h3>
+                <p>The clock runs. Anti-cheat is active. No tab-switching allowed.</p>
+            </div>
+            <div class="how-step">
+                <div class="how-num">IV.</div>
+                <h3>Instant Results</h3>
+                <p>See every answer. Download your score card as a PDF. Share it.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="stats-section">
+        <div class="stats-row">
+            <div class="big-stat">
+                <span class="big-num">50</span>
+                <span class="big-label">QUESTIONS PER TEST</span>
+            </div>
+            <div class="big-stat">
+                <span class="big-num">25<small>min</small></span>
+                <span class="big-label">TIME LIMIT</span>
+            </div>
+            <div class="big-stat">
+                <span class="big-num">6</span>
+                <span class="big-label">CHAPTERS COVERED</span>
+            </div>
+            <div class="big-stat">
+                <span class="big-num">100%</span>
+                <span class="big-label">FREE, ALWAYS</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark" id="start-section">
+        <div class="start-form-wrap">
+            <div class="section-label" style="color:#888">BEGIN</div>
+            <h2 class="section-title" style="color:#f0ede8; margin-bottom:48px">Ready to<br>test yourself?</h2>
+            <form id="start-form" class="start-form">
+                <div class="form-row">
+                    <label class="form-label">YOUR FULL NAME</label>
+                    <input type="text" id="student-name" class="form-input" placeholder="e.g. Sarthak Pandey" required autocomplete="off">
+                </div>
+                <div class="form-row">
+                    <label class="form-label">SELECT CHAPTER</label>
+                    <select id="chapter-select" class="form-select" required>
+                        <option value="physical">Ch. 6 &mdash; Physical and Chemical Changes</option>
+                        <option value="heat">Ch. 3 &mdash; Heat</option>
+                        <option value="forests">Ch. 12 &mdash; Forests: Our Lifeline</option>
+                        <option value="transportation">Ch. 7 &mdash; Transportation (Part 1)</option>
+                        <option value="transportation2">Ch. 7 &mdash; Transportation (Part 2)</option>
+                        <option value="reproduction">Ch. 8 &mdash; Reproduction in Plants (Very Hard)</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-large">Start Test</button>
+                <button type="submit" class="btn-primary btn-full">BEGIN TEST &rarr;</button>
+                <p class="form-note">Anti-cheat active &middot; 25 min timer &middot; Cannot be paused</p>
             </form>
         </div>
-    </div>
+    </section>
 
-    <!-- Quiz Screen -->
-    <div id="quiz-wrapper" class="hidden">
-        <div class="top-bar">
-            <div class="top-bar-content">
-                <div class="student-info">Candidate: <span id="display-name"></span></div>
-                <div class="timer" id="timer-display">25:00</div>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">testiiii.</div>
+            <div class="footer-meta">
+                <button class="footer-author-btn" id="footer-author-btn">Created by Sarthak Pandey</button>
+                <span class="footer-sep">&middot;</span>
+                <span>NCERT Class 7 Science</span>
+                <span class="footer-sep">&middot;</span>
+                <span>All questions curated manually</span>
             </div>
         </div>
-
-        <div class="container" id="quiz-container">
-            <form id="quiz-form">
-                <div id="questions-container"></div>
-                
-                <div class="submit-section">
-                    <button type="submit" id="submit-btn" class="btn">Submit Test</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Result Screen -->
-    <div class="container hidden" id="result-container">
-        <div class="result-card">
-            <h2>Test Submitted Successfully</h2>
-            <p class="result-name">Name: <span id="result-student-name"></span></p>
-            <div class="score-display">
-                <span id="score">0</span> / 50
-            </div>
-            <p id="score-message"></p>
-        </div>
-
-        <div class="review-section" id="review-container">
-            <h3>Detailed Review</h3>
-            <div id="review-list"></div>
-        </div>
-    </div>
-
-    <footer>
-        <p>Created by Sarthak Pandey</p>
     </footer>
 
-    <audio id="warning-sound" src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3" preload="auto"></audio>
+</div><!-- end #home-screen -->
 
-    <script src="questions.js"></script>
-    <script src="questions_heat.js"></script>
-    <script src="questions_forests.js"></script>
-    <script src="questions_transportation2.js"></script>
-    <script src="script.js"></script>
+
+<!-- QUIZ SCREEN -->
+<div id="quiz-screen" class="hidden">
+
+    <div class="quiz-topbar">
+        <div class="qtb-left">
+            <span class="qtb-brand">testiiii.</span>
+            <span class="qtb-divider">|</span>
+            <span id="qtb-candidate">Candidate: <strong id="display-name"></strong></span>
+        </div>
+        <div class="qtb-center">
+            <span id="qtb-chapter"></span>
+        </div>
+        <div class="qtb-right">
+            <div class="quiz-timer" id="timer-display">25:00</div>
+        </div>
+    </div>
+
+    <div class="quiz-progress-bar-wrap">
+        <div class="quiz-progress-bar" id="quiz-progress-bar" style="width:0%"></div>
+    </div>
+
+    <div class="quiz-body">
+        <div id="questions-container"></div>
+        <div class="quiz-submit-row">
+            <div class="quiz-answered-count">
+                <span id="answered-count">0</span> / <span id="total-count">50</span> answered
+            </div>
+            <button id="submit-btn" class="btn-primary">SUBMIT TEST &rarr;</button>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- RESULT SCREEN -->
+<div id="result-screen" class="hidden">
+
+    <div class="result-topbar">
+        <div class="rtb-brand">testiiii.</div>
+        <button class="rtb-restart" id="restart-btn">&larr; NEW TEST</button>
+    </div>
+
+    <div class="result-hero">
+        <div class="result-hero-grid"></div>
+        <div class="result-hero-content">
+            <div class="result-label">TEST COMPLETE</div>
+            <div class="result-name-display" id="result-student-name-display"></div>
+            <div class="result-score-big">
+                <span id="score">0</span><span class="result-slash"> / </span><span id="total-questions">50</span>
+            </div>
+            <div class="result-grade-badge" id="result-grade">A+</div>
+            <div class="result-pct" id="result-pct">100%</div>
+            <p id="score-message" class="result-message"></p>
+            <div class="result-actions">
+                <button class="btn-primary-light" id="download-pdf-btn" onclick="downloadScoreCard()">&#128196; DOWNLOAD PDF</button>
+                <button class="btn-ghost-light" id="share-btn" onclick="shareScoreCard()">&#128279; SHARE RESULT</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="result-summary-bar">
+        <div class="rsb-item rsb-correct">
+            <span class="rsb-val" id="rsb-correct">0</span>
+            <span class="rsb-label">CORRECT</span>
+        </div>
+        <div class="rsb-divider"></div>
+        <div class="rsb-item rsb-incorrect">
+            <span class="rsb-val" id="rsb-incorrect">0</span>
+            <span class="rsb-label">INCORRECT</span>
+        </div>
+        <div class="rsb-divider"></div>
+        <div class="rsb-item rsb-skip">
+            <span class="rsb-val" id="rsb-skipped">0</span>
+            <span class="rsb-label">SKIPPED</span>
+        </div>
+        <div class="rsb-divider"></div>
+        <div class="rsb-item">
+            <span class="rsb-val" id="rsb-time">0:00</span>
+            <span class="rsb-label">TIME TAKEN</span>
+        </div>
+    </div>
+
+    <div class="review-section">
+        <div class="review-header">
+            <div class="section-label">DETAILED REVIEW</div>
+            <div class="review-filters">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="correct">CORRECT</button>
+                <button class="filter-btn" data-filter="incorrect">INCORRECT</button>
+                <button class="filter-btn" data-filter="skipped">SKIPPED</button>
+            </div>
+        </div>
+        <div id="review-list"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">testiiii.</div>
+            <div class="footer-meta">
+                <span>Created by Sarthak Pandey</span>
+                <span class="footer-sep">&middot;</span>
+                <span>NCERT Class 7 Science</span>
+            </div>
+        </div>
+    </footer>
+
+</div><!-- end #result-screen -->
+
+
+<audio id="warning-sound" src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3" preload="auto"></audio>
+
+<script src="questions.js"></script>
+<script src="questions_heat.js"></script>
+<script src="questions_forests.js"></script>
+<script src="questions_transportation2.js"></script>
+<script src="questions_reproduction.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

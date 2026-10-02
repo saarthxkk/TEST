@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#faf8f5"/>
+  
+  <!-- Title -->
+  <text x="400" y="38" font-family="'Inter', sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="#1c1917" letter-spacing="1">VEGETATIVE PROPAGATION BY LEAF (BRYOPHYLLUM)</text>
+  <text x="400" y="60" font-family="'Inter', sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#78716c">Adventitious buds in leaf notches develop into independent plantlets</text>
+
+  <!-- Main Leaf -->
+  <g transform="translate(100, 70)">
+    <!-- Stem/Petiole -->
+    <path d="M 50 260 C 90 240 140 210 180 180" stroke="#166534" stroke-width="10" stroke-linecap="round" fill="none"/>
+    
+    <!-- Scalloped Leaf Blade -->
+    <path d="M 180 180 
+             C 170 140 180 100 220 70
+             C 240 50 270 45 300 50
+             C 330 35 370 40 400 60
+             C 440 50 480 70 500 100
+             C 530 115 550 150 540 180
+             C 550 210 530 240 500 260
+             C 470 280 430 280 400 270
+             C 360 285 320 280 280 260
+             C 240 265 200 240 180 180 Z" 
+          fill="url(#leafGrad)" stroke="#14532d" stroke-width="3" filter="url(#shadow)"/>
+          
+    <!-- Main Vein -->
+    <path d="M 180 180 Q 330 170 515 175" stroke="#86efac" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <!-- Side Veins -->
+    <path d="M 260 177 Q 280 110 300 52" stroke="#86efac" stroke-width="2" fill="none"/>
+    <path d="M 330 175 Q 360 110 400 62" stroke="#86efac" stroke-width="2" fill="none"/>
+    <path d="M 410 174 Q 450 120 500 102" stroke="#86efac" stroke-width="2" fill="none"/>
+    <path d="M 280 177 Q 270 230 280 258" stroke="#86efac" stroke-width="2" fill="none"/>
+    <path d="M 370 175 Q 380 235 400 268" stroke="#86efac" stroke-width="2" fill="none"/>
+    <path d="M 450 174 Q 470 225 500 258" stroke="#86efac" stroke-width="2" fill="none"/>
+
+    <!-- Plantlet 1 (Top notch) -->
+    <g transform="translate(300, 50)">
+      <!-- Tiny rootlets -->
+      <path d="M 0 0 Q -10 15 -15 30 M 0 0 Q 5 18 2 32 M 0 0 Q 12 15 18 28" stroke="#78350f" stroke-width="1.8" fill="none"/>
+      <!-- Tiny shoot & leaves -->
+      <path d="M 0 0 Q -15 -20 -30 -25 Q -15 -35 0 0" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+      <path d="M 0 0 Q 15 -25 30 -25 Q 15 -35 0 0" fill="#4ade80" stroke="#15803d" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="4" fill="#ca8a04"/>
+    </g>
+
+    <!-- Plantlet 2 (Top notch 2) -->
+    <g transform="translate(400, 60)">
+      <path d="M 0 0 Q -8 15 -12 28 M 0 0 Q 6 16 8 28" stroke="#78350f" stroke-width="1.8" fill="none"/>
+      <path d="M 0 0 Q -12 -18 -25 -20 Q -10 -28 0 0" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+      <path d="M 0 0 Q 12 -20 25 -20 Q 10 -28 0 0" fill="#4ade80" stroke="#15803d" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="4" fill="#ca8a04"/>
+    </g>
+
+    <!-- Plantlet 3 (Tip notch) -->
+    <g transform="translate(525, 135)">
+      <path d="M 0 0 Q 15 10 25 15 M 0 0 Q 18 0 30 2" stroke="#78350f" stroke-width="1.8" fill="none"/>
+      <path d="M 0 0 Q 15 -15 30 -10 Q 20 -25 0 0" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+      <path d="M 0 0 Q 5 -20 15 -30 Q 0 -25 0 0" fill="#4ade80" stroke="#15803d" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="4" fill="#ca8a04"/>
+    </g>
+
+    <!-- Plantlet 4 (Bottom notch) -->
+    <g transform="translate(400, 270)">
+      <path d="M 0 0 Q -10 20 -15 38 M 0 0 Q 8 22 12 40" stroke="#78350f" stroke-width="2" fill="none"/>
+      <path d="M 0 0 Q -18 10 -30 25 Q -10 25 0 0" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+      <path d="M 0 0 Q 18 10 30 25 Q 10 25 0 0" fill="#4ade80" stroke="#15803d" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="4" fill="#ca8a04"/>
+    </g>
+
+    <!-- Labels with pointer lines -->
+    <!-- Adventitious Bud / Plantlet -->
+    <line x1="300" y1="-15" x2="300" y2="40" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="210" y="-45" width="180" height="26" rx="4" fill="#ffffff" stroke="#e7e5e4"/>
+    <text x="300" y="-28" font-family="'Inter', sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#047857">Adventitious Bud (Shoot + Root)</text>
+
+    <!-- Notched Margin -->
+    <line x1="480" y1="260" x2="520" y2="295" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="470" y="295" width="120" height="24" rx="4" fill="#ffffff" stroke="#e7e5e4"/>
+    <text x="530" y="311" font-family="'Inter', sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1c1917">Notched Margin</text>
+
+    <!-- Fallen on soil explanation box -->
+    <rect x="50" y="285" width="280" height="42" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+    <text x="60" y="303" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#166534">When leaf touches moist soil:</text>
+    <text x="60" y="319" font-family="'Inter', sans-serif" font-size="11" fill="#15803d">Buds sprout roots &amp; grow into new plants</text>
+  </g>
+</svg>

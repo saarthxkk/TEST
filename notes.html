@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproduction in Plants — Complete Revision Notes | testiiii</title>
+    <meta name="description" content="Complete, easy, exam-oriented revision notes for NCERT Class 7 Science: Reproduction in Plants. Includes illustrated diagrams, exam traps, and memory tricks.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --notes-bg: #fdfbf7;
+            --notes-surface: #ffffff;
+            --notes-border: #e8e3d9;
+            --notes-text: #1a1714;
+            --notes-muted: #6b645c;
+            --notes-accent: #15803d;
+            --notes-accent-light: #f0fdf4;
+            --notes-warn-bg: #fffbeb;
+            --notes-warn-border: #fde68a;
+            --notes-warn-text: #92400e;
+        }
+
+        body.notes-page {
+            background-color: var(--notes-bg);
+            color: var(--notes-text);
+            font-family: var(--sans);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        .notes-nav {
+            position: sticky;
+            top: 0;
+            background: rgba(253, 251, 247, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--notes-border);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 32px;
+        }
+
+        .notes-brand-link {
+            font-family: var(--serif);
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--ink);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .notes-nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .btn-test-cta {
+            background: var(--ink);
+            color: var(--off-white);
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .btn-test-cta:hover { opacity: 0.85; }
+
+        .notes-layout {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 48px;
+            padding: 40px 24px 80px;
+        }
+
+        /* Sidebar TOC */
+        .notes-toc {
+            position: sticky;
+            top: 90px;
+            height: calc(100vh - 120px);
+            overflow-y: auto;
+            padding-right: 16px;
+            border-right: 1px solid var(--notes-border);
+        }
+
+        .toc-title {
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            color: var(--notes-muted);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .toc-link {
+            font-size: 13px;
+            color: var(--notes-muted);
+            text-decoration: none;
+            display: block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.15s;
+        }
+
+        .toc-link:hover {
+            color: var(--ink);
+            background: rgba(0,0,0,0.04);
+            padding-left: 12px;
+        }
+
+        /* Main Content */
+        .notes-content {
+            min-width: 0;
+            background: var(--notes-surface);
+            padding: 48px 56px;
+            border: 1px solid var(--notes-border);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            border-radius: 4px;
+        }
+
+        .notes-header {
+            border-bottom: 2px solid var(--ink);
+            padding-bottom: 24px;
+            margin-bottom: 40px;
+        }
+
+        .notes-tag {
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            color: var(--notes-muted);
+            margin-bottom: 8px;
+        }
+
+        .notes-headline {
+            font-family: var(--serif);
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 1.2;
+            color: var(--ink);
+            margin: 0 0 12px;
+        }
+
+        .notes-sub {
+            font-family: var(--sans);
+            font-size: 15px;
+            color: var(--notes-muted);
+            margin: 0;
+        }
+
+        .notes-section {
+            margin-bottom: 48px;
+            scroll-margin-top: 100px;
+        }
+
+        .notes-section-title {
+            font-family: var(--serif);
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--ink);
+            border-bottom: 1px solid var(--notes-border);
+            padding-bottom: 8px;
+            margin: 36px 0 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .notes-section h3 {
+            font-family: var(--sans);
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--ink);
+            margin: 24px 0 10px;
+        }
+
+        .notes-section p {
+            font-size: 15px;
+            color: #2b2723;
+            margin: 0 0 14px;
+        }
+
+        .notes-section ul {
+            padding-left: 20px;
+            margin: 0 0 16px;
+        }
+
+        .notes-section li {
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+
+        /* ASCII Tree & Flow boxes */
+        .ascii-box {
+            background: #f7f5f0;
+            border: 1px solid var(--notes-border);
+            border-left: 4px solid var(--ink);
+            padding: 16px 20px;
+            font-family: var(--mono);
+            font-size: 13px;
+            line-height: 1.5;
+            color: #1f1b18;
+            overflow-x: auto;
+            border-radius: 4px;
+            margin: 18px 0;
+            white-space: pre;
+        }
+
+        /* Tables */
+        .notes-table-wrap {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .notes-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            background: #fff;
+        }
+
+        .notes-table th {
+            background: #f2eee6;
+            color: var(--ink);
+            font-family: var(--mono);
+            font-size: 12px;
+            letter-spacing: 0.05em;
+            text-align: left;
+            padding: 12px 16px;
+            border: 1px solid var(--notes-border);
+        }
+
+        .notes-table td {
+            padding: 12px 16px;
+            border: 1px solid var(--notes-border);
+            color: #2b2723;
+        }
+
+        .notes-table tr:nth-child(even) {
+            background: #faf8f5;
+        }
+
+        /* Callout cards */
+        .callout-box {
+            padding: 16px 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        .callout-trap {
+            background: #fff1f2;
+            border: 1px solid #fecdd3;
+            color: #9f1239;
+        }
+        .callout-trap strong { color: #881337; }
+
+        .callout-tip {
+            background: var(--notes-accent-light);
+            border: 1px solid #bbf7d0;
+            color: #14532d;
+        }
+        .callout-tip strong { color: #052e16; }
+
+        .callout-memory {
+            background: var(--notes-warn-bg);
+            border: 1px solid var(--notes-warn-border);
+            color: var(--notes-warn-text);
+        }
+
+        /* Diagram Cards */
+        .diagram-card {
+            background: #ffffff;
+            border: 1px solid var(--notes-border);
+            border-radius: 8px;
+            padding: 18px;
+            margin: 24px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            text-align: center;
+        }
+
+        .diagram-card img {
+            width: 100%;
+            max-width: 720px;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+            margin: 0 auto 12px;
+            border: 1px solid #f0ede8;
+        }
+
+        .diagram-caption {
+            font-family: var(--mono);
+            font-size: 12px;
+            color: var(--notes-muted);
+            letter-spacing: 0.05em;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .notes-layout {
+                grid-template-columns: 1fr;
+                padding: 20px 16px 60px;
+            }
+            .notes-toc {
+                display: none;
+            }
+            .notes-content {
+                padding: 28px 20px;
+            }
+            .notes-headline {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body class="notes-page">
+
+    <!-- Top Navigation -->
+    <nav class="notes-nav">
+        <a href="index.html" class="notes-brand-link">testiiii.</a>
+        <div class="notes-nav-actions">
+            <a href="index.html#chapters-section" class="nav-link" style="color:var(--notes-muted); font-size:13px; text-decoration:none;">&larr; ALL CHAPTERS</a>
+            <a href="index.html#start-section" class="btn-test-cta">TAKE CHAPTER TEST &rarr;</a>
+        </div>
+    </nav>
+
+    <div class="notes-layout">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="notes-toc">
+            <div class="toc-title">TABLE OF CONTENTS</div>
+            <ul class="toc-list">
+                <li><a href="#sec-1" class="toc-link">1. What is Reproduction?</a></li>
+                <li><a href="#sec-2" class="toc-link">2. Vegetative vs Reproductive</a></li>
+                <li><a href="#sec-3" class="toc-link">3. Asexual Reproduction</a></li>
+                <li><a href="#sec-4" class="toc-link">4. Budding (Yeast)</a></li>
+                <li><a href="#sec-5" class="toc-link">5. Spore Formation</a></li>
+                <li><a href="#sec-6" class="toc-link">6. Activity: Rhizopus</a></li>
+                <li><a href="#sec-7" class="toc-link">7. Fragmentation</a></li>
+                <li><a href="#sec-8" class="toc-link">8. Vegetative Propagation</a></li>
+                <li><a href="#sec-9" class="toc-link">9. By Modified Roots</a></li>
+                <li><a href="#sec-10" class="toc-link">10. Underground Stems</a></li>
+                <li><a href="#sec-11" class="toc-link">11. By Leaves (Bryophyllum)</a></li>
+                <li><a href="#sec-12" class="toc-link">12. Aerial Stems</a></li>
+                <li><a href="#sec-13" class="toc-link">13. Artificial Propagation</a></li>
+                <li><a href="#sec-14" class="toc-link">14. Stem Cutting</a></li>
+                <li><a href="#sec-15" class="toc-link">15. Layering</a></li>
+                <li><a href="#sec-16" class="toc-link">16. Grafting</a></li>
+                <li><a href="#sec-17" class="toc-link">17. Tissue Culture</a></li>
+                <li><a href="#sec-18" class="toc-link">18. Advantages of Veg. Prop.</a></li>
+                <li><a href="#sec-19" class="toc-link">19. Disadvantages</a></li>
+                <li><a href="#sec-20" class="toc-link">20. Sexual Reproduction</a></li>
+                <li><a href="#sec-21" class="toc-link">21. Flower Types</a></li>
+                <li><a href="#sec-22" class="toc-link">22. Parts of a Flower</a></li>
+                <li><a href="#sec-23" class="toc-link">23. Stamen (Male)</a></li>
+                <li><a href="#sec-24" class="toc-link">24. Pistil / Carpel (Female)</a></li>
+                <li><a href="#sec-25" class="toc-link">25. Pollination Overview</a></li>
+                <li><a href="#sec-26" class="toc-link">26. Self-Pollination</a></li>
+                <li><a href="#sec-27" class="toc-link">27. Cross-Pollination</a></li>
+                <li><a href="#sec-28" class="toc-link">28. Insect Pollination</a></li>
+                <li><a href="#sec-29" class="toc-link">29. Wind Pollination</a></li>
+                <li><a href="#sec-30" class="toc-link">30. Water Pollination</a></li>
+                <li><a href="#sec-31" class="toc-link">31. Fertilisation Sequence</a></li>
+                <li><a href="#sec-32" class="toc-link">32. Fruit &amp; Seed Formation</a></li>
+                <li><a href="#sec-33" class="toc-link">33. Fate of Floral Parts</a></li>
+                <li><a href="#sec-34" class="toc-link">34. Seed Dispersal</a></li>
+                <li><a href="#sec-35" class="toc-link">35. Wind Dispersal</a></li>
+                <li><a href="#sec-36" class="toc-link">36. Water Dispersal</a></li>
+                <li><a href="#sec-37" class="toc-link">37. Animal Dispersal</a></li>
+                <li><a href="#sec-38" class="toc-link">38. Explosion Dispersal</a></li>
+                <li><a href="#sec-39" class="toc-link">39. Master Chapter Map</a></li>
+                <li><a href="#sec-40" class="toc-link">40. Exam Traps &amp; Summary</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Notes Content -->
+        <main class="notes-content">
+            
+            <header class="notes-header">
+                <div class="notes-tag">NCERT CLASS 7 SCIENCE &middot; CHAPTER 8</div>
+                <h1 class="notes-headline">Reproduction in Plants</h1>
+                <p class="notes-sub">Complete Easy Notes &middot; Pages 1&ndash;10 &middot; Detailed &middot; Exam Revision &middot; Illustrated Diagrams</p>
+            </header>
+
+            <!-- 1. What is Reproduction? -->
+            <section class="notes-section" id="sec-1">
+                <h2 class="notes-section-title">1. 🌱 What is Reproduction?</h2>
+                <p><strong>Reproduction</strong> is the process by which a living organism produces its <strong>offspring / new individuals</strong>.</p>
+                <h3>Why is reproduction necessary?</h3>
+                <p>Reproduction helps maintain the <strong>continuity of a species</strong> generation after generation.</p>
+                
+                <div class="callout-box callout-tip">
+                    <strong>Simple consequence:</strong> If all plants of a species stopped reproducing:<br>
+                    Existing plants die &rarr; no new plants &rarr; number decreases &rarr; species may eventually disappear.
+                </div>
+
+                <h3>Two Major Modes in Plants</h3>
+                <div class="ascii-box">                 REPRODUCTION
+                      │
+             ┌────────┴────────┐
+             ↓                 ↓
+        ASEXUAL             SEXUAL
+             │                 │
+      No seeds required   Seeds are formed
+      One organism        Male + female
+      is sufficient       gametes fuse</div>
+            </section>
+
+            <!-- 2. Vegetative vs Reproductive -->
+            <section class="notes-section" id="sec-2">
+                <h2 class="notes-section-title">2. 🌿 Vegetative Parts vs Reproductive Parts</h2>
+                <p>The main body parts of a flowering plant are categorized into two groups:</p>
+                <ul>
+                    <li><strong>Vegetative parts:</strong> Root, Stem, and Leaves.</li>
+                    <li><strong>Reproductive part:</strong> The <strong>Flower</strong>.</li>
+                </ul>
+
+                <div class="ascii-box">              FLOWERING PLANT
+                    │
+          ┌─────────┴─────────┐
+          ↓                   ↓
+   Vegetative parts      Reproductive part
+          │                   │
+   Root, Stem, Leaf          Flower</div>
+                <p>Most plants grow from seeds. After maturing, plants produce flowers, which undergo reproduction to produce fruits containing seeds.</p>
+            </section>
+
+            <!-- 3. Asexual Reproduction -->
+            <section class="notes-section" id="sec-3">
+                <h2 class="notes-section-title">3. 🌱 Asexual Reproduction</h2>
+                <p>In <strong>asexual reproduction</strong>:</p>
+                <ul>
+                    <li>Only <strong>one parent organism</strong> is required.</li>
+                    <li>New plants are obtained <strong>without seeds</strong>.</li>
+                    <li>Offspring are genetically identical to the parent.</li>
+                </ul>
+
+                <div class="ascii-box">ASEXUAL REPRODUCTION
+        │
+        ├── 1. Budding
+        ├── 2. Spore formation
+        ├── 3. Fragmentation
+        └── 4. Vegetative propagation</div>
+
+                <div class="diagram-card">
+                    <img src="images/notes_asexual_diagram.jpg" alt="Four Modes of Asexual Reproduction">
+                    <div class="diagram-caption">FIG 1: Four Main Modes of Asexual Reproduction (Budding, Fragmentation, Spores, Vegetative)</div>
+                </div>
+            </section>
+
+            <!-- 4. Budding -->
+            <section class="notes-section" id="sec-4">
+                <h2 class="notes-section-title">4. 🌱 Budding</h2>
+                <p>In budding, a small <strong>bulb-like projection</strong> develops on the parent body called a <strong>bud</strong>.</p>
+                <p>The nucleus divides into two, and one daughter nucleus moves into the bud. The bud grows, matures, and eventually separates from the parent cell to live independently.</p>
+                
+                <div class="ascii-box">       Parent yeast
+            │
+            ↓
+       Small bud forms
+            │
+            ↓
+      Nucleus divides
+            │
+            ↓
+     One nucleus → bud
+            │
+            ↓
+       Bud grows
+            │
+            ↓
+    New yeast separates</div>
+
+                <div class="callout-box callout-memory">
+                    <strong>Memory Rule:</strong> <code>BUDDING = BUD</code> (Primary example: <strong>Yeast</strong>). Under nutrient-rich conditions, yeast cells can form long chains of buds rapidly.
+                </div>
+            </section>
+
+            <!-- 5. Spore Formation -->
+            <section class="notes-section" id="sec-5">
+                <h2 class="notes-section-title">5. 🍞 Spore Formation</h2>
+                <p>A <strong>spore</strong> is a tiny single-celled reproductive body covered by a <strong>thick, hard protective coating</strong>.</p>
+                <p>This protective coating helps spores survive extreme environmental conditions like high temperatures, drought, or lack of food. When favourable conditions return:</p>
+                <p><strong>Protective coat breaks &rarr; Spore germinates &rarr; New fungal body develops.</strong></p>
+
+                <h3>⭐ Important Comparison: Budding vs Spore Formation</h3>
+                <div class="notes-table-wrap">
+                    <table class="notes-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Budding</th>
+                                <th>Spore Formation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Mechanism</strong></td>
+                                <td>Bulb-like projection (bud) forms on parent</td>
+                                <td>Microscopic thick-walled spores are formed</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Primary Example</strong></td>
+                                <td>Yeast (unicellular fungus)</td>
+                                <td>Rhizopus (Bread Mould), Mosses, Ferns</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Separation / Growth</strong></td>
+                                <td>Bud detaches directly from parent cell</td>
+                                <td>Spores disperse through air and germinate later</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 6. Activity: Observing Rhizopus -->
+            <section class="notes-section" id="sec-6">
+                <h2 class="notes-section-title">6. 🍞 Activity: Observing Rhizopus</h2>
+                <p>According to the NCERT chapter:</p>
+                <ol>
+                    <li>Take a slice of stale bread and moisten it with water.</li>
+                    <li>Keep it in a warm, dark, moist enclosure for <strong>2–3 days</strong>.</li>
+                    <li>A white, fluffy cotton-like growth appears across the surface.</li>
+                    <li>Under a microscope, this growth is confirmed as <strong>hyphae, sporangia, and germinating spores of Rhizopus</strong>.</li>
+                </ol>
+
+                <div class="callout-box callout-trap">
+                    <strong>⚠️ Common Exam Trap:</strong><br>
+                    ❌ <em>"The bread substance directly transforms into fungus cells."</em><br>
+                    ✅ <strong>Airborne fungal spores</strong> landed on the bread, germinated, and fed on it saprophytically.
+                </div>
+            </section>
+
+            <!-- 7. Fragmentation -->
+            <section class="notes-section" id="sec-7">
+                <h2 class="notes-section-title">7. 🌿 Fragmentation</h2>
+                <p>In filamentous green algae like <strong>Spirogyra</strong>, the body consists of long ribbon-like filaments.</p>
+                <p>When mature, the filament breaks into two or more pieces called <strong>fragments</strong>. Each fragment grows independently into a full-sized filament through repeated cell division.</p>
+                
+                <div class="ascii-box">        Parent filament
+   ──────────────────────
+             ↓
+        breaks apart
+       ↙     ↓      ↘
+   Fragment Fragment Fragment
+       ↓       ↓       ↓
+     New     New     New
+  individual individual individual</div>
+                
+                <div class="callout-box callout-memory">
+                    <strong>Memory Trick:</strong> <code>FRAGMENTATION &rarr; FRAGMENTS</code> (Algae: <em>Spirogyra</em>). Enables rapid green coverage of ponds and stagnant water bodies.
+                </div>
+            </section>
+
+            <!-- 8. Vegetative Propagation -->
+            <section class="notes-section" id="sec-8">
+                <h2 class="notes-section-title">8. 🌱 Vegetative Propagation Overview</h2>
+                <p><strong>Vegetative propagation</strong> is the development of a new plant directly from a <strong>vegetative organ (root, stem, or leaf)</strong> without the involvement of seeds or flowers.</p>
+                <p>It can be <strong>Natural</strong> or <strong>Artificial</strong>.</p>
+                <p>Examples: Sugarcane, ginger, potato, rose, strawberry, jasmine, mint, turmeric, and Dahlia.</p>
+            </section>
+
+            <!-- 9. By Modified Roots -->
+            <section class="notes-section" id="sec-9">
+                <h2 class="notes-section-title">9. 🌿 Natural Vegetative Propagation: By Modified Roots</h2>
+                <p>Certain plants develop <strong>swollen storage roots</strong> containing stored food reserves. When planted in moist soil, buds on these roots produce new shoots.</p>
+                <ul>
+                    <li><strong>Examples:</strong> Sweet potato, Dahlia, Asparagus.</li>
+                </ul>
+                <div class="ascii-box">Swollen root &rarr; Stored nutrients &rarr; Planted in soil &rarr; New Shoot &rarr; New Plant</div>
+            </section>
+
+            <!-- 10. Underground Stems -->
+            <section class="notes-section" id="sec-10">
+                <h2 class="notes-section-title">10. 🥔 By Modified Underground Stems</h2>
+                <p>Underground stems store food and bear dormant vegetative buds:</p>
+                
+                <div class="notes-table-wrap">
+                    <table class="notes-table">
+                        <thead>
+                            <tr>
+                                <th>Type of Stem</th>
+                                <th>Structure</th>
+                                <th>Examples</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Tuber</strong></td>
+                                <td>Swollen underground stem with "eyes" (buds)</td>
+                                <td><strong>Potato</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rhizome</strong></td>
+                                <td>Horizontal underground stem with nodes &amp; buds</td>
+                                <td><strong>Ginger, Turmeric</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Bulb</strong></td>
+                                <td>Condensed stem surrounded by fleshy scale leaves</td>
+                                <td><strong>Onion, Garlic</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Corm</strong></td>
+                                <td>Short, solid, swollen vertical stem base</td>
+                                <td><strong>Gladiolus, Colocasia</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 11. By Leaves (Bryophyllum) -->
+            <section class="notes-section" id="sec-11">
+                <h2 class="notes-section-title">11. 🍃 Vegetative Propagation by Leaves (Bryophyllum)</h2>
+                <p>In <strong>Bryophyllum</strong> (Sprout Leaf Plant), specialized <strong>adventitious buds</strong> are situated along the notched margins of the fleshy leaf.</p>
+                <p>When a detached leaf falls onto moist soil, each marginal bud sprouts tiny roots and a shoot, developing into an independent plantlet.</p>
+
+                <div class="diagram-card">
+                    <img src="images/notes_bryophyllum.svg" alt="Bryophyllum leaf vegetative propagation">
+                    <div class="diagram-caption">FIG 2: Adventitious Buds Sprouting along the Margins of a Bryophyllum Leaf</div>
+                </div>
+            </section>
+
+            <!-- 12. Aerial Stem -->
+            <section class="notes-section" id="sec-12">
+                <h2 class="notes-section-title">12. 🌿 Vegetative Propagation by Aerial Stems &amp; Runners</h2>
+                <p>In plants like <strong>wild strawberry</strong> and <strong>doob grass (lawn grass)</strong>, slender horizontal branches (runners/stolons) grow across the soil surface. At regular nodes, they strike roots into the soil and shoot upward, establishing new plants.</p>
+            </section>
+
+            <!-- 13. Artificial Propagation -->
+            <section class="notes-section" id="sec-13">
+                <h2 class="notes-section-title">13. 🧑‍🌾 Artificial Vegetative Propagation</h2>
+                <p>Horticultural techniques developed by humans to multiply desired plant varieties rapidly:</p>
+                <div class="ascii-box">ARTIFICIAL METHODS
+     ├── 1. Stem Cutting (Rose, Sugarcane)
+     ├── 2. Layering (Jasmine, Bougainvillea)
+     └── 3. Grafting (Mango, Apple, Citrus)</div>
+            </section>
+
+            <!-- 14. Cutting -->
+            <section class="notes-section" id="sec-14">
+                <h2 class="notes-section-title">14. ✂️ Stem Cutting</h2>
+                <p>A healthy piece of stem bearing at least one or two <strong>axillary leaf buds (nodes)</strong> is cut and planted into moist soil. After a few days, adventitious roots sprout from the buried node and new leaves emerge.</p>
+                <ul>
+                    <li><strong>Examples:</strong> Rose, Bougainvillea, Sugarcane, Cactus, China rose.</li>
+                </ul>
+            </section>
+
+            <!-- 15. Layering -->
+            <section class="notes-section" id="sec-15">
+                <h2 class="notes-section-title">15. 🌱 Layering</h2>
+                <p>A flexible lower branch of the parent plant is bent down, pegged, and covered with moist soil while <strong>remaining attached to the parent</strong>. Once roots establish, the branch is severed from the mother plant.</p>
+                <ul>
+                    <li><strong>Examples:</strong> Jasmine, Grapes, Bougainvillea.</li>
+                </ul>
+            </section>
+
+            <!-- 16. Grafting -->
+            <section class="notes-section" id="sec-16">
+                <h2 class="notes-section-title">16. 🌳 Grafting (Scion + Stock)</h2>
+                <p>Grafting joins the vascular tissues of two separate plants:</p>
+                <ul>
+                    <li><strong>SCION:</strong> The stem cutting taken from the <em>desired, superior fruit/flower plant</em>.</li>
+                    <li><strong>STOCK:</strong> The strong, disease-resistant <em>rooted plant</em> that absorbs water and minerals.</li>
+                </ul>
+
+                <div class="diagram-card">
+                    <img src="images/notes_grafting.svg" alt="Grafting Technique Diagram">
+                    <div class="diagram-caption">FIG 3: Grafting Process — Scion Joined to Rooted Stock &amp; Tied Joint</div>
+                </div>
+            </section>
+
+            <!-- 17. Tissue Culture -->
+            <section class="notes-section" id="sec-17">
+                <h2 class="notes-section-title">17. 🧫 Plant Tissue Culture (Micropropagation)</h2>
+                <p>A modern laboratory method where miniature plant tissues are cultured under sterile conditions:</p>
+                <ol>
+                    <li><strong>Explant:</strong> Tiny piece of tissue removed from growing shoot tip.</li>
+                    <li><strong>Nutrient Medium:</strong> Jelly containing sugars, vitamins, and plant hormones.</li>
+                    <li><strong>Callus:</strong> Undifferentiated mass of dividing cells.</li>
+                    <li><strong>Plantlets:</strong> Hormones induce shoots and roots.</li>
+                    <li><strong>Soil:</strong> Plantlets hardened and planted in nursery beds.</li>
+                </ol>
+
+                <div class="diagram-card">
+                    <img src="images/notes_tissue_culture.svg" alt="Plant Tissue Culture Process">
+                    <div class="diagram-caption">FIG 4: Five Stages of Plant Tissue Culture (Micropropagation)</div>
+                </div>
+                <p><strong>Examples:</strong> Orchids, Chrysanthemums, Asparagus, ornamental plants.</p>
+            </section>
+
+            <!-- 18. Advantages -->
+            <section class="notes-section" id="sec-18">
+                <h2 class="notes-section-title">18. ✅ Advantages of Vegetative Propagation</h2>
+                <div class="callout-box callout-tip">
+                    <strong>Remember the "G-E-U-E" Rule:</strong>
+                    <ul>
+                        <li><strong>G — Genetically Identical:</strong> Exact clonal copies preserve desirable traits.</li>
+                        <li><strong>E — Earlier Flowers/Fruits:</strong> Mature faster than seed-grown plants.</li>
+                        <li><strong>U — Useful for Seedless Varieties:</strong> Propagates bananas, seedless grapes, sugarcane.</li>
+                        <li><strong>E — Economical &amp; Rapid:</strong> Fast and high success rate.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 19. Disadvantages -->
+            <section class="notes-section" id="sec-19">
+                <h2 class="notes-section-title">19. ❌ Disadvantages of Vegetative Propagation</h2>
+                <ul>
+                    <li><strong>No Genetic Variation:</strong> Offspring are identical clones; no evolution or adaptation.</li>
+                    <li><strong>Overcrowding:</strong> Dense clusters lead to intense local competition.</li>
+                    <li><strong>Disease Vulnerability:</strong> If a pathogen affects the mother plant, all clonal offspring will succumb.</li>
+                </ul>
+            </section>
+
+            <!-- 20. Sexual Reproduction -->
+            <section class="notes-section" id="sec-20">
+                <h2 class="notes-section-title">20. 🌸 Sexual Reproduction</h2>
+                <p>Sexual reproduction involves the fusion of <strong>male gametes</strong> (from pollen) and <strong>female gametes</strong> (egg in ovule) to produce a <strong>zygote</strong>, which develops into a seed containing an embryo.</p>
+            </section>
+
+            <!-- 21. Flower Types -->
+            <section class="notes-section" id="sec-21">
+                <h2 class="notes-section-title">21. 🌸 Flower Types: Unisexual vs Bisexual</h2>
+                <div class="notes-table-wrap">
+                    <table class="notes-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Definition</th>
+                                <th>Examples</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Unisexual Flower</strong></td>
+                                <td>Contains <em>only one</em> reproductive organ (either Stamen or Pistil)</td>
+                                <td><strong>Papaya, Corn, Cucumber, Watermelon</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Bisexual Flower</strong></td>
+                                <td>Contains <em>both</em> male (Stamen) and female (Pistil) organs</td>
+                                <td><strong>Rose, Mustard, Hibiscus, Petunia, Pea</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 22, 23, 24. Flower Anatomy, Stamen, Pistil -->
+            <section class="notes-section" id="sec-22">
+                <h2 class="notes-section-title">22–24. 🌼 Flower Anatomy: Stamen &amp; Pistil</h2>
+                <p>The flower is the reproductive shoot of an angiosperm plant containing 4 concentric whorls: Sepals (Calyx), Petals (Corolla), Stamens (Androecium), and Pistil/Carpel (Gynoecium).</p>
+
+                <div class="diagram-card">
+                    <img src="images/q27_flower_diagram.jpg" alt="Longitudinal Section of a Bisexual Flower">
+                    <div class="diagram-caption">FIG 5: Complete Bisexual Flower Anatomy (P: Ovary, Q: Stigma, R: Anther, S: Ovule)</div>
+                </div>
+
+                <div class="diagram-card">
+                    <img src="images/notes_stamen_pistil.svg" alt="Stamen vs Pistil Anatomy">
+                    <div class="diagram-caption">FIG 6: Detailed Comparison: Stamen (Male Organ) vs Pistil (Female Organ)</div>
+                </div>
+            </section>
+
+            <!-- 25, 26, 27. Pollination -->
+            <section class="notes-section" id="sec-25">
+                <h2 class="notes-section-title">25–27. 🌼 Pollination: Self vs Cross</h2>
+                <p><strong>Pollination</strong> is the mechanical transfer of pollen grains from the <strong>anther to the receptive stigma</strong>.</p>
+                
+                <div class="notes-table-wrap">
+                    <table class="notes-table">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Condition</th>
+                                <th>Technical Term</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Self-Pollination</strong></td>
+                                <td>Transfer within <em>same flower</em> OR between <em>two flowers on the same plant</em></td>
+                                <td><strong>Autogamy</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cross-Pollination</strong></td>
+                                <td>Transfer between flowers on <em>two different plants of the same species</em></td>
+                                <td><strong>Allogamy</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="callout-box callout-trap">
+                    <strong>⚠️ Exam Trap:</strong> Transfer of pollen between two separate flowers growing on the <strong>same single plant</strong> is still classified as <strong>Self-Pollination (Autogamy)</strong>.
+                </div>
+            </section>
+
+            <!-- 28, 29, 30. Agents of Pollination -->
+            <section class="notes-section" id="sec-28">
+                <h2 class="notes-section-title">28–30. 🐝 Pollination Adaptations: Insect, Wind, Water</h2>
+                <div class="notes-table-wrap">
+                    <table class="notes-table">
+                        <thead>
+                            <tr>
+                                <th>Pollination Agent</th>
+                                <th>Floral Adaptations</th>
+                                <th>Examples</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Insect (Entomophily)</strong></td>
+                                <td>Bright petals, fragrant scent, sweet nectar, sticky pollen grains</td>
+                                <td>Sweet pea, Rose, Orchid, Buttercup</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Wind (Anemophily)</strong></td>
+                                <td>Small inconspicuous petals, no nectar/scent, huge quantities of light dry pollen, feathery stigmas</td>
+                                <td>Maize, Wheat, Rice, Grasses</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Water (Hydrophily)</strong></td>
+                                <td>Aquatic habitat, pollen grains with mucilaginous waterproof coats</td>
+                                <td><em>Vallisneria, Hydrilla, Zostera</em></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 31. Fertilisation -->
+            <section class="notes-section" id="sec-31">
+                <h2 class="notes-section-title">31. 🧬 Fertilisation: The Complete Sequence</h2>
+                <p><strong>Fertilisation</strong> is the fusion of the male gamete with the female egg cell inside the ovule.</p>
+                <div class="ascii-box">Pollen on Stigma &rarr; Pollen Tube grows down Style &rarr; Reaches Ovule &rarr; Male Gamete fuses with Egg &rarr; ZYGOTE &rarr; EMBRYO</div>
+
+                <div class="diagram-card">
+                    <img src="images/q28_pollination_fert_diagram.jpg" alt="Progression from Pollination to Fertilisation">
+                    <div class="diagram-caption">FIG 7: Sequential Stages: Pollen on Stigma (P) &rarr; Pollen Tube (Q) &rarr; Fusion (R) &rarr; Zygote (S)</div>
+                </div>
+            </section>
+
+            <!-- 32, 33. Fruit & Seed Formation -->
+            <section class="notes-section" id="sec-32">
+                <h2 class="notes-section-title">32–33. 🍎 Post-Fertilisation Changes in Flowers</h2>
+                <p>After fertilisation, petals, sepals, stamens, style, and stigma wither and drop off. The ovary remains and transforms:</p>
+
+                <div class="notes-table-wrap">
+                    <table class="notes-table">
+                        <thead>
+                            <tr>
+                                <th>Flower Structure (Before)</th>
+                                <th>Transforms into (After Fertilisation)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Ovary</strong></td>
+                                <td><strong>FRUIT</strong> (Ripened ovary wall = Pericarp)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fertilised Ovule</strong></td>
+                                <td><strong>SEED</strong> (Ovule coat = Testa/Seed Coat)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Zygote</strong></td>
+                                <td><strong>EMBRYO</strong> (Baby plant with Cotyledons)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Petals, Stamens, Style, Stigma</strong></td>
+                                <td>Wither, dry up, and fall off</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 34–38. Seed Dispersal -->
+            <section class="notes-section" id="sec-34">
+                <h2 class="notes-section-title">34–38. 🌱 Seed Dispersal Mechanisms</h2>
+                <p><strong>Seed dispersal</strong> prevents overcrowding, eliminates localized resource competition for sunlight, water, and soil minerals, and enables species expansion into new habitats.</p>
+
+                <div class="diagram-card">
+                    <img src="images/q29_seed_dispersal_diagram.jpg" alt="Seed Dispersal Mechanisms">
+                    <div class="diagram-caption">FIG 8: Four Dispersal Modes: P (Wind / Dandelion), Q (Water / Coconut), R (Animals / Xanthium), S (Explosion / Pea Pod)</div>
+                </div>
+
+                <div class="notes-table-wrap">
+                    <table class="notes-table">
+                        <thead>
+                            <tr>
+                                <th>Agent</th>
+                                <th>Adaptation Feature</th>
+                                <th>Key Plant Examples</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Wind</strong></td>
+                                <td>Lightweight, winged extensions, tufts of silky pappus hairs</td>
+                                <td>Dandelion, Cotton, Drumstick, Maple (Acer)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Water</strong></td>
+                                <td>Spongy, fibrous buoyant outer coat that floats</td>
+                                <td>Coconut, Lotus, Water Lily</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Animals</strong></td>
+                                <td>Hooks, spines, stiff barbs (clings to fur) OR juicy edible pulp</td>
+                                <td><em>Xanthium, Urena, Tribulus</em>, Guava, Tomato, Mango</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Explosive Bursting</strong></td>
+                                <td>Tension builds up in drying pericarp; suddenly splits with jerking force</td>
+                                <td>Pea, Castor, Balsam, Ladyfinger</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 39. Master Chapter Map -->
+            <section class="notes-section" id="sec-39">
+                <h2 class="notes-section-title">39. 🧠 Complete Lifecycle Flowchart</h2>
+                <div class="diagram-card">
+                    <img src="images/q30_reproduction_cycle_diagram.jpg" alt="Complete Flowering Plant Reproduction Lifecycle">
+                    <div class="diagram-caption">FIG 9: Complete Flowering Plant Lifecycle: Pollination (P) &rarr; Pollen Tube (Q) &rarr; Fertilisation (R) &rarr; Embryo (S) &rarr; Fruit (T) &rarr; Dispersal (U)</div>
+                </div>
+            </section>
+
+            <!-- 40. Exam Traps & Summary -->
+            <section class="notes-section" id="sec-40">
+                <h2 class="notes-section-title">40. 🔥 Rapid 1-Minute Exam Checklist</h2>
+                <div class="callout-box callout-memory">
+                    <p><strong>🎯 Top 9 High-Frequency Exam Facts:</strong></p>
+                    <ol>
+                        <li><strong>Asexual:</strong> 1 parent, no seeds, identical clones.</li>
+                        <li><strong>Yeast:</strong> Reproduces by <em>Budding</em>.</li>
+                        <li><strong>Rhizopus (Bread Mould):</strong> Reproduces by <em>Spore Formation</em>.</li>
+                        <li><strong>Spirogyra (Algae):</strong> Reproduces by <em>Fragmentation</em>.</li>
+                        <li><strong>Bryophyllum:</strong> Propagates via <em>Leaf margin adventitious buds</em>.</li>
+                        <li><strong>Grafting:</strong> <em>Scion</em> (desired stem) + <em>Stock</em> (rooted plant).</li>
+                        <li><strong>Stamen (Male):</strong> Filament + Anther (produces pollen).</li>
+                        <li><strong>Pistil (Female):</strong> Stigma + Style + Ovary (contains ovules).</li>
+                        <li><strong>Transformation:</strong> <code>Ovary &rarr; Fruit</code> | <code>Ovule &rarr; Seed</code> | <code>Zygote &rarr; Embryo</code>.</li>
+                    </ol>
+                </div>
+
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="index.html#start-section" class="btn-primary" style="display:inline-block; text-decoration:none; padding:16px 36px;">TAKE THE HARD CHAPTER MCQ TEST &rarr;</a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>

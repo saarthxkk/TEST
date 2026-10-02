@@ -94,6 +94,7 @@
         <div class="nav-links">
             <button class="nav-link-btn" id="nav-author-btn">AUTHOR</button>
             <a href="#chapters-section" class="nav-link">CHAPTERS</a>
+            <a href="notes.html" class="nav-link">NOTES</a>
             <a href="#how-section" class="nav-link">HOW IT WORKS</a>
             <a href="#stats-section" class="nav-link">STATS</a>
             <button class="nav-cta" id="nav-start-btn">START TEST</button>
@@ -104,6 +105,7 @@
     <div class="mobile-menu hidden" id="mobile-menu">
         <button class="mobile-link" id="mobile-author-btn" onclick="closeMobileMenu(); showAuthorSplash();">AUTHOR PROFILE</button>
         <a href="#chapters-section" class="mobile-link" onclick="closeMobileMenu()">CHAPTERS</a>
+        <a href="notes.html" class="mobile-link" onclick="closeMobileMenu()">REVISION NOTES</a>
         <a href="#how-section" class="mobile-link" onclick="closeMobileMenu()">HOW IT WORKS</a>
         <a href="#stats-section" class="mobile-link" onclick="closeMobileMenu()">STATS</a>
         <button class="mobile-cta" onclick="closeMobileMenu(); document.getElementById('start-section').scrollIntoView({behavior:'smooth'})">START TEST</button>
@@ -240,6 +242,28 @@
                     <span>30 MCQs</span>
                     <button class="chapter-start-btn" data-chapter="reproduction2">START &rarr;</button>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="notes-section" style="background:#faf8f5; border-top:1px solid var(--border-light); border-bottom:1px solid var(--border-light);">
+        <div class="section-header">
+            <div class="section-label">STUDY &middot; REVISION</div>
+            <h2 class="section-title">Illustrated<br>Revision Notes.</h2>
+        </div>
+        <div style="background:#ffffff; border:1px solid var(--border-light); border-radius:8px; padding:36px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:28px; box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
+            <div style="max-width:640px;">
+                <div style="font-family:var(--mono); font-size:11px; letter-spacing:0.12em; color:var(--muted); margin-bottom:8px;">NCERT CLASS 7 SCIENCE &middot; CHAPTER 8</div>
+                <h3 style="font-family:var(--serif); font-size:28px; margin:0 0 10px; color:var(--ink);">Reproduction in Plants &mdash; Complete Easy Notes</h3>
+                <p style="font-size:15px; color:#44403c; line-height:1.6; margin:0 0 18px;">Detailed, exam-oriented revision notes covering pages 1–10: Asexual &amp; sexual reproduction, budding, fragmentation, spore formation, vegetative propagation, tissue culture, flower parts, pollination, fertilisation, and seed dispersal with 9+ scientific diagrams.</p>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <span style="font-family:var(--mono); font-size:11px; background:#f5f3ef; padding:5px 12px; border-radius:4px; border:1px solid #e7e5e4;">40 Topic Sections</span>
+                    <span style="font-family:var(--mono); font-size:11px; background:#f5f3ef; padding:5px 12px; border-radius:4px; border:1px solid #e7e5e4;">9+ Illustrated Diagrams</span>
+                    <span style="font-family:var(--mono); font-size:11px; background:#f5f3ef; padding:5px 12px; border-radius:4px; border:1px solid #e7e5e4;">Exam Traps &amp; Memory Rules</span>
+                </div>
+            </div>
+            <div>
+                <a href="notes.html" class="btn-primary" style="display:inline-block; text-decoration:none; padding:16px 32px; font-size:13px;">READ COMPLETE NOTES &rarr;</a>
             </div>
         </div>
     </section>

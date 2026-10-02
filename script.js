@@ -148,7 +148,8 @@ function handleStartForm(e) {
         'forests':        { questions: () => questions_forests,        label: 'Ch. 12 — Forests: Our Lifeline' },
         'transportation': { questions: () => questions_transportation,  label: 'Ch. 7 — Transportation (Part 1)' },
         'transportation2':{ questions: () => questions_transportation2, label: 'Ch. 7 — Transportation (Part 2)' },
-        'reproduction':   { questions: () => questions_reproduction,   label: 'Ch. 8 — Reproduction in Plants (Very Hard)' }
+        'reproduction':   { questions: () => questions_reproduction,   label: 'Ch. 8 — Reproduction in Plants (Part 1)' },
+        'reproduction2':  { questions: () => questions_reproduction2,  label: 'Ch. 8 — Reproduction in Plants (Part 2 — Very Hard)' }
     };
 
     const selected = chapterMap[chapterVal];

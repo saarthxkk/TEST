@@ -202,8 +202,9 @@ function renderQuestions(questions) {
         // Header
         const header = document.createElement('div');
         header.className = 'q-header';
+        const imgHtml = q.image ? `<div class="question-image-wrap"><img src="${q.image}" alt="Question Diagram" class="question-diagram-img" loading="lazy"></div>` : '';
         header.innerHTML = `<span class="q-num">Q ${String(index + 1).padStart(2, '0')}</span>
-                            <div class="question-text">${q.question}</div>`;
+                            <div class="question-text">${q.question}${imgHtml}</div>`;
         card.appendChild(header);
 
         // Options
@@ -289,6 +290,7 @@ function submitTest() {
         results.push({
             id: q.id,
             question: q.question,
+            image: q.image,
             options: q.options,
             answer: q.answer,
             selected,
@@ -380,8 +382,9 @@ function buildReview(results) {
         // Q header
         const qh = document.createElement('div');
         qh.className = 'review-q-header';
+        const imgHtml = r.image ? `<div class="question-image-wrap"><img src="${r.image}" alt="Question Diagram" class="question-diagram-img" loading="lazy"></div>` : '';
         qh.innerHTML = `<span class="review-q-num">Q ${String(idx + 1).padStart(2, '0')}</span>
-                        <div class="review-question">${r.question}</div>`;
+                        <div class="review-question">${r.question}${imgHtml}</div>`;
         card.appendChild(qh);
 
         // Options

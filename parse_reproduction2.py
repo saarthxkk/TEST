@@ -279,6 +279,7 @@ raw_questions = [
     {
         "id": 26,
         "question": "Study the diagram showing four different modes of asexual reproduction in organisms/plants. In Diagram A, a small projection develops on the parent organism; in Diagram B, a filamentous organism breaks into several pieces; in Diagram C, reproductive structures containing spores are shown; and in Diagram D, a new plant develops from a vegetative part of the parent plant.\n\nWhich sequence correctly identifies A, B, C and D?",
+        "image": "images/q26_asexual_diagram.jpg",
         "options": {
             "A": "Budding → Fragmentation → Spore formation → Vegetative propagation",
             "B": "Fragmentation → Budding → Vegetative propagation → Spore formation",
@@ -290,6 +291,7 @@ raw_questions = [
     {
         "id": 27,
         "question": "A labelled diagram of a bisexual flower is shown. The labels P, Q, R and S point respectively to four different structures. P is the swollen basal portion of the female reproductive structure, Q is the sticky upper surface that receives pollen, R is the pollen-producing structure of the male reproductive organ, and S is the structure inside the ovary that develops into a seed after fertilisation.\n\nWhich option correctly identifies P, Q, R and S?",
+        "image": "images/q27_flower_diagram.jpg",
         "options": {
             "A": "P — Ovary, Q — Stigma, R — Anther, S — Ovule",
             "B": "P — Ovule, Q — Style, R — Stigma, S — Ovary",
@@ -301,6 +303,7 @@ raw_questions = [
     {
         "id": 28,
         "question": "The diagram shows the reproductive sequence in a flower. P represents pollen being transferred from anther to stigma. Q represents a tube growing down through the style. R represents the fusion of male and female gametes inside the ovule. S represents the immediate product formed following this fusion.\n\nWhich option correctly identifies the processes/events represented by P, Q, R and S?",
+        "image": "images/q28_pollination_fert_diagram.jpg",
         "options": {
             "A": "P — Fertilisation, Q — Pollination, R — Seed formation, S — Embryo",
             "B": "P — Pollination, Q — Pollen tube formation/growth, R — Fertilisation, S — Zygote",
@@ -312,6 +315,7 @@ raw_questions = [
     {
         "id": 29,
         "question": "A diagram contains four fruits/seeds labelled P, Q, R and S:\n\n• P has a light structure with hair-like projections.\n• Q has a structure adapted for floating.\n• R has hooks/spines that can attach to animal fur.\n• S is enclosed in a fruit that bursts open when mature.\n\nWhich sequence correctly identifies their primary methods of seed dispersal?",
+        "image": "images/q29_seed_dispersal_diagram.jpg",
         "options": {
             "A": "P — Wind, Q — Water, R — Animals, S — Explosion",
             "B": "P — Water, Q — Wind, R — Explosion, S — Animals",
@@ -323,6 +327,7 @@ raw_questions = [
     {
         "id": 30,
         "question": "The diagram represents a simplified sequence beginning with a flower and ending with the establishment of new plants. The stages are labelled P, Q, R, S, T and U.\n\nThe diagram shows:\n• P: pollen transfer to stigma\n• Q: pollen tube reaching the ovule\n• R: formation of a zygote\n• S: development of the embryo/seed\n• T: development of the fruit\n• U: movement of seeds away from the parent plant\n\nWhich sequence of processes is represented most accurately?",
+        "image": "images/q30_reproduction_cycle_diagram.jpg",
         "options": {
             "A": "Pollination → pollen tube growth → fertilisation → seed formation → fruit formation → seed dispersal",
             "B": "Fertilisation → pollination → seed dispersal → fruit formation → germination → budding",
@@ -336,4 +341,4 @@ raw_questions = [
 with open("questions_reproduction2.js", "w", encoding="utf-8") as f:
     f.write("const questions_reproduction2 = " + json.dumps(raw_questions, indent=2) + ";\n")
 
-print(f"Wrote {len(raw_questions)} questions to questions_reproduction2.js")
+print(f"Wrote {len(raw_questions)} questions with diagram images to questions_reproduction2.js")

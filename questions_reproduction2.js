@@ -277,6 +277,7 @@ const questions_reproduction2 = [
   {
     "id": 26,
     "question": "Study the diagram showing four different modes of asexual reproduction in organisms/plants. In Diagram A, a small projection develops on the parent organism; in Diagram B, a filamentous organism breaks into several pieces; in Diagram C, reproductive structures containing spores are shown; and in Diagram D, a new plant develops from a vegetative part of the parent plant.\n\nWhich sequence correctly identifies A, B, C and D?",
+    "image": "images/q26_asexual_diagram.jpg",
     "options": {
       "A": "Budding \u2192 Fragmentation \u2192 Spore formation \u2192 Vegetative propagation",
       "B": "Fragmentation \u2192 Budding \u2192 Vegetative propagation \u2192 Spore formation",
@@ -288,6 +289,7 @@ const questions_reproduction2 = [
   {
     "id": 27,
     "question": "A labelled diagram of a bisexual flower is shown. The labels P, Q, R and S point respectively to four different structures. P is the swollen basal portion of the female reproductive structure, Q is the sticky upper surface that receives pollen, R is the pollen-producing structure of the male reproductive organ, and S is the structure inside the ovary that develops into a seed after fertilisation.\n\nWhich option correctly identifies P, Q, R and S?",
+    "image": "images/q27_flower_diagram.jpg",
     "options": {
       "A": "P \u2014 Ovary, Q \u2014 Stigma, R \u2014 Anther, S \u2014 Ovule",
       "B": "P \u2014 Ovule, Q \u2014 Style, R \u2014 Stigma, S \u2014 Ovary",
@@ -299,6 +301,7 @@ const questions_reproduction2 = [
   {
     "id": 28,
     "question": "The diagram shows the reproductive sequence in a flower. P represents pollen being transferred from anther to stigma. Q represents a tube growing down through the style. R represents the fusion of male and female gametes inside the ovule. S represents the immediate product formed following this fusion.\n\nWhich option correctly identifies the processes/events represented by P, Q, R and S?",
+    "image": "images/q28_pollination_fert_diagram.jpg",
     "options": {
       "A": "P \u2014 Fertilisation, Q \u2014 Pollination, R \u2014 Seed formation, S \u2014 Embryo",
       "B": "P \u2014 Pollination, Q \u2014 Pollen tube formation/growth, R \u2014 Fertilisation, S \u2014 Zygote",
@@ -310,6 +313,7 @@ const questions_reproduction2 = [
   {
     "id": 29,
     "question": "A diagram contains four fruits/seeds labelled P, Q, R and S:\n\n\u2022 P has a light structure with hair-like projections.\n\u2022 Q has a structure adapted for floating.\n\u2022 R has hooks/spines that can attach to animal fur.\n\u2022 S is enclosed in a fruit that bursts open when mature.\n\nWhich sequence correctly identifies their primary methods of seed dispersal?",
+    "image": "images/q29_seed_dispersal_diagram.jpg",
     "options": {
       "A": "P \u2014 Wind, Q \u2014 Water, R \u2014 Animals, S \u2014 Explosion",
       "B": "P \u2014 Water, Q \u2014 Wind, R \u2014 Explosion, S \u2014 Animals",
@@ -321,6 +325,7 @@ const questions_reproduction2 = [
   {
     "id": 30,
     "question": "The diagram represents a simplified sequence beginning with a flower and ending with the establishment of new plants. The stages are labelled P, Q, R, S, T and U.\n\nThe diagram shows:\n\u2022 P: pollen transfer to stigma\n\u2022 Q: pollen tube reaching the ovule\n\u2022 R: formation of a zygote\n\u2022 S: development of the embryo/seed\n\u2022 T: development of the fruit\n\u2022 U: movement of seeds away from the parent plant\n\nWhich sequence of processes is represented most accurately?",
+    "image": "images/q30_reproduction_cycle_diagram.jpg",
     "options": {
       "A": "Pollination \u2192 pollen tube growth \u2192 fertilisation \u2192 seed formation \u2192 fruit formation \u2192 seed dispersal",
       "B": "Fertilisation \u2192 pollination \u2192 seed dispersal \u2192 fruit formation \u2192 germination \u2192 budding",

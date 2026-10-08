@@ -95,6 +95,7 @@
             <button class="nav-link-btn" id="nav-author-btn">AUTHOR</button>
             <a href="#chapters-section" class="nav-link">CHAPTERS</a>
             <a href="notes.html" class="nav-link">NOTES</a>
+            <a href="game.html" class="nav-link" style="color: #0284c7; font-weight: 600;"><span style="background: #0284c7; color: #fff; font-size: 9px; padding: 2px 6px; border-radius: 3px; margin-right: 4px; font-family: var(--mono);">NEW</span>GAMES</a>
             <a href="#how-section" class="nav-link">HOW IT WORKS</a>
             <a href="#stats-section" class="nav-link">STATS</a>
             <button class="nav-cta" id="nav-start-btn">START TEST</button>
@@ -106,6 +107,7 @@
         <button class="mobile-link" id="mobile-author-btn" onclick="closeMobileMenu(); showAuthorSplash();">AUTHOR PROFILE</button>
         <a href="#chapters-section" class="mobile-link" onclick="closeMobileMenu()">CHAPTERS</a>
         <a href="notes.html" class="mobile-link" onclick="closeMobileMenu()">REVISION NOTES</a>
+        <a href="game.html" class="mobile-link" onclick="closeMobileMenu()" style="color: #0284c7; font-weight: 600;">🎮 INTERACTIVE GAMES (MOTION MISSION)</a>
         <a href="#how-section" class="mobile-link" onclick="closeMobileMenu()">HOW IT WORKS</a>
         <a href="#stats-section" class="mobile-link" onclick="closeMobileMenu()">STATS</a>
         <button class="mobile-cta" onclick="closeMobileMenu(); document.getElementById('start-section').scrollIntoView({behavior:'smooth'})">START TEST</button>
@@ -124,11 +126,11 @@
         </div>
         <div class="hero-side">
             <div class="hero-stat-card">
-                <div class="stat-num">7</div>
+                <div class="stat-num">8</div>
                 <div class="stat-label">CHAPTERS</div>
             </div>
             <div class="hero-stat-card">
-                <div class="stat-num">305+</div>
+                <div class="stat-num">335+</div>
                 <div class="stat-label">QUESTIONS</div>
             </div>
             <div class="hero-stat-card">
@@ -149,6 +151,8 @@
             <span class="banner-item">TRANSPORTATION IN ANIMALS AND PLANTS</span>
             <span class="banner-sep">&middot;</span>
             <span class="banner-item">REPRODUCTION IN PLANTS (PT. 1 &amp; 2)</span>
+            <span class="banner-sep">&middot;</span>
+            <span class="banner-item">MOTION AND TIME</span>
             <span class="banner-sep">&middot;</span>
         </div>
     </section>
@@ -243,6 +247,18 @@
                     <button class="chapter-start-btn" data-chapter="reproduction2">START &rarr;</button>
                 </div>
             </div>
+            <div class="chapter-card">
+                <div class="chapter-num">08</div>
+                <div class="chapter-info">
+                    <div class="chapter-tag">CH. 9 &middot; TOUGH MCQS &middot; EXAM-LEVEL</div>
+                    <h3 class="chapter-name">Motion and Time</h3>
+                    <p class="chapter-desc">Uniform &amp; non-uniform motion, speed calculations, simple pendulum oscillation, distance-time graphs &amp; case studies.</p>
+                </div>
+                <div class="chapter-meta">
+                    <span>30 MCQs</span>
+                    <button class="chapter-start-btn" data-chapter="motion">START &rarr;</button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -264,6 +280,29 @@
             </div>
             <div>
                 <a href="notes.html" class="btn-primary" style="display:inline-block; text-decoration:none; padding:16px 32px; font-size:13px;">READ COMPLETE NOTES &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="games-section" style="background:#0b0d11; border-top:1px solid #263042; border-bottom:1px solid #263042; color:#f8fafc;">
+        <div class="section-header light">
+            <div class="section-label" style="color: #06b6d4;">PLAY &middot; EXPERIMENT &middot; MASTER</div>
+            <h2 class="section-title" style="color: #f8fafc;">Interactive Games &amp;<br><em style="color: #06b6d4;">Motion Mission.</em></h2>
+        </div>
+        <div style="background:#131720; border:1px solid #263042; border-radius:12px; padding:36px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:28px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+            <div style="max-width:640px;">
+                <div style="font-family:var(--mono); font-size:11px; letter-spacing:0.12em; color:#06b6d4; margin-bottom:8px;">STORY-BASED SCIENCE GAME &middot; CLASS 7 NCERT</div>
+                <h3 style="font-family:var(--serif); font-size:32px; margin:0 0 12px; color:#f8fafc;">Motion Mission: Move. Measure. Understand.</h3>
+                <p style="font-size:15px; color:#94a3b8; line-height:1.6; margin:0 0 20px;">Play through 7 high-tech science zones. Drive dual rovers, manipulate real-time distance–time graphs, measure pendulum oscillations, earn XP, maintain answer streaks, and generate your official verified points card!</p>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <span style="font-family:var(--mono); font-size:11px; background:#1a202c; color:#f59e0b; padding:6px 12px; border-radius:4px; border:1px solid #37445c;">&#11088; Real-time Points &amp; XP</span>
+                    <span style="font-family:var(--mono); font-size:11px; background:#1a202c; color:#06b6d4; padding:6px 12px; border-radius:4px; border:1px solid #37445c;">&#128200; Live Graph Decoder</span>
+                    <span style="font-family:var(--mono); font-size:11px; background:#1a202c; color:#10b981; padding:6px 12px; border-radius:4px; border:1px solid #37445c;">&#9201; Pendulum &amp; Clocks Lab</span>
+                    <span style="font-family:var(--mono); font-size:11px; background:#1a202c; color:#f43f5e; padding:6px 12px; border-radius:4px; border:1px solid #37445c;">&#127919; Mistake Diagnostic Review</span>
+                </div>
+            </div>
+            <div>
+                <a href="game.html" class="btn-primary" style="display:inline-block; text-decoration:none; padding:18px 36px; font-size:14px; background: #06b6d4; color: #080a0e; font-weight: 700;">LAUNCH MOTION MISSION &rarr;</a>
             </div>
         </div>
     </section>
@@ -308,7 +347,7 @@
                 <span class="big-label">TIME LIMIT</span>
             </div>
             <div class="big-stat">
-                <span class="big-num">7</span>
+                <span class="big-num">8</span>
                 <span class="big-label">CHAPTERS COVERED</span>
             </div>
             <div class="big-stat">
@@ -337,6 +376,7 @@
                         <option value="transportation2">Ch. 7 &mdash; Transportation (Part 2)</option>
                         <option value="reproduction">Ch. 8 &mdash; Reproduction in Plants (Part 1)</option>
                         <option value="reproduction2">Ch. 8 &mdash; Reproduction in Plants (Part 2 &mdash; Very Hard)</option>
+                        <option value="motion">Ch. 9 &mdash; Motion and Time (30 Tough MCQs)</option>
                     </select>
                 </div>
                 <button type="submit" class="btn-primary btn-full">BEGIN TEST &rarr;</button>
@@ -478,6 +518,7 @@
 <script src="questions_transportation2.js"></script>
 <script src="questions_reproduction.js"></script>
 <script src="questions_reproduction2.js"></script>
+<script src="questions_motion.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

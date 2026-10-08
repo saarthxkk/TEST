@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Mission — Interactive Educational Science Game | testiiii</title>
+    <meta name="description" content="Play Motion Mission: Move. Measure. Understand. Master Class 7 NCERT Motion and Time through interactive experiments, live graphs, pendulum simulations, and situation challenges.">
+    <link rel="stylesheet" href="game.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body class="game-body">
+
+    <!-- TOP NAVIGATION & HUD -->
+    <header class="game-hud">
+        <div class="hud-left">
+            <a href="index.html" class="hud-back-btn" title="Back to testiiii">&larr; TESTIIII</a>
+            <div class="hud-title-wrap">
+                <span class="hud-logo">MOTION MISSION</span>
+                <span class="hud-tagline">Move &middot; Measure &middot; Understand</span>
+            </div>
+        </div>
+
+        <div class="hud-center">
+            <div class="zone-pill" id="hud-zone-pill">
+                <span class="zone-dot"></span>
+                <span id="hud-zone-name">ZONE 1: MOTION DETECTIVE</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-bar" id="game-progress-bar" style="width: 14%;"></div>
+            </div>
+        </div>
+
+        <div class="hud-right">
+            <div class="hud-stat" title="Total Points Earned">
+                <span class="stat-icon">&#11088;</span>
+                <span class="stat-num" id="hud-points">0</span>
+                <span class="stat-lbl">PTS</span>
+            </div>
+            <div class="hud-stat" title="Experience Points">
+                <span class="stat-icon">&#9889;</span>
+                <span class="stat-num" id="hud-xp">0</span>
+                <span class="stat-lbl">XP</span>
+            </div>
+            <div class="hud-stat" title="Current Answer Streak">
+                <span class="stat-icon">&#128293;</span>
+                <span class="stat-num" id="hud-streak">0</span>
+                <span class="stat-lbl">STREAK</span>
+            </div>
+            <button class="audio-toggle-btn" id="audio-btn" title="Toggle Sound (Mute/Unmute)">&#128266;</button>
+        </div>
+    </header>
+
+    <!-- ZONE NAVIGATOR BAR -->
+    <nav class="zone-nav-bar" id="zone-nav-bar">
+        <button class="z-tab active" data-zone="1"><span class="z-num">01</span><span class="z-title">Motion Detective</span></button>
+        <button class="z-tab" data-zone="2"><span class="z-num">02</span><span class="z-title">Speed Highway</span></button>
+        <button class="z-tab" data-zone="3"><span class="z-num">03</span><span class="z-title">Uniform Motion Lab</span></button>
+        <button class="z-tab" data-zone="4"><span class="z-num">04</span><span class="z-title">Time Laboratory</span></button>
+        <button class="z-tab" data-zone="5"><span class="z-num">05</span><span class="z-title">Pendulum Lab</span></button>
+        <button class="z-tab" data-zone="6"><span class="z-num">06</span><span class="z-title">Graph Decoder</span></button>
+        <button class="z-tab" data-zone="7"><span class="z-num">07</span><span class="z-title">Final Mission</span></button>
+    </nav>
+
+    <!-- MAIN GAME STAGE CONTAINER -->
+    <main class="game-main" id="game-main">
+
+        <!-- DYNAMIC ZONE VIEW CONTAINER -->
+        <div id="zone-view" class="zone-view">
+            <!-- Dynamically populated by game.js -->
+        </div>
+
+    </main>
+
+    <!-- REMEDIATION / VISUAL REPLAY MODAL -->
+    <div id="remediation-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <span class="modal-badge">&#128161; CONCEPT REINFORCEMENT</span>
+                <h3 id="remed-title" class="modal-title">Let's Look Closely at This Concept</h3>
+            </div>
+            <div class="modal-body">
+                <div id="remed-animation" class="remed-anim-box"></div>
+                <div id="remed-explanation" class="remed-text"></div>
+                <div id="remed-check" class="remed-check-box"></div>
+            </div>
+            <div class="modal-footer">
+                <button id="remed-continue-btn" class="btn-game-primary">CONTINUE MISSION &rarr;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- POINTS CARD / SHARE MODAL -->
+    <div id="share-card-modal" class="modal-overlay hidden">
+        <div class="modal-card card-share-style">
+            <div class="modal-header">
+                <span class="modal-badge">&#127942; OFFICIAL MOTION MISSION CREDENTIAL</span>
+                <h3 class="modal-title">Your Verified Science Scorecard</h3>
+            </div>
+            <div class="points-card-preview" id="points-card-preview">
+                <!-- Live Card Generator -->
+                <div class="pcard-brand">testiiii &middot; MOTION MISSION</div>
+                <div class="pcard-sub">NCERT Class 7 Science &mdash; Motion &amp; Time</div>
+                <div class="pcard-hero">
+                    <div class="pcard-score-box">
+                        <span class="pcard-big-pts" id="card-pts-val">1250</span>
+                        <span class="pcard-pts-label">TOTAL POINTS</span>
+                    </div>
+                    <div class="pcard-badge-box">
+                        <div class="pcard-rank-badge" id="card-rank-badge">🏆 MOTION MASTER</div>
+                        <div class="pcard-acc" id="card-acc-val">94% Accuracy</div>
+                    </div>
+                </div>
+                <div class="pcard-stats-grid">
+                    <div class="pcard-stat"><span class="ps-val" id="card-xp-val">1850</span><span class="ps-lbl">XP</span></div>
+                    <div class="pcard-stat"><span class="ps-val" id="card-zones-val">7 / 7</span><span class="ps-lbl">ZONES</span></div>
+                    <div class="pcard-stat"><span class="ps-val" id="card-streak-val">6</span><span class="ps-lbl">MAX STREAK</span></div>
+                </div>
+                <div class="pcard-mastery" id="card-mastery-list"></div>
+                <div class="pcard-footer">
+                    <span>Candidate: <strong id="card-name-val">Explorer</strong></span>
+                    <span id="card-date-val"></span>
+                </div>
+            </div>
+            <div class="modal-footer modal-actions-row">
+                <button id="btn-copy-card" class="btn-game-primary">&#128203; COPY SHARE LINK / TEXT</button>
+                <button id="btn-download-card-pdf" class="btn-game-ghost">&#128196; DOWNLOAD PDF</button>
+                <button id="btn-close-share" class="btn-game-ghost">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOUND & ENGINE SCRIPTS -->
+    <script src="game.js"></script>
+</body>
+</html>

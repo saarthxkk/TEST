@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <marker id="axis-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#1c1917"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#faf8f5" rx="8"/>
+  <rect x="1" y="1" width="598" height="398" fill="none" stroke="#e7e5e4" stroke-width="2" rx="8"/>
+
+  <!-- Title -->
+  <text x="300" y="28" font-family="'Inter', sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1c1917" letter-spacing="1">DISTANCE &ndash; TIME GRAPH (UNIFORM MOTION)</text>
+
+  <!-- Graph Grid Background -->
+  <!-- Origin at (90, 330). Width 450 (up to x=540, 10 min -> 45px per min, 90px per 2 min).
+       Height 250 (from y=330 to y=80, 500m -> 50px per 100m). -->
+  <g stroke="#e2e8f0" stroke-width="1">
+    <!-- Horizontal grid lines for Y = 0, 100, 200, 300, 400, 500 -->
+    <line x1="90" y1="330" x2="550" y2="330"/>
+    <line x1="90" y1="280" x2="550" y2="280"/>
+    <line x1="90" y1="230" x2="550" y2="230"/>
+    <line x1="90" y1="180" x2="550" y2="180"/>
+    <line x1="90" y1="130" x2="550" y2="130"/>
+    <line x1="90" y1="80" x2="550" y2="80"/>
+
+    <!-- Vertical grid lines for X = 0, 2, 4, 6, 8, 10 -->
+    <line x1="90" y1="330" x2="90" y2="70"/>
+    <line x1="180" y1="330" x2="180" y2="70"/>
+    <line x1="270" y1="330" x2="270" y2="70"/>
+    <line x1="360" y1="330" x2="360" y2="70"/>
+    <line x1="450" y1="330" x2="450" y2="70"/>
+    <line x1="540" y1="330" x2="540" y2="70"/>
+  </g>
+
+  <!-- Axes -->
+  <!-- X Axis -->
+  <line x1="90" y1="330" x2="565" y2="330" stroke="#1c1917" stroke-width="2" marker-end="url(#axis-arrow)"/>
+  <!-- Y Axis -->
+  <line x1="90" y1="330" x2="90" y2="60" stroke="#1c1917" stroke-width="2" marker-end="url(#axis-arrow)"/>
+
+  <!-- Y Axis Ticks & Labels -->
+  <text x="80" y="334" font-family="'Space Mono', monospace" font-size="11" text-anchor="end" fill="#44403c">0</text>
+  <text x="80" y="284" font-family="'Space Mono', monospace" font-size="11" text-anchor="end" fill="#44403c">100</text>
+  <text x="80" y="234" font-family="'Space Mono', monospace" font-size="11" text-anchor="end" fill="#44403c">200</text>
+  <text x="80" y="184" font-family="'Space Mono', monospace" font-size="11" text-anchor="end" fill="#44403c">300</text>
+  <text x="80" y="134" font-family="'Space Mono', monospace" font-size="11" text-anchor="end" fill="#44403c">400</text>
+  <text x="80" y="84" font-family="'Space Mono', monospace" font-size="11" text-anchor="end" fill="#44403c">500</text>
+
+  <text x="35" y="195" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#1c1917" transform="rotate(-90 35 195)" text-anchor="middle">Distance (metres) &rarr;</text>
+
+  <!-- X Axis Ticks & Labels -->
+  <text x="90" y="352" font-family="'Space Mono', monospace" font-size="11" text-anchor="middle" fill="#44403c">0</text>
+  <text x="180" y="352" font-family="'Space Mono', monospace" font-size="11" text-anchor="middle" fill="#44403c">2</text>
+  <text x="270" y="352" font-family="'Space Mono', monospace" font-size="11" text-anchor="middle" fill="#44403c">4</text>
+  <text x="360" y="352" font-family="'Space Mono', monospace" font-size="11" text-anchor="middle" fill="#44403c">6</text>
+  <text x="450" y="352" font-family="'Space Mono', monospace" font-size="11" text-anchor="middle" fill="#44403c">8</text>
+  <text x="540" y="352" font-family="'Space Mono', monospace" font-size="11" text-anchor="middle" fill="#44403c">10</text>
+
+  <text x="315" y="380" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#1c1917" text-anchor="middle">Time (minutes) &rarr;</text>
+
+  <!-- Plotted Line: (90,330) -> (180,280) -> (270,230) -> (360,180) -> (450,130) -> (540,80) -->
+  <line x1="90" y1="330" x2="540" y2="80" stroke="#0284c7" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Plotted Points -->
+  <circle cx="90" cy="330" r="5" fill="#0369a1" stroke="#ffffff" stroke-width="1.5"/>
+  <circle cx="180" cy="280" r="5" fill="#0369a1" stroke="#ffffff" stroke-width="1.5"/>
+  <circle cx="270" cy="230" r="5" fill="#0369a1" stroke="#ffffff" stroke-width="1.5"/>
+  <circle cx="360" cy="180" r="5" fill="#0369a1" stroke="#ffffff" stroke-width="1.5"/>
+  <circle cx="450" cy="130" r="5" fill="#0369a1" stroke="#ffffff" stroke-width="1.5"/>
+  <circle cx="540" cy="80" r="5" fill="#0369a1" stroke="#ffffff" stroke-width="1.5"/>
+
+  <!-- Interval Highlight for Q15 (4 to 8 minutes) -->
+  <path d="M 270 230 L 450 230 L 450 130" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="460" y="185" font-family="'Space Mono', monospace" font-size="10" font-weight="700" fill="#b45309">&Delta;s = 200 m</text>
+  <text x="360" y="246" font-family="'Space Mono', monospace" font-size="10" font-weight="700" text-anchor="middle" fill="#b45309">&Delta;t = 4 min</text>
+</svg>

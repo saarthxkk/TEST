@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Current & Its Effects — Interactive Simulation | testiiii</title>
+    <meta name="description" content="Explore electric current and its effects through interactive simulations. Build circuits, see electron flow, discover heating, magnetic, and chemical effects — Class 7 NCERT Science.">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="electric.css">
+</head>
+<body>
+
+    <!-- TOP NAV -->
+    <header class="sim-header">
+        <div class="sh-left">
+            <a href="index.html" class="sh-back">&larr; TESTIIII</a>
+            <div class="sh-title-group">
+                <span class="sh-logo">⚡ CIRCUIT LAB</span>
+                <span class="sh-sub">Electric Current & Its Effects</span>
+            </div>
+        </div>
+        <div class="sh-right">
+            <div class="sh-badge">CLASS 7 · CH. 10 · NCERT</div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="sim-hero">
+        <div class="sim-hero-bg"></div>
+        <div class="sim-hero-content">
+            <div class="sim-hero-label">INTERACTIVE SIMULATION · CHAPTER 10</div>
+            <h1 class="sim-hero-title">Electric Current<br>&amp; Its <em>Effects.</em></h1>
+            <p class="sim-hero-desc">Build circuits, watch electrons flow, and discover how electricity creates heat, magnetism, and chemical changes — all in your browser.</p>
+            <div class="sim-hero-tags">
+                <span class="sim-tag">⚡ Circuit Builder</span>
+                <span class="sim-tag">💡 Bulb Brightness</span>
+                <span class="sim-tag">🧲 Electromagnet</span>
+                <span class="sim-tag">🔬 Chemical Effect</span>
+            </div>
+            <button class="btn-sim-start" id="btn-scroll-sim">START EXPLORING &rarr;</button>
+        </div>
+    </section>
+
+    <!-- MAIN SIMULATION AREA -->
+    <main class="sim-main" id="sim-main">
+
+        <!-- ═══ LAB 1: CIRCUIT BUILDER ═══ -->
+        <section class="lab-section" id="lab-circuit">
+            <div class="lab-header">
+                <div class="lab-num">01</div>
+                <div class="lab-info">
+                    <div class="lab-tag">INTERACTIVE LAB</div>
+                    <h2 class="lab-title">Build a Circuit</h2>
+                    <p class="lab-desc">Toggle the switch to complete the circuit. Watch electrons flow through the wire and light up the bulb!</p>
+                </div>
+            </div>
+
+            <div class="circuit-canvas-wrap">
+                <canvas id="circuit-canvas" width="900" height="500"></canvas>
+                <div class="circuit-controls">
+                    <button class="circuit-btn" id="btn-switch-toggle">
+                        <span class="switch-indicator off" id="switch-indicator"></span>
+                        SWITCH: <strong id="switch-label">OFF</strong>
+                    </button>
+                    <div class="resistance-control">
+                        <label class="res-label">RESISTANCE</label>
+                        <input type="range" id="resistance-slider" min="1" max="10" value="3" class="res-slider">
+                        <div class="res-val"><span id="res-value">3</span>Ω</div>
+                    </div>
+                </div>
+                <div class="circuit-readout">
+                    <div class="readout-item">
+                        <span class="readout-label">VOLTAGE</span>
+                        <span class="readout-val" id="readout-voltage">9V</span>
+                    </div>
+                    <div class="readout-divider"></div>
+                    <div class="readout-item">
+                        <span class="readout-label">CURRENT</span>
+                        <span class="readout-val" id="readout-current">0.0 A</span>
+                    </div>
+                    <div class="readout-divider"></div>
+                    <div class="readout-item">
+                        <span class="readout-label">BULB</span>
+                        <span class="readout-val" id="readout-bulb">OFF</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <div class="concept-icon">📘</div>
+                <div class="concept-text">
+                    <strong>Ohm's Law:</strong> Current (I) = Voltage (V) ÷ Resistance (R). When resistance increases, the current decreases and the bulb glows dimmer. When resistance decreases, more current flows and the bulb glows brighter!
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ LAB 2: HEATING EFFECT ═══ -->
+        <section class="lab-section" id="lab-heating">
+            <div class="lab-header">
+                <div class="lab-num">02</div>
+                <div class="lab-info">
+                    <div class="lab-tag">HEATING EFFECT</div>
+                    <h2 class="lab-title">Electricity Makes Things Hot</h2>
+                    <p class="lab-desc">See how electric current heats up a nichrome wire. The more current flows, the hotter and brighter it gets!</p>
+                </div>
+            </div>
+
+            <div class="heating-sim-wrap">
+                <canvas id="heating-canvas" width="900" height="400"></canvas>
+                <div class="heating-controls">
+                    <button class="circuit-btn" id="btn-heating-toggle">
+                        <span class="switch-indicator off" id="heating-switch-ind"></span>
+                        POWER: <strong id="heating-switch-label">OFF</strong>
+                    </button>
+                    <div class="resistance-control">
+                        <label class="res-label">CURRENT LEVEL</label>
+                        <input type="range" id="heating-slider" min="1" max="10" value="1" class="res-slider heating-accent">
+                        <div class="res-val heat-val"><span id="heating-value">1</span>A</div>
+                    </div>
+                    <div class="temp-display">
+                        <span class="temp-label">TEMPERATURE</span>
+                        <span class="temp-val" id="temp-value">25°C</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="ex-icon">💡</div>
+                    <h4>Electric Bulb</h4>
+                    <p>Filament heats up to ~2500°C and glows white-hot, producing light.</p>
+                </div>
+                <div class="example-card">
+                    <div class="ex-icon">🔌</div>
+                    <h4>Electric Iron</h4>
+                    <p>Nichrome coil heats up when current flows. Used for pressing clothes.</p>
+                </div>
+                <div class="example-card">
+                    <div class="ex-icon">⚡</div>
+                    <h4>Electric Fuse</h4>
+                    <p>Safety device — melts and breaks circuit when too much current flows.</p>
+                </div>
+                <div class="example-card">
+                    <div class="ex-icon">🍞</div>
+                    <h4>Electric Heater</h4>
+                    <p>Coil glows red-hot due to heating effect. Warms room or cooks food.</p>
+                </div>
+            </div>
+
+            <div class="concept-card heat-concept">
+                <div class="concept-icon">🔥</div>
+                <div class="concept-text">
+                    <strong>Heating Effect:</strong> When electric current flows through a conductor, it produces heat. The amount of heat depends on the current, resistance, and time. This is called Joule's law of heating: H = I²Rt
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ LAB 3: MAGNETIC EFFECT ═══ -->
+        <section class="lab-section" id="lab-magnetic">
+            <div class="lab-header">
+                <div class="lab-num">03</div>
+                <div class="lab-info">
+                    <div class="lab-tag">MAGNETIC EFFECT</div>
+                    <h2 class="lab-title">Electricity Creates Magnets</h2>
+                    <p class="lab-desc">Wrap wire around a nail and pass current — it becomes an electromagnet! Watch it attract iron objects.</p>
+                </div>
+            </div>
+
+            <div class="magnet-sim-wrap">
+                <canvas id="magnet-canvas" width="900" height="450"></canvas>
+                <div class="magnet-controls">
+                    <button class="circuit-btn" id="btn-magnet-toggle">
+                        <span class="switch-indicator off" id="magnet-switch-ind"></span>
+                        CURRENT: <strong id="magnet-switch-label">OFF</strong>
+                    </button>
+                    <div class="resistance-control">
+                        <label class="res-label">COIL TURNS</label>
+                        <input type="range" id="coil-slider" min="5" max="30" value="10" class="res-slider magnet-accent">
+                        <div class="res-val magnet-val"><span id="coil-value">10</span> turns</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="concept-card magnet-concept">
+                <div class="concept-icon">🧲</div>
+                <div class="concept-text">
+                    <strong>Electromagnet:</strong> When electric current flows through a coil of wire wound around an iron nail, it becomes a magnet. Increasing the number of turns or the current makes the electromagnet stronger. Electromagnets are used in cranes, doorbells, and MRI machines!
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ LAB 4: CHEMICAL EFFECT ═══ -->
+        <section class="lab-section" id="lab-chemical">
+            <div class="lab-header">
+                <div class="lab-num">04</div>
+                <div class="lab-info">
+                    <div class="lab-tag">CHEMICAL EFFECT</div>
+                    <h2 class="lab-title">Electroplating & Electrolysis</h2>
+                    <p class="lab-desc">Pass current through a solution and watch copper deposit on the electrode. This is electroplating!</p>
+                </div>
+            </div>
+
+            <div class="chemical-sim-wrap">
+                <canvas id="chemical-canvas" width="900" height="450"></canvas>
+                <div class="chemical-controls">
+                    <button class="circuit-btn" id="btn-chemical-toggle">
+                        <span class="switch-indicator off" id="chemical-switch-ind"></span>
+                        CURRENT: <strong id="chemical-switch-label">OFF</strong>
+                    </button>
+                    <div class="chemical-timer">
+                        <span class="timer-label">TIME ELAPSED</span>
+                        <span class="timer-val" id="chemical-timer-val">0s</span>
+                    </div>
+                    <div class="coating-meter">
+                        <span class="coating-label">COPPER COATING</span>
+                        <div class="coating-bar-wrap">
+                            <div class="coating-bar" id="coating-bar" style="width:0%"></div>
+                        </div>
+                        <span class="coating-pct" id="coating-pct">0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="concept-card chemical-concept">
+                <div class="concept-icon">🔬</div>
+                <div class="concept-text">
+                    <strong>Chemical Effect:</strong> When electric current passes through a conducting solution (electrolyte), chemical reactions occur. Metal gets deposited on the electrode — this process is called <em>electroplating</em>. It's used to coat iron with chromium (taps), gold/silver plating on jewelry, and tin coating on food cans!
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ MINI QUIZ ═══ -->
+        <section class="lab-section quiz-section" id="lab-quiz">
+            <div class="lab-header">
+                <div class="lab-num">05</div>
+                <div class="lab-info">
+                    <div class="lab-tag">TEST YOUR UNDERSTANDING</div>
+                    <h2 class="lab-title">Quick Quiz</h2>
+                    <p class="lab-desc">Answer these 5 questions to test what you learned from the simulations above.</p>
+                </div>
+            </div>
+
+            <div class="quiz-container" id="sim-quiz-container">
+                <!-- Dynamically populated -->
+            </div>
+            <div class="quiz-result-bar hidden" id="sim-quiz-result">
+                <div class="qr-score">
+                    <span class="qr-label">YOUR SCORE</span>
+                    <span class="qr-val" id="sim-quiz-score">0/5</span>
+                </div>
+                <button class="btn-sim-retry" id="btn-sim-retry">RETRY QUIZ &rarr;</button>
+            </div>
+            <button class="btn-sim-start quiz-submit-btn" id="btn-sim-quiz-submit">SUBMIT ANSWERS &rarr;</button>
+
+            <!-- CALLOUT TO FULL 30-MCQ CHAPTER TEST -->
+            <div style="margin-top: 40px; padding: 28px; background: linear-gradient(135deg, rgba(30, 41, 59, 0.4), rgba(15, 23, 42, 0.6)); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <div style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: #f59e0b; margin-bottom: 6px;">OFFICIAL CHAPTER TEST &middot; 30 HARD MCQS</div>
+                    <h3 style="font-family: var(--serif); font-size: 22px; color: #f0ede8; margin: 0 0 6px;">Ready for the Complete Exam Challenge?</h3>
+                    <p style="font-size: 14px; color: #a8a29e; margin: 0; max-width: 540px;">Test yourself on the full 30 NCERT exam questions with diagrams, 25-minute timer, anti-cheat protection, and instant PDF scorecard.</p>
+                </div>
+                <a href="index.html" class="btn-sim-start" style="text-decoration: none; display: inline-flex; align-items: center; font-size: 11px; padding: 12px 24px; background: #f59e0b; color: #000;">TAKE FULL TEST &rarr;</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="sim-footer">
+        <div class="sf-inner">
+            <div class="sf-brand">testiiii.</div>
+            <div class="sf-meta">
+                <span>Electric Current & Its Effects Simulation</span>
+                <span class="sf-sep">&middot;</span>
+                <span>NCERT Class 7 Science</span>
+                <span class="sf-sep">&middot;</span>
+                <span>Created by Sarthak Pandey</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="electric.js"></script>
+</body>
+</html>

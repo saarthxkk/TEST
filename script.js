@@ -150,7 +150,8 @@ function handleStartForm(e) {
         'transportation2':{ questions: () => questions_transportation2, label: 'Ch. 7 — Transportation (Part 2)' },
         'reproduction':   { questions: () => questions_reproduction,   label: 'Ch. 8 — Reproduction in Plants (Part 1)' },
         'reproduction2':  { questions: () => questions_reproduction2,  label: 'Ch. 8 — Reproduction in Plants (Part 2 — Very Hard)' },
-        'motion':         { questions: () => questions_motion,         label: 'Ch. 9 — Motion & Time (30 Tough MCQs)' }
+        'motion':         { questions: () => questions_motion,         label: 'Ch. 9 — Motion & Time (30 Tough MCQs)' },
+        'electric':       { questions: () => questions_electric,       label: 'Ch. 10 — Electric Current & Its Effects (30 Hard MCQs)' }
     };
 
     const selected = chapterMap[chapterVal];

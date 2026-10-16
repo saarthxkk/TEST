@@ -96,6 +96,7 @@
             <a href="#chapters-section" class="nav-link">CHAPTERS</a>
             <a href="notes.html" class="nav-link">NOTES</a>
             <a href="game.html" class="nav-link" style="color: #0284c7; font-weight: 600;"><span style="background: #0284c7; color: #fff; font-size: 9px; padding: 2px 6px; border-radius: 3px; margin-right: 4px; font-family: var(--mono);">NEW</span>GAMES</a>
+            <a href="electric.html" class="nav-link" style="color: #06b6d4; font-weight: 600;"><span style="background: #06b6d4; color: #080a0e; font-size: 9px; padding: 2px 6px; border-radius: 3px; margin-right: 4px; font-family: var(--mono);">NEW</span>CIRCUIT LAB</a>
             <a href="#how-section" class="nav-link">HOW IT WORKS</a>
             <a href="#stats-section" class="nav-link">STATS</a>
             <button class="nav-cta" id="nav-start-btn">START TEST</button>
@@ -108,6 +109,7 @@
         <a href="#chapters-section" class="mobile-link" onclick="closeMobileMenu()">CHAPTERS</a>
         <a href="notes.html" class="mobile-link" onclick="closeMobileMenu()">REVISION NOTES</a>
         <a href="game.html" class="mobile-link" onclick="closeMobileMenu()" style="color: #0284c7; font-weight: 600;">🎮 INTERACTIVE GAMES (MOTION MISSION)</a>
+        <a href="electric.html" class="mobile-link" onclick="closeMobileMenu()" style="color: #06b6d4; font-weight: 600;">⚡ CIRCUIT LAB (ELECTRIC CURRENT)</a>
         <a href="#how-section" class="mobile-link" onclick="closeMobileMenu()">HOW IT WORKS</a>
         <a href="#stats-section" class="mobile-link" onclick="closeMobileMenu()">STATS</a>
         <button class="mobile-cta" onclick="closeMobileMenu(); document.getElementById('start-section').scrollIntoView({behavior:'smooth'})">START TEST</button>
@@ -153,6 +155,8 @@
             <span class="banner-item">REPRODUCTION IN PLANTS (PT. 1 &amp; 2)</span>
             <span class="banner-sep">&middot;</span>
             <span class="banner-item">MOTION AND TIME</span>
+            <span class="banner-sep">&middot;</span>
+            <span class="banner-item">ELECTRIC CURRENT &amp; ITS EFFECTS</span>
             <span class="banner-sep">&middot;</span>
         </div>
     </section>
@@ -259,6 +263,18 @@
                     <button class="chapter-start-btn" data-chapter="motion">START &rarr;</button>
                 </div>
             </div>
+            <div class="chapter-card">
+                <div class="chapter-num">09</div>
+                <div class="chapter-info">
+                    <div class="chapter-tag">CH. 10 &middot; 30 HARD MCQS &middot; WITH DIAGRAMS</div>
+                    <h3 class="chapter-name">Electric Current and Its Effects</h3>
+                    <p class="chapter-desc">Circuit symbols, heating &amp; magnetic effects, fuse &amp; MCB, electromagnets, electric bell sequence &amp; case studies.</p>
+                </div>
+                <div class="chapter-meta">
+                    <span>30 MCQs</span>
+                    <button class="chapter-start-btn" data-chapter="electric">START &rarr;</button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -307,6 +323,29 @@
         </div>
     </section>
 
+    <section class="section" id="electric-section" style="background:#060a12; border-top:1px solid #1a2540; border-bottom:1px solid #1a2540; color:#f8fafc;">
+        <div class="section-header light">
+            <div class="section-label" style="color: #06b6d4;">SIMULATE &middot; EXPERIMENT &middot; LEARN</div>
+            <h2 class="section-title" style="color: #f8fafc;">Circuit Lab &amp;<br><em style="color: #06b6d4;">Electric Current.</em></h2>
+        </div>
+        <div style="background:#0e1219; border:1px solid #1a2540; border-radius:12px; padding:36px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:28px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+            <div style="max-width:640px;">
+                <div style="font-family:var(--mono); font-size:11px; letter-spacing:0.12em; color:#06b6d4; margin-bottom:8px;">INTERACTIVE SIMULATION &middot; CH. 10 &middot; CLASS 7 NCERT</div>
+                <h3 style="font-family:var(--serif); font-size:32px; margin:0 0 12px; color:#f8fafc;">Electric Current &amp; Its Effects: Build. Simulate. Understand.</h3>
+                <p style="font-size:15px; color:#94a3b8; line-height:1.6; margin:0 0 20px;">Build circuits with switches and resistors, watch animated electrons flow, see how current creates heat, magnetism, and chemical changes. Four interactive labs + a quiz to test your understanding!</p>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <span style="font-family:var(--mono); font-size:11px; background:#1a202c; color:#3b82f6; padding:6px 12px; border-radius:4px; border:1px solid #263042;">⚡ Circuit Builder</span>
+                    <span style="font-family:var(--mono); font-size:11px; background:#1a202c; color:#f97316; padding:6px 12px; border-radius:4px; border:1px solid #263042;">🔥 Heating Effect</span>
+                    <span style="font-family:var(--mono); font-size:11px; background:#1a202c; color:#a855f7; padding:6px 12px; border-radius:4px; border:1px solid #263042;">🧲 Electromagnet</span>
+                    <span style="font-family:var(--mono); font-size:11px; background:#1a202c; color:#10b981; padding:6px 12px; border-radius:4px; border:1px solid #263042;">🔬 Electroplating</span>
+                </div>
+            </div>
+            <div>
+                <a href="electric.html" class="btn-primary" style="display:inline-block; text-decoration:none; padding:18px 36px; font-size:14px; background: #06b6d4; color: #080a0e; font-weight: 700;">LAUNCH CIRCUIT LAB &rarr;</a>
+            </div>
+        </div>
+    </section>
+
     <section class="section section-dark" id="how-section">
         <div class="section-header light">
             <div class="section-label" style="color:#888">HOW IT WORKS</div>
@@ -347,7 +386,7 @@
                 <span class="big-label">TIME LIMIT</span>
             </div>
             <div class="big-stat">
-                <span class="big-num">8</span>
+                <span class="big-num">9</span>
                 <span class="big-label">CHAPTERS COVERED</span>
             </div>
             <div class="big-stat">
@@ -377,6 +416,7 @@
                         <option value="reproduction">Ch. 8 &mdash; Reproduction in Plants (Part 1)</option>
                         <option value="reproduction2">Ch. 8 &mdash; Reproduction in Plants (Part 2 &mdash; Very Hard)</option>
                         <option value="motion">Ch. 9 &mdash; Motion and Time (30 Tough MCQs)</option>
+                        <option value="electric">Ch. 10 &mdash; Electric Current &amp; Its Effects (30 Hard MCQs)</option>
                     </select>
                 </div>
                 <button type="submit" class="btn-primary btn-full">BEGIN TEST &rarr;</button>
@@ -519,6 +559,7 @@
 <script src="questions_reproduction.js"></script>
 <script src="questions_reproduction2.js"></script>
 <script src="questions_motion.js"></script>
+<script src="questions_electric.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

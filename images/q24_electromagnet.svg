@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 380" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#faf8f5" rx="8"/>
+  <rect x="1" y="1" width="618" height="378" fill="none" stroke="#e7e5e4" stroke-width="2" rx="8"/>
+
+  <!-- Title -->
+  <text x="310" y="30" font-family="'Inter', sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1c1917" letter-spacing="1">EXPERIMENT &mdash; A SIMPLE ELECTROMAGNET</text>
+  <text x="310" y="48" font-family="'Inter', sans-serif" font-size="11" text-anchor="middle" fill="#78716c">Question 24: Iron nail wound with insulated copper wire</text>
+
+  <!-- Circuit Top: Battery and Switch D -->
+  <!-- Battery on left -->
+  <g transform="translate(180, 80)">
+    <!-- Battery Symbol: 2 cells -->
+    <line x1="-60" y1="0" x2="0" y2="0" stroke="#1c1917" stroke-width="2"/>
+    <!-- Cell 1 -->
+    <line x1="0" y1="-18" x2="0" y2="18" stroke="#1c1917" stroke-width="2"/> <!-- + -->
+    <line x1="12" y1="-10" x2="12" y2="10" stroke="#1c1917" stroke-width="4.5"/> <!-- - -->
+    <line x1="12" y1="0" x2="24" y2="0" stroke="#1c1917" stroke-width="2"/>
+    <!-- Cell 2 -->
+    <line x1="24" y1="-18" x2="24" y2="18" stroke="#1c1917" stroke-width="2"/> <!-- + -->
+    <line x1="36" y1="-10" x2="36" y2="10" stroke="#1c1917" stroke-width="4.5"/> <!-- - -->
+    <line x1="36" y1="0" x2="90" y2="0" stroke="#1c1917" stroke-width="2"/>
+    <text x="-10" y="-12" font-family="'Space Mono', monospace" font-size="11" fill="#dc2626">+</text>
+    <text x="44" y="-8" font-family="'Space Mono', monospace" font-size="11" fill="#78716c">&minus;</text>
+    <text x="18" y="32" font-family="'Space Mono', monospace" font-size="10" text-anchor="middle" fill="#78716c">Battery</text>
+  </g>
+
+  <!-- Switch D -->
+  <g transform="translate(370, 80)">
+    <circle cx="0" cy="0" r="3.5" fill="#1c1917"/>
+    <circle cx="45" cy="0" r="3.5" fill="#1c1917"/>
+    <line x1="0" y1="0" x2="45" y2="0" stroke="#15803d" stroke-width="3"/> <!-- Closed Switch -->
+    <line x1="45" y1="0" x2="120" y2="0" stroke="#1c1917" stroke-width="2"/>
+    <!-- Label D Pointer -->
+    <rect x="12" y="-35" width="22" height="22" fill="#15803d" rx="4"/>
+    <text x="23" y="-20" font-family="'Space Mono', monospace" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">D</text>
+    <text x="23" y="18" font-family="'Space Mono', monospace" font-size="10" text-anchor="middle" fill="#15803d">Switch (closed)</text>
+  </g>
+
+  <!-- Connecting Wires Down to Nail -->
+  <path d="M 120 80 L 120 190 L 220 190" fill="none" stroke="#b45309" stroke-width="2.5"/>
+  <path d="M 490 80 L 490 190 L 430 190" fill="none" stroke="#b45309" stroke-width="2.5"/>
+
+  <!-- Iron Nail (B) -->
+  <!-- Nail Head on left, shank going right, pointed tip on right -->
+  <g transform="translate(200, 190)">
+    <!-- Nail Head -->
+    <rect x="0" y="-14" width="10" height="28" fill="#64748b" stroke="#334155" stroke-width="1.5" rx="2"/>
+    <!-- Nail Shank -->
+    <rect x="10" y="-7" width="220" height="14" fill="#94a3b8" stroke="#334155" stroke-width="1.5"/>
+    <!-- Nail Point -->
+    <polygon points="230,-7 255,0 230,7" fill="#64748b" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Coils of insulated copper wire (A) around shank -->
+    <!-- 12 clean coils -->
+    <g stroke="#b45309" stroke-width="3.5" stroke-linecap="round">
+      <path d="M 30 -11 C 35 -13, 40 13, 45 11" fill="none"/>
+      <path d="M 45 -11 C 50 -13, 55 13, 60 11" fill="none"/>
+      <path d="M 60 -11 C 65 -13, 70 13, 75 11" fill="none"/>
+      <path d="M 75 -11 C 80 -13, 85 13, 90 11" fill="none"/>
+      <path d="M 90 -11 C 95 -13, 100 13, 105 11" fill="none"/>
+      <path d="M 105 -11 C 110 -13, 115 13, 120 11" fill="none"/>
+      <path d="M 120 -11 C 125 -13, 130 13, 135 11" fill="none"/>
+      <path d="M 135 -11 C 140 -13, 145 13, 150 11" fill="none"/>
+      <path d="M 150 -11 C 155 -13, 160 13, 165 11" fill="none"/>
+      <path d="M 165 -11 C 170 -13, 175 13, 180 11" fill="none"/>
+      <path d="M 180 -11 C 185 -13, 190 13, 195 11" fill="none"/>
+      <path d="M 195 -11 C 200 -13, 205 13, 210 11" fill="none"/>
+    </g>
+
+    <!-- Paper clips clinging to the tip (C) -->
+    <!-- Clip 1 -->
+    <g transform="translate(255, 0) rotate(45)">
+      <rect x="0" y="-3" width="30" height="10" rx="5" fill="none" stroke="#475569" stroke-width="2"/>
+      <rect x="5" y="-1" width="20" height="6" rx="3" fill="none" stroke="#475569" stroke-width="1.5"/>
+    </g>
+    <!-- Clip 2 clinging to clip 1 -->
+    <g transform="translate(270, 25) rotate(70)">
+      <rect x="0" y="-3" width="28" height="9" rx="4.5" fill="none" stroke="#475569" stroke-width="2"/>
+    </g>
+    <!-- Clip 3 -->
+    <g transform="translate(250, 15) rotate(15)">
+      <rect x="0" y="-3" width="26" height="8" rx="4" fill="none" stroke="#475569" stroke-width="2"/>
+    </g>
+    <!-- Clip 4 -->
+    <g transform="translate(265, 45) rotate(50)">
+      <rect x="0" y="-3" width="25" height="8" rx="4" fill="none" stroke="#475569" stroke-width="1.8"/>
+    </g>
+  </g>
+
+  <!-- Labels with boxed letters & pointers -->
+  <!-- Label B: Iron Nail Core -->
+  <g transform="translate(240, 260)">
+    <rect x="-12" y="-12" width="24" height="24" fill="#0284c7" rx="4"/>
+    <text x="0" y="5" font-family="'Space Mono', monospace" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">B</text>
+    <text x="20" y="5" font-family="'Space Mono', monospace" font-size="11" font-weight="700" fill="#0284c7">Iron Nail Core</text>
+    <line x1="0" y1="-12" x2="30" y2="-60" stroke="#0284c7" stroke-width="1.5"/>
+  </g>
+
+  <!-- Label A: Insulated Copper Wire Coil -->
+  <g transform="translate(320, 130)">
+    <rect x="-12" y="-12" width="24" height="24" fill="#d97706" rx="4"/>
+    <text x="0" y="5" font-family="'Space Mono', monospace" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">A</text>
+    <text x="20" y="5" font-family="'Space Mono', monospace" font-size="11" font-weight="700" fill="#d97706">Insulated Coil</text>
+    <line x1="0" y1="12" x2="0" y2="48" stroke="#d97706" stroke-width="1.5"/>
+  </g>
+
+  <!-- Label C: Paper clips -->
+  <g transform="translate(520, 260)">
+    <rect x="-12" y="-12" width="24" height="24" fill="#475569" rx="4"/>
+    <text x="0" y="5" font-family="'Space Mono', monospace" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">C</text>
+    <text x="20" y="5" font-family="'Space Mono', monospace" font-size="11" font-weight="700" fill="#475569">Paper Clips</text>
+    <line x1="-12" y1="-5" x2="-45" y2="-30" stroke="#475569" stroke-width="1.5"/>
+  </g>
+
+  <!-- Bottom Explanatory Caption -->
+  <text x="310" y="348" font-family="'Inter', sans-serif" font-size="12" text-anchor="middle" fill="#57534e">When switch D is opened, current stops flowing through coil A and core B.</text>
+</svg>

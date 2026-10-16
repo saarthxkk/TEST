@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 370" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#faf8f5" rx="8"/>
+  <rect x="1" y="1" width="678" height="368" fill="none" stroke="#e7e5e4" stroke-width="2" rx="8"/>
+
+  <!-- Title -->
+  <text x="340" y="28" font-family="'Inter', sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1c1917" letter-spacing="1">HANS CHRISTIAN OERSTED&rsquo;S EXPERIMENT (1820)</text>
+  <text x="340" y="46" font-family="'Inter', sans-serif" font-size="11" text-anchor="middle" fill="#78716c">Question 23: Magnetic compass placed directly below copper wire AB</text>
+
+  <!-- Divider between two panels -->
+  <line x1="340" y1="65" x2="340" y2="340" stroke="#d6d3d1" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- Compass Rose in top corner -->
+  <g transform="translate(630, 45)">
+    <circle cx="0" cy="0" r="16" fill="#ffffff" stroke="#a8a29e" stroke-width="1"/>
+    <line x1="0" y1="-12" x2="0" y2="12" stroke="#44403c" stroke-width="1.5"/>
+    <line x1="-12" y1="0" x2="12" y2="0" stroke="#a8a29e" stroke-width="1"/>
+    <polygon points="0,-12 3,-2 -3,-2" fill="#dc2626"/>
+    <text x="0" y="-14" font-family="'Space Mono', monospace" font-size="9" font-weight="700" text-anchor="middle" fill="#dc2626">N</text>
+    <text x="0" y="22" font-family="'Space Mono', monospace" font-size="9" text-anchor="middle" fill="#78716c">S</text>
+  </g>
+
+  <!-- PANEL 1: Key Open (No Current) -->
+  <g transform="translate(0, 10)">
+    <rect x="30" y="65" width="280" height="25" fill="#f5f5f4" stroke="#e7e5e4" rx="4"/>
+    <text x="170" y="82" font-family="'Space Mono', monospace" font-size="11" font-weight="700" text-anchor="middle" fill="#57534e">CASE 1: KEY OPEN (NO CURRENT)</text>
+
+    <!-- Circuit outline -->
+    <!-- Top wire with open switch -->
+    <line x1="60" y1="120" x2="140" y2="120" stroke="#1c1917" stroke-width="2"/>
+    <circle cx="140" cy="120" r="3" fill="#1c1917"/>
+    <line x1="140" y1="120" x2="170" y2="105" stroke="#dc2626" stroke-width="2.5"/> <!-- Open switch arm -->
+    <circle cx="175" cy="120" r="3" fill="#1c1917"/>
+    <line x1="175" y1="120" x2="280" y2="120" stroke="#1c1917" stroke-width="2"/>
+    <text x="145" y="100" font-family="'Space Mono', monospace" font-size="9" fill="#dc2626">Key Open</text>
+
+    <!-- Right vertical wire -->
+    <line x1="280" y1="120" x2="280" y2="280" stroke="#1c1917" stroke-width="2"/>
+
+    <!-- Bottom wire AB (North-South) -->
+    <!-- Point B (South) on left, Point A (North) on right or vertical -->
+    <line x1="60" y1="280" x2="280" y2="280" stroke="#b45309" stroke-width="4"/> <!-- Thick copper wire AB -->
+    <text x="50" y="285" font-family="'Space Mono', monospace" font-size="12" font-weight="700" fill="#b45309">B</text>
+    <text x="290" y="285" font-family="'Space Mono', monospace" font-size="12" font-weight="700" fill="#b45309">A</text>
+    <text x="170" y="302" font-family="'Space Mono', monospace" font-size="10" text-anchor="middle" fill="#78716c">Thick Copper Wire AB</text>
+
+    <!-- Left vertical wire with Cell -->
+    <line x1="60" y1="120" x2="60" y2="185" stroke="#1c1917" stroke-width="2"/>
+    <!-- Cell: Positive long, Negative short -->
+    <line x1="45" y1="185" x2="75" y2="185" stroke="#1c1917" stroke-width="2"/>
+    <line x1="50" y1="195" x2="70" y2="195" stroke="#1c1917" stroke-width="4"/>
+    <line x1="60" y1="195" x2="60" y2="280" stroke="#1c1917" stroke-width="2"/>
+    <text x="32" y="187" font-family="'Space Mono', monospace" font-size="10" fill="#dc2626">+</text>
+    <text x="32" y="198" font-family="'Space Mono', monospace" font-size="10" fill="#78716c">&minus;</text>
+
+    <!-- Compass below wire: Needle undeflected, strictly North-South (pointing along N-S) -->
+    <circle cx="170" cy="225" r="32" fill="#ffffff" stroke="#78716c" stroke-width="1.5"/>
+    <circle cx="170" cy="225" r="3" fill="#1c1917"/>
+    <!-- Needle: pointing straight up (North) -->
+    <polygon points="170,198 165,225 170,223 175,225" fill="#dc2626"/>
+    <polygon points="170,252 165,225 170,227 175,225" fill="#44403c"/>
+    <text x="170" y="193" font-family="'Space Mono', monospace" font-size="9" font-weight="700" text-anchor="middle" fill="#dc2626">N</text>
+    <text x="170" y="264" font-family="'Space Mono', monospace" font-size="9" font-weight="700" text-anchor="middle" fill="#44403c">S</text>
+    <text x="170" y="328" font-family="'Inter', sans-serif" font-size="11" text-anchor="middle" fill="#57534e">Needle remains along N-S</text>
+  </g>
+
+  <!-- PANEL 2: Key Closed (Current Flowing) -->
+  <g transform="translate(340, 10)">
+    <rect x="30" y="65" width="280" height="25" fill="#eff6ff" stroke="#bfdbfe" rx="4"/>
+    <text x="170" y="82" font-family="'Space Mono', monospace" font-size="11" font-weight="700" text-anchor="middle" fill="#1e40af">CASE 2: KEY CLOSED (CURRENT FLOWS)</text>
+
+    <!-- Circuit outline -->
+    <!-- Top wire with closed switch -->
+    <line x1="60" y1="120" x2="140" y2="120" stroke="#1c1917" stroke-width="2"/>
+    <circle cx="140" cy="120" r="3" fill="#1c1917"/>
+    <line x1="140" y1="120" x2="175" y2="120" stroke="#15803d" stroke-width="2.5"/> <!-- Closed switch arm -->
+    <circle cx="175" cy="120" r="3" fill="#1c1917"/>
+    <line x1="175" y1="120" x2="280" y2="120" stroke="#1c1917" stroke-width="2"/>
+    <text x="145" y="110" font-family="'Space Mono', monospace" font-size="9" fill="#15803d">Key Closed</text>
+
+    <!-- Right vertical wire -->
+    <line x1="280" y1="120" x2="280" y2="280" stroke="#1c1917" stroke-width="2"/>
+
+    <!-- Bottom wire AB with current arrow -->
+    <line x1="60" y1="280" x2="280" y2="280" stroke="#b45309" stroke-width="4"/>
+    <!-- Current direction arrow from B to A or A to B -->
+    <polygon points="175,276 185,280 175,284" fill="#1c1917"/>
+    <text x="50" y="285" font-family="'Space Mono', monospace" font-size="12" font-weight="700" fill="#b45309">B</text>
+    <text x="290" y="285" font-family="'Space Mono', monospace" font-size="12" font-weight="700" fill="#b45309">A</text>
+    <text x="170" y="302" font-family="'Space Mono', monospace" font-size="10" text-anchor="middle" fill="#15803d">Current I flowing</text>
+
+    <!-- Left vertical wire with Cell -->
+    <line x1="60" y1="120" x2="60" y2="185" stroke="#1c1917" stroke-width="2"/>
+    <line x1="45" y1="185" x2="75" y2="185" stroke="#1c1917" stroke-width="2"/>
+    <line x1="50" y1="195" x2="70" y2="195" stroke="#1c1917" stroke-width="4"/>
+    <line x1="60" y1="195" x2="60" y2="280" stroke="#1c1917" stroke-width="2"/>
+    <text x="32" y="187" font-family="'Space Mono', monospace" font-size="10" fill="#dc2626">+</text>
+    <text x="32" y="198" font-family="'Space Mono', monospace" font-size="10" fill="#78716c">&minus;</text>
+
+    <!-- Compass below wire: DEFLECTED away from N-S line -->
+    <circle cx="170" cy="225" r="32" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="170" cy="225" r="3" fill="#1c1917"/>
+    <!-- Dotted original N-S line -->
+    <line x1="170" y1="195" x2="170" y2="255" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="2,2"/>
+    <!-- Deflected needle (tilted ~35 deg) -->
+    <g transform="rotate(35, 170, 225)">
+      <polygon points="170,198 165,225 170,223 175,225" fill="#dc2626"/>
+      <polygon points="170,252 165,225 170,227 175,225" fill="#44403c"/>
+    </g>
+    <text x="195" y="200" font-family="'Space Mono', monospace" font-size="9" font-weight="700" fill="#dc2626">N'</text>
+    <text x="170" y="328" font-family="'Inter', sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#2563eb">Compass needle DEFLECTS!</text>
+  </g>
+</svg>

@@ -3,371 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Attendance Ledger &middot; testiiii</title>
-    <meta name="description" content="Daily Attendance Portal for Class 7 Science. View daily roll call, overall attendance rates, streak tracking, calendar records, and student report slips.">
+    <title>Attendance — Aradhya Joshi | testiiii</title>
+    <meta name="description" content="Daily Attendance Record for Aradhya Joshi on testiiii.">
     <link rel="stylesheet" href="attendance.css">
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body class="attendance-body">
 
-    <!-- TOP NAVIGATION -->
+    <!-- NAVIGATION -->
     <nav class="att-nav">
-        <div class="att-brand-wrap">
-            <a href="index.html" class="att-brand">testiiii.</a>
-            <span class="att-badge-tag">ATTENDANCE LEDGER</span>
-        </div>
-
+        <a href="index.html" class="att-brand">testiiii.</a>
         <div class="att-nav-links">
-            <a href="index.html" class="att-nav-link">&larr; TESTS</a>
-            <a href="notes.html" class="att-nav-link">NOTES</a>
-            <a href="game.html" class="att-nav-link" style="color:#0284c7;">GAMES</a>
-            <a href="electric.html" class="att-nav-link" style="color:#06b6d4;">CIRCUIT LAB</a>
-            <a href="attendance.html" class="att-nav-link active">ATTENDANCE</a>
-            <button class="att-btn-code-helper" onclick="openCodeHelperModal()">
-                <span>⚡</span>
-                <span>ADD DAILY CODE</span>
-            </button>
+            <a href="index.html" class="att-nav-link">&larr; BACK TO HOME</a>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <header class="att-hero">
-        <div class="att-hero-tag">CLASS 7 SCIENCE &middot; DAILY OFFICIAL REGISTER</div>
-        <div class="att-hero-title-row">
-            <div>
-                <h1 class="att-hero-title">Attendance<br><em>Ledger.</em></h1>
-                <p style="color:var(--text-secondary); max-width:580px; margin-top:8px; font-size:15px;">
-                    Daily student attendance records, streak analytics, and class participation metrics. Maintained directly via code updates.
-                </p>
+    <main class="att-container">
+        <!-- HEADER -->
+        <div class="att-header">
+            <div class="att-tag">DAILY ATTENDANCE PORTAL</div>
+            <h1 class="att-title">Aradhya <em>Joshi.</em></h1>
+            <p class="att-subtitle">Official Daily Attendance Record</p>
+        </div>
+
+        <!-- SUMMARY STATS -->
+        <div class="stats-row">
+            <div class="stat-box">
+                <span class="stat-lbl">TODAY'S STATUS</span>
+                <span class="stat-val status-present" id="today-status">PRESENT</span>
+                <span class="stat-sub" id="today-date">Sat, 17 Oct 2026</span>
             </div>
-            <div class="att-hero-actions">
-                <button class="btn-secondary" onclick="exportCSV()">
-                    <span>📥</span>
-                    <span>EXPORT CSV</span>
-                </button>
-                <button class="btn-secondary" onclick="window.print()">
-                    <span>🖨️</span>
-                    <span>PRINT REGISTER</span>
-                </button>
-                <button class="att-btn-code-helper" onclick="openCodeHelperModal()" style="padding:10px 18px;">
-                    <span>📝</span>
-                    <span>DAILY CODE ASSISTANT</span>
-                </button>
+            <div class="stat-box">
+                <span class="stat-lbl">ATTENDANCE RATE</span>
+                <span class="stat-val" id="total-rate">100%</span>
+                <span class="stat-sub">Overall Record</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-lbl">TOTAL DAYS</span>
+                <span class="stat-val" id="total-days">1</span>
+                <span class="stat-sub">1 Present &middot; 0 Absent</span>
             </div>
         </div>
 
-        <!-- QUICK EDIT GUIDE BANNER -->
-        <div style="background:rgba(6, 182, 212, 0.08); border:1px solid rgba(6, 182, 212, 0.25); border-radius:10px; padding:16px 20px; margin-bottom:28px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
-            <div style="display:flex; align-items:center; gap:12px;">
-                <span style="font-size:22px;">💡</span>
-                <div style="font-size:13px; color:#e2e8f0;">
-                    <strong style="color:var(--cyan-accent); font-family:var(--font-mono);">How to upload daily attendance:</strong>
-                    Open <code style="background:#1e293b; color:#38bdf8; padding:2px 6px; border-radius:4px; font-family:var(--font-mono);">attendance_data.js</code>, copy the template at the top, change the date, mark <code style="color:#10b981;">P</code> or <code style="color:#f43f5e;">A</code>, and save! Or click <button onclick="openCodeHelperModal()" style="background:transparent; border:none; color:var(--cyan-accent); text-decoration:underline; cursor:pointer; font-weight:600;">Daily Code Assistant</button> to generate the snippet in 5 seconds.
-                </div>
+        <!-- ATTENDANCE TABLE -->
+        <div class="records-card">
+            <div class="records-card-header">
+                <h2>Attendance History</h2>
             </div>
+            <table class="simple-table">
+                <thead>
+                    <tr>
+                        <th>DATE</th>
+                        <th>DAY</th>
+                        <th>SESSION / TOPIC</th>
+                        <th>STATUS</th>
+                    </tr>
+                </thead>
+                <tbody id="records-table-body">
+                    <!-- Populated dynamically from attendance_data.js -->
+                </tbody>
+            </table>
         </div>
 
-        <!-- OVERVIEW METRICS -->
-        <div class="metrics-grid">
-            <div class="metric-card accent-cyan">
-                <div class="metric-header">
-                    <span class="metric-label">AVERAGE ATTENDANCE</span>
-                    <span class="metric-icon">📊</span>
-                </div>
-                <div class="metric-val" id="metric-avg-rate">0%</div>
-                <div class="metric-sub">Across all recorded sessions</div>
-            </div>
-
-            <div class="metric-card accent-emerald">
-                <div class="metric-header">
-                    <span class="metric-label">ACTIVE STUDENTS</span>
-                    <span class="metric-icon">👥</span>
-                </div>
-                <div class="metric-val" id="metric-total-students">0</div>
-                <div class="metric-sub">Enrolled in Class 7A</div>
-            </div>
-
-            <div class="metric-card accent-gold">
-                <div class="metric-header">
-                    <span class="metric-label">TOTAL SESSIONS</span>
-                    <span class="metric-icon">📅</span>
-                </div>
-                <div class="metric-val" id="metric-total-days">0</div>
-                <div class="metric-sub">Academic days logged</div>
-            </div>
-
-            <div class="metric-card accent-emerald">
-                <div class="metric-header">
-                    <span class="metric-label">HONOR ROLL (90%+)</span>
-                    <span class="metric-icon">⭐</span>
-                </div>
-                <div class="metric-val" id="metric-honor-roll">0</div>
-                <div class="metric-sub">Exemplary attendance</div>
-            </div>
-
-            <div class="metric-card accent-rose">
-                <div class="metric-header">
-                    <span class="metric-label">AT RISK (&lt;75%)</span>
-                    <span class="metric-icon">⚠️</span>
-                </div>
-                <div class="metric-val" id="metric-at-risk">0</div>
-                <div class="metric-sub">Needs attendance follow-up</div>
-            </div>
+        <!-- HOW TO UPDATE GUIDE -->
+        <div class="edit-guide-box">
+            <div class="guide-title">💡 How to add tomorrow's attendance in code:</div>
+            <p>Open <code class="code-tag">attendance_data.js</code> and add a new line to <code class="code-tag">ATTENDANCE_RECORDS</code>:</p>
+            <pre class="code-example">{ date: "18 Oct 2026", day: "Sunday", student: "Aradhya Joshi", status: "Present" },</pre>
         </div>
+    </main>
 
-        <!-- TABS BAR -->
-        <div class="tabs-bar">
-            <div class="tab-buttons">
-                <button class="tab-btn active" data-tab="daily">
-                    <span>📋</span>
-                    <span>DAILY ROLL CALL</span>
-                </button>
-                <button class="tab-btn" data-tab="roster">
-                    <span>👤</span>
-                    <span>STUDENT ROSTER &amp; RATES</span>
-                </button>
-                <button class="tab-btn" data-tab="calendar">
-                    <span>🗓️</span>
-                    <span>CALENDAR HEATMAP</span>
-                </button>
-            </div>
-        </div>
-
-        <!-- ═════════ TAB 1: DAILY VIEW ═════════ -->
-        <div class="tab-content active" id="tab-daily">
-            <!-- Date Navigator Card -->
-            <div class="date-selector-card">
-                <div class="date-controls">
-                    <button class="date-nav-btn" id="btn-prev-day" title="Older Date">&larr;</button>
-                    <select class="date-dropdown-select" id="date-dropdown-select"></select>
-                    <button class="date-nav-btn" id="btn-next-day" title="Newer Date">&rarr;</button>
-                </div>
-
-                <div class="date-display-info">
-                    <h3 id="current-day-title">Loading Date...</h3>
-                    <p id="current-day-subtitle">Loading Lesson Details...</p>
-                </div>
-
-                <div class="day-stats-pill-group">
-                    <span class="day-pill present" id="day-pill-present">Present: 0</span>
-                    <span class="day-pill absent" id="day-pill-absent">Absent: 0</span>
-                    <span class="day-pill late" id="day-pill-late">Late: 0</span>
-                    <span class="day-pill rate" id="day-pill-rate">Rate: 0%</span>
-                </div>
-            </div>
-
-            <!-- Search and Filter Row -->
-            <div class="search-filter-row">
-                <div class="search-input-wrap">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" id="student-search-input" placeholder="Search by student name or roll number...">
-                </div>
-
-                <div class="status-filter-pills">
-                    <button class="filter-pill-btn active" data-status="all">ALL STUDENTS</button>
-                    <button class="filter-pill-btn" data-status="present">PRESENT</button>
-                    <button class="filter-pill-btn" data-status="absent">ABSENT</button>
-                    <button class="filter-pill-btn" data-status="late">LATE / EXCUSED</button>
-                </div>
-            </div>
-
-            <!-- Table Card -->
-            <div class="table-card">
-                <table class="att-table">
-                    <thead>
-                        <tr>
-                            <th>ROLL</th>
-                            <th>STUDENT NAME</th>
-                            <th>STATUS</th>
-                            <th>OVERALL ATTENDANCE</th>
-                            <th>CURRENT STREAK</th>
-                        </tr>
-                    </thead>
-                    <tbody id="daily-table-body">
-                        <!-- Populated by attendance.js -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- ═════════ TAB 2: ROSTER VIEW ═════════ -->
-        <div class="tab-content" id="tab-roster">
-            <div style="margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">
-                <p style="font-size:14px; color:var(--text-secondary);">
-                    Click any student profile card to view their comprehensive attendance breakdown, absence log, and official record slip.
-                </p>
-            </div>
-            <div class="roster-grid" id="roster-grid">
-                <!-- Populated by attendance.js -->
-            </div>
-        </div>
-
-        <!-- ═════════ TAB 3: CALENDAR VIEW ═════════ -->
-        <div class="tab-content" id="tab-calendar">
-            <div class="cal-container">
-                <div class="cal-header">
-                    <h2 class="cal-title" id="cal-month-title">October 2026</h2>
-                    <div style="font-family:var(--font-mono); font-size:12px; color:var(--text-muted); display:flex; gap:16px;">
-                        <span style="display:flex; align-items:center; gap:6px;">
-                            <span style="width:10px; height:10px; border-radius:2px; background:var(--present-color);"></span> &gt;85% High
-                        </span>
-                        <span style="display:flex; align-items:center; gap:6px;">
-                            <span style="width:10px; height:10px; border-radius:2px; background:var(--late-color);"></span> 75-85% Normal
-                        </span>
-                        <span style="display:flex; align-items:center; gap:6px;">
-                            <span style="width:10px; height:10px; border-radius:2px; background:var(--absent-color);"></span> &lt;75% Low
-                        </span>
-                    </div>
-                </div>
-
-                <div class="cal-grid">
-                    <div class="cal-day-header">SUN</div>
-                    <div class="cal-day-header">MON</div>
-                    <div class="cal-day-header">TUE</div>
-                    <div class="cal-day-header">WED</div>
-                    <div class="cal-day-header">THU</div>
-                    <div class="cal-day-header">FRI</div>
-                    <div class="cal-day-header">SAT</div>
-                </div>
-
-                <div class="cal-grid" id="cal-days-grid" style="margin-top:10px;">
-                    <!-- Calendar cells rendered by attendance.js -->
-                </div>
-            </div>
-        </div>
-
-    </header>
-
-    <!-- ═════════ MODAL: STUDENT DETAILS ═════════ -->
-    <div class="modal-overlay" id="student-modal">
-        <div class="modal-card">
-            <button class="modal-close-btn" onclick="closeStudentModal()">&times;</button>
-            <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:20px;">
-                <div>
-                    <span class="helper-step-badge">STUDENT PARTICIPATION DOSSIER</span>
-                    <h2 id="modal-student-name" style="font-family:var(--font-serif); font-size:28px; color:#ffffff; margin:4px 0 2px;">Student Name</h2>
-                    <p id="modal-student-meta" style="font-family:var(--font-mono); font-size:12px; color:var(--text-secondary);"></p>
-                </div>
-                <div style="text-align:right;">
-                    <div id="modal-student-rate" style="font-family:var(--font-mono); font-size:28px; font-weight:700; color:var(--cyan-accent);">0%</div>
-                    <div id="modal-student-streak" style="font-family:var(--font-mono); font-size:11px; color:#fb923c;">🔥 0 Days</div>
-                </div>
-            </div>
-
-            <!-- Stats grid -->
-            <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:10px; margin-bottom:24px; text-align:center;">
-                <div style="background:#0c1017; border:1px solid #1e283b; border-radius:8px; padding:12px 6px;">
-                    <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); display:block;">PRESENT</span>
-                    <strong id="modal-count-present" style="font-family:var(--font-mono); font-size:18px; color:var(--present-color);">0</strong>
-                </div>
-                <div style="background:#0c1017; border:1px solid #1e283b; border-radius:8px; padding:12px 6px;">
-                    <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); display:block;">ABSENT</span>
-                    <strong id="modal-count-absent" style="font-family:var(--font-mono); font-size:18px; color:var(--absent-color);">0</strong>
-                </div>
-                <div style="background:#0c1017; border:1px solid #1e283b; border-radius:8px; padding:12px 6px;">
-                    <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); display:block;">LATE</span>
-                    <strong id="modal-count-late" style="font-family:var(--font-mono); font-size:18px; color:var(--late-color);">0</strong>
-                </div>
-                <div style="background:#0c1017; border:1px solid #1e283b; border-radius:8px; padding:12px 6px;">
-                    <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); display:block;">EXCUSED</span>
-                    <strong id="modal-count-excused" style="font-family:var(--font-mono); font-size:18px; color:var(--excused-color);">0</strong>
-                </div>
-            </div>
-
-            <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em; color:var(--text-secondary); margin-bottom:10px; text-transform:uppercase;">
-                Date-by-Date Attendance Log:
-            </div>
-            <div id="modal-student-history" style="max-height:260px; overflow-y:auto; padding-right:6px;">
-                <!-- Filled dynamically -->
-            </div>
-
-            <div style="margin-top:24px; display:flex; justify-content:space-between; align-items:center;">
-                <button class="btn-secondary" onclick="window.print()">
-                    <span>🖨️</span>
-                    <span>Print Slip</span>
-                </button>
-                <button class="btn-secondary" onclick="closeStudentModal()">Close Window</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- ═════════ MODAL: DAILY CODE HELPER ═════════ -->
-    <div class="modal-overlay" id="code-helper-modal">
-        <div class="modal-card">
-            <button class="modal-close-btn" onclick="closeCodeHelperModal()">&times;</button>
-            
-            <span class="helper-step-badge">DAILY UPLOAD ASSISTANT</span>
-            <h2 style="font-family:var(--font-serif); font-size:28px; color:#ffffff; margin:4px 0 6px;">Add Today's Attendance</h2>
-            <p style="font-size:13px; color:var(--text-secondary); margin-bottom:20px;">
-                Quickly toggle who is Present/Absent. The code snippet below will update automatically. Copy and paste it directly into <code style="color:var(--cyan-accent); font-family:var(--font-mono);">attendance_data.js</code>!
-            </p>
-
-            <!-- Inputs -->
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:14px;">
-                <div>
-                    <label style="font-family:var(--font-mono); font-size:11px; color:var(--text-muted); display:block; margin-bottom:4px;">DATE</label>
-                    <input type="date" id="gen-date" style="width:100%; background:#090d14; border:1px solid #232d42; border-radius:6px; padding:8px 12px; color:#ffffff; font-family:var(--font-mono); font-size:12px;">
-                </div>
-                <div>
-                    <label style="font-family:var(--font-mono); font-size:11px; color:var(--text-muted); display:block; margin-bottom:4px;">INSTRUCTOR</label>
-                    <input type="text" id="gen-instructor" value="Sarthak Pandey" style="width:100%; background:#090d14; border:1px solid #232d42; border-radius:6px; padding:8px 12px; color:#ffffff; font-family:var(--font-mono); font-size:12px;">
-                </div>
-            </div>
-
-            <div style="margin-bottom:14px;">
-                <label style="font-family:var(--font-mono); font-size:11px; color:var(--text-muted); display:block; margin-bottom:4px;">TOPIC / LESSON</label>
-                <input type="text" id="gen-topic" value="Electric Current & Circuit Builder Simulation" style="width:100%; background:#090d14; border:1px solid #232d42; border-radius:6px; padding:8px 12px; color:#ffffff; font-size:13px;">
-            </div>
-
-            <div style="margin-bottom:16px;">
-                <label style="font-family:var(--font-mono); font-size:11px; color:var(--text-muted); display:block; margin-bottom:4px;">SESSION NOTES</label>
-                <input type="text" id="gen-notes" value="All students participated in circuit building experiment." style="width:100%; background:#090d14; border:1px solid #232d42; border-radius:6px; padding:8px 12px; color:#ffffff; font-size:13px;">
-            </div>
-
-            <!-- Quick Batch Buttons -->
-            <div class="helper-quick-bar">
-                <span style="font-family:var(--font-mono); font-size:11px; color:var(--text-muted); align-self:center;">Quick Mark:</span>
-                <button type="button" class="helper-quick-btn" onclick="markAllGenerator('P')">✅ All Present</button>
-                <button type="button" class="helper-quick-btn" onclick="markAllGenerator('A')">❌ All Absent</button>
-            </div>
-
-            <!-- Student Checklist -->
-            <div style="max-height:180px; overflow-y:auto; border:1px solid #1a2333; border-radius:8px; padding:8px; margin-bottom:16px;" id="helper-student-list">
-                <!-- Populated dynamically -->
-            </div>
-
-            <!-- Generated Code Snippet Area -->
-            <div>
-                <div style="display:flex; justify-content:space-between; align-items:center;">
-                    <span style="font-family:var(--font-mono); font-size:11px; color:var(--cyan-accent);">GENERATED CODE TO PASTE:</span>
-                    <span style="font-size:11px; color:var(--text-muted); font-family:var(--font-mono);">Paste in attendance_data.js inside ATTENDANCE_LOGS</span>
-                </div>
-                <div class="code-output-block" id="code-output-area"></div>
-            </div>
-
-            <!-- Modal Action Buttons -->
-            <div style="margin-top:20px; display:flex; justify-content:space-between; align-items:center;">
-                <button class="btn-secondary" onclick="closeCodeHelperModal()">Cancel</button>
-                <button class="att-btn-code-helper" id="btn-copy-code" onclick="copyCodeSnippet()" style="padding:12px 24px; font-size:13px;">
-                    <span>📋</span>
-                    <span>COPY CODE SNIPPET</span>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- FOOTER -->
     <footer class="att-footer">
-        <div>&copy; testiiii &middot; Daily Attendance Portal &middot; Designed &amp; Developed with Care by Sarthak Pandey</div>
-        <div style="margin-top:6px;">
-            <a href="index.html">Science Tests</a> &middot; 
-            <a href="notes.html">Revision Notes</a> &middot; 
-            <a href="game.html">Motion Mission</a> &middot; 
-            <a href="electric.html">Circuit Lab</a>
-        </div>
+        &copy; testiiii &middot; Attendance Portal for Aradhya Joshi
     </footer>
 
-    <!-- Load Attendance Database and Engine -->
     <script src="attendance_data.js"></script>
     <script src="attendance.js"></script>
 </body>

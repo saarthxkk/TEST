@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Portal & Ledger — Aradhya Joshi | testiiii</title>
+    <meta name="description" content="Official Student Fee Ledger and Payment Portal for Aradhya Joshi on testiiii.">
+    <link rel="stylesheet" href="fee.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="fee-body">
+
+    <!-- NAVIGATION -->
+    <nav class="fee-nav">
+        <a href="index.html" class="fee-brand">testiiii.</a>
+        <div class="fee-nav-links">
+            <a href="attendance.html" class="fee-nav-link" style="color:var(--emerald);">📋 ATTENDANCE</a>
+            <a href="light.html" class="fee-nav-link" style="color:#fbbf24;">🕯️ OPTICS LAB</a>
+            <a href="index.html" class="fee-nav-link">&larr; BACK TO HOME</a>
+        </div>
+    </nav>
+
+    <main class="fee-container">
+        <!-- HEADER -->
+        <div class="fee-header">
+            <div class="fee-tag">STUDENT TUITION LEDGER &middot; CLASS 7 SCIENCE</div>
+            <h1 class="fee-title">Fee <em>Portal.</em></h1>
+            <p class="fee-subtitle">Student: <strong>Aradhya Joshi</strong> &middot; Academic Year 2026–2027 &middot; Monthly Tuition Records</p>
+        </div>
+
+        <!-- SUMMARY STATS -->
+        <div class="summary-grid">
+            <div class="sum-card">
+                <span class="sum-label">SEPTEMBER 2026 FEE</span>
+                <span class="sum-value done" id="sum-sept-status">DONE (PAID)</span>
+                <span class="sum-sub">Paid on 05 Sep 2026 via UPI</span>
+            </div>
+            <div class="sum-card">
+                <span class="sum-label">OCTOBER 2026 FEE</span>
+                <span class="sum-value remaining" id="sum-oct-status">REMAINING</span>
+                <span class="sum-sub">Due since 10 Oct 2026</span>
+            </div>
+            <div class="sum-card">
+                <span class="sum-label">TOTAL REMAINING DUE</span>
+                <span class="sum-value remaining" id="sum-remaining-val">₹2,500</span>
+                <span class="sum-sub">1 Month Outstanding</span>
+            </div>
+            <div class="sum-card">
+                <span class="sum-label">TOTAL PAID TO DATE</span>
+                <span class="sum-value done" id="sum-paid-val">₹2,500</span>
+                <span class="sum-sub">1 Month Cleared</span>
+            </div>
+        </div>
+
+        <!-- DETAILED LEDGER TABLE -->
+        <div class="ledger-card">
+            <div class="ledger-card-header">
+                <h2 class="ledger-title">Tuition Fee History &amp; Monthly Status</h2>
+                <span class="ledger-badge">STATUS: 1 PAID &middot; 1 REMAINING</span>
+            </div>
+            <div class="table-wrap">
+                <table class="ledger-table">
+                    <thead>
+                        <tr>
+                            <th>BILLING MONTH</th>
+                            <th>DETAILS / SESSION</th>
+                            <th>AMOUNT</th>
+                            <th>DUE DATE</th>
+                            <th>PAYMENT DETAILS</th>
+                            <th>STATUS</th>
+                            <th>RECEIPT / ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody id="fee-table-body">
+                        <!-- Populated dynamically from fee_data.js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- PAYMENT DETAILS CARD -->
+        <div class="payment-card" id="pay-section">
+            <div class="pay-card-title">
+                <span>💳</span> PAYMENT METHODS FOR OCTOBER 2026 FEE
+            </div>
+            <div class="pay-grid">
+                <div class="pay-box">
+                    <div class="pay-box-title">📲 Instant UPI Payment</div>
+                    <div class="pay-row">
+                        <span class="pay-row-lbl">UPI ID:</span>
+                        <span class="pay-row-val">sarthak@upi <button class="copy-btn" data-copy="sarthak@upi">Copy</button></span>
+                    </div>
+                    <div class="pay-row">
+                        <span class="pay-row-lbl">Payee Name:</span>
+                        <span class="pay-row-val">Sarthak Pandey</span>
+                    </div>
+                    <div class="pay-row">
+                        <span class="pay-row-lbl">Amount Due:</span>
+                        <span class="pay-row-val" style="color:var(--amber);">₹2,500</span>
+                    </div>
+                </div>
+
+                <div class="pay-box">
+                    <div class="pay-box-title">🏦 Bank Wire / IMPS</div>
+                    <div class="pay-row">
+                        <span class="pay-row-lbl">Bank:</span>
+                        <span class="pay-row-val">HDFC Bank</span>
+                    </div>
+                    <div class="pay-row">
+                        <span class="pay-row-lbl">Account No:</span>
+                        <span class="pay-row-val">50100492817291 <button class="copy-btn" data-copy="50100492817291">Copy</button></span>
+                    </div>
+                    <div class="pay-row">
+                        <span class="pay-row-lbl">IFSC Code:</span>
+                        <span class="pay-row-val">HDFC0001234 <button class="copy-btn" data-copy="HDFC0001234">Copy</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HOW TO UPDATE GUIDE -->
+        <div class="edit-guide-box">
+            <div class="guide-title">💡 How to mark October fee as done in code:</div>
+            <p>Open <code class="code-tag">fee_data.js</code> and update October's entry:</p>
+            <p style="margin-top:6px;"><code class="code-tag">status: "PAID", paidDate: "20 Oct 2026", paymentMode: "UPI"</code></p>
+        </div>
+    </main>
+
+    <!-- RECEIPT MODAL -->
+    <div class="modal-overlay hidden" id="receipt-modal">
+        <div class="receipt-card">
+            <button class="btn-close-modal" id="btn-close-receipt">&times;</button>
+            <div class="receipt-header">
+                <span class="receipt-badge">OFFICIAL RECEIPT</span>
+                <h3 class="receipt-title">testiiii Tuition</h3>
+                <p style="font-size:12px; color:#64748b; margin-top:4px;">Receipt ID: <span id="rec-num">REC-2026-09-142</span></p>
+            </div>
+            <div class="receipt-body">
+                <div class="receipt-row">
+                    <span class="receipt-row-lbl">Student Name:</span>
+                    <span class="receipt-row-val" id="rec-student">Aradhya Joshi</span>
+                </div>
+                <div class="receipt-row">
+                    <span class="receipt-row-lbl">Billing Month:</span>
+                    <span class="receipt-row-val" id="rec-month">September 2026</span>
+                </div>
+                <div class="receipt-row">
+                    <span class="receipt-row-lbl">Course / Grade:</span>
+                    <span class="receipt-row-val">Class 7 Science</span>
+                </div>
+                <div class="receipt-row">
+                    <span class="receipt-row-lbl">Payment Date:</span>
+                    <span class="receipt-row-val" id="rec-date">05 Sep 2026</span>
+                </div>
+                <div class="receipt-row">
+                    <span class="receipt-row-lbl">Payment Mode:</span>
+                    <span class="receipt-row-val" id="rec-mode">UPI / Online Transfer</span>
+                </div>
+                <div class="receipt-row">
+                    <span class="receipt-row-lbl">Status:</span>
+                    <span class="receipt-row-val" style="color:var(--emerald);">PAID &middot; CLEARED ✓</span>
+                </div>
+                <div class="receipt-total">
+                    <span>Total Paid:</span>
+                    <span id="rec-amount" style="color:var(--emerald);">₹2,500</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="fee-footer">
+        &copy; testiiii &middot; Official Fee Ledger for Aradhya Joshi &middot; Managed by Sarthak Pandey
+    </footer>
+
+    <script src="fee_data.js"></script>
+    <script src="fee.js"></script>
+</body>
+</html>

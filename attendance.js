@@ -22,6 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('today-date').textContent = `${latest.day}, ${latest.date}`;
     document.getElementById('total-rate').textContent = `${rate}%`;
     document.getElementById('total-days').textContent = totalDays;
+    const daysSub = document.getElementById('total-days-sub');
+    if (daysSub) {
+        daysSub.textContent = `${presentCount} Present · ${totalDays - presentCount} Absent`;
+    }
 
     // Render table
     const tbody = document.getElementById('records-table-body');

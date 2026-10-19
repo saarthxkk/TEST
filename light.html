@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Optics Lab — Chapter 11: Light | Interactive Science Simulations</title>
+    <meta name="description" content="Interactive physics simulations for Class 7 Science Chapter 11 'Light'. Virtual experiments on rectilinear propagation, plane mirrors, concave & convex mirrors, lenses, prism dispersion, and Newton's disc.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="light.css">
+</head>
+<body>
+
+    <!-- TOP NAVIGATION -->
+    <header class="optics-header">
+        <div class="header-left">
+            <a href="index.html" class="nav-back-btn" title="Back to main platform">&larr; TESTIIII</a>
+            <button class="nav-home-btn" id="btn-nav-home" title="Return to Experiments Hub">
+                <span class="hub-icon">🔬</span>
+                <span class="hub-text">ALL EXPERIMENTS</span>
+            </button>
+            <div class="header-title-box">
+                <span class="header-badge">CLASS 7 &middot; CHAPTER 11 &middot; SCIENCE</span>
+                <h1 class="header-title">OPTICS LAB &middot; <span>LIGHT</span></h1>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <!-- Progress Pill -->
+            <div class="progress-pill" id="global-progress-pill" title="Completed activities in this session">
+                <span class="pill-dot"></span>
+                <span id="progress-count-text">0 / 9 Completed</span>
+            </div>
+
+            <!-- Fast Fact Button -->
+            <button class="header-tool-btn" id="btn-fast-facts" title="Quick Light Facts">
+                <span>⚡</span>
+                <span class="btn-tool-label">Fast Fact</span>
+            </button>
+
+            <!-- Glossary Button -->
+            <button class="header-tool-btn" id="btn-glossary" title="Optics Glossary">
+                <span>📖</span>
+                <span class="btn-tool-label">Glossary</span>
+            </button>
+
+            <!-- Theme Toggle -->
+            <button class="header-tool-btn theme-toggle" id="btn-theme-toggle" title="Toggle Light / Dark Mode" aria-label="Toggle theme">
+                <span id="theme-icon">☀️</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN VIEW CONTAINER -->
+    <main class="optics-main" id="optics-app-root">
+
+        <!-- ════════════════════════════════════════════════════════════════
+             HOME VIEW: 9 ACTIVITY CARDS + CHAPTER QUIZ
+             ════════════════════════════════════════════════════════════════ -->
+        <section class="view-section active" id="view-hub">
+            <div class="hub-hero">
+                <div class="hero-badge">NCERT &middot; SCIENCE IN-DEPTH 7</div>
+                <h2 class="hero-heading">Explore the Wonders of <em>Light.</em></h2>
+                <p class="hero-subheading">
+                    Conduct 9 interactive virtual experiments from your textbook. Manipulate rays, move mirrors and lenses on an optical bench, split sunlight through prisms, and spin Newton's disc in real time.
+                </p>
+                <div class="hero-stats-row">
+                    <div class="stat-box">
+                        <span class="stat-val" id="stat-completed">0</span>
+                        <span class="stat-lbl">Done</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-box">
+                        <span class="stat-val">9</span>
+                        <span class="stat-lbl">Experiments</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-box">
+                        <span class="stat-val">10</span>
+                        <span class="stat-lbl">Quiz MCQs</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARDS GRID -->
+            <div class="hub-grid" id="hub-cards-grid">
+                <!-- Card 1 -->
+                <div class="hub-card" data-sim="sim1" tabindex="0" role="button">
+                    <div class="card-status" id="badge-sim1">Pending</div>
+                    <div class="card-icon-wrap">🕯️</div>
+                    <div class="card-tag">ACTIVITY 1</div>
+                    <h3 class="card-title">Light Travels in a Straight Line</h3>
+                    <p class="card-desc">Look at a candle through a straight vs. coiled rubber tube and observe rectilinear propagation.</p>
+                    <div class="card-footer">
+                        <span class="card-tech">Rubber Tube &middot; Ray Path</span>
+                        <span class="card-arrow">&rarr;</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="hub-card" data-sim="sim2" tabindex="0" role="button">
+                    <div class="card-status" id="badge-sim2">Pending</div>
+                    <div class="card-icon-wrap">🪞</div>
+                    <div class="card-tag">ACTIVITY 2</div>
+                    <h3 class="card-title">Image in a Plane Mirror</h3>
+                    <p class="card-desc">Explore virtual image distance, lateral inversion, ambulance lettering, and screen tests.</p>
+                    <div class="card-footer">
+                        <span class="card-tech">u = v &middot; Lateral Inversion</span>
+                        <span class="card-arrow">&rarr;</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="hub-card" data-sim="sim3" tabindex="0" role="button">
+                    <div class="card-status" id="badge-sim3">Pending</div>
+                    <div class="card-icon-wrap">☀️</div>
+                    <div class="card-tag">ACTIVITY 3</div>
+                    <h3 class="card-title">Real Image of the Sun (Concave Mirror)</h3>
+                    <p class="card-desc">Focus parallel sunbeams onto a sheet of paper at the focus until it smokes and burns.</p>
+                    <div class="card-footer">
+                        <span class="card-tech">Principal Focus &middot; Heat Concentration</span>
+                        <span class="card-arrow">&rarr;</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="hub-card" data-sim="sim4" tabindex="0" role="button">
+                    <div class="card-status" id="badge-sim4">Pending</div>
+                    <div class="card-icon-wrap">🕯️</div>
+                    <div class="card-tag">ACTIVITY 4</div>
+                    <h3 class="card-title">Image Formation by Concave Mirror</h3>
+                    <p class="card-desc">Full optical bench with 5 object positions, ray diagram, sharp screen mode & observation table.</p>
+                    <div class="card-footer">
+                        <span class="card-tech">1/v + 1/u = 1/f &middot; Live Table</span>
+                        <span class="card-arrow">&rarr;</span>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="hub-card" data-sim="sim5" tabindex="0" role="button">
+                    <div class="card-status" id="badge-sim5">Pending</div>
+                    <div class="card-icon-wrap">🚗</div>
+                    <div class="card-tag">TEXTBOOK LAB</div>
+                    <h3 class="card-title">Image in a Convex Mirror & Field of View</h3>
+                    <p class="card-desc">Discover why convex mirrors are used in car rear-view mirrors; compare fields of view.</p>
+                    <div class="card-footer">
+                        <span class="card-tech">Always Virtual & Diminished &middot; Wide View</span>
+                        <span class="card-arrow">&rarr;</span>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="hub-card" data-sim="sim6" tabindex="0" role="button">
+                    <div class="card-status" id="badge-sim6">Pending</div>
+                    <div class="card-icon-wrap">🔍</div>
+                    <div class="card-tag">TEXTBOOK LAB</div>
+                    <h3 class="card-title">Convex Lens: Converging & Image Formation</h3>
+                    <p class="card-desc">Converge rays to a real focus, use as a magnifying glass, and capture sharp images on screen.</p>
+                    <div class="card-footer">
+                        <span class="card-tech">1/v - 1/u = 1/f &middot; Converging</span>
+                        <span class="card-arrow">&rarr;</span>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="hub-card" data-sim="sim7" tabindex="0" role="button">
+                    <div class="card-status" id="badge-sim7">Pending</div>
+                    <div class="card-icon-wrap">👓</div>
+                    <div class="card-tag">TEXTBOOK LAB</div>
+                    <h3 class="card-title">Concave Lens: Diverging Action</h3>
+                    <p class="card-desc">Why concave lenses diverge light and why they cannot burn paper. Full comparison table.</p>
+                    <div class="card-footer">
+                        <span class="card-tech">Diverging Rays &middot; No Paper Burn</span>
+                        <span class="card-arrow">&rarr;</span>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="hub-card" data-sim="sim8" tabindex="0" role="button">
+                    <div class="card-status" id="badge-sim8">Pending</div>
+                    <div class="card-icon-wrap">🌈</div>
+                    <div class="card-tag">ACTIVITY 5</div>
+                    <h3 class="card-title">Dispersion of Light: Prism & Rainbow</h3>
+                    <p class="card-desc">Split white sunlight into VIBGYOR using Snell's law dispersion; see how rainbows form.</p>
+                    <div class="card-footer">
+                        <span class="card-tech">Snell's Law &middot; VIBGYOR Spectrum</span>
+                        <span class="card-arrow">&rarr;</span>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="hub-card" data-sim="sim9" tabindex="0" role="button">
+                    <div class="card-status" id="badge-sim9">Pending</div>
+                    <div class="card-icon-wrap">💿</div>
+                    <div class="card-tag">TEXTBOOK LAB</div>
+                    <h3 class="card-title">Newton's Disc: Make & Spin</h3>
+                    <p class="card-desc">Build the disc step-by-step, paint the 7 sectors, and spin at 3000 RPM to produce white light.</p>
+                    <div class="card-footer">
+                        <span class="card-tech">Persistence of Vision &middot; Color Blending</span>
+                        <span class="card-arrow">&rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHAPTER QUIZ BANNER -->
+            <div class="quiz-launch-banner">
+                <div class="qlb-content">
+                    <span class="qlb-badge">FINAL CHALLENGE</span>
+                    <h3 class="qlb-title">Test Your Mastery: Chapter 11 Quiz</h3>
+                    <p class="qlb-desc">10 NCERT-level multiple-choice questions covering all mirror, lens, ray, and color concepts with instant explanations.</p>
+                </div>
+                <button class="btn-primary-optics" id="btn-open-quiz">
+                    <span>TAKE CHAPTER QUIZ</span> &rarr;
+                </button>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════════════════
+             SIMULATION 1: LIGHT TRAVELS IN A STRAIGHT LINE
+             ════════════════════════════════════════════════════════════════ -->
+        <section class="view-section" id="view-sim1">
+            <div class="sim-container">
+                <div class="sim-nav-bar">
+                    <button class="btn-back-hub">&larr; All Activities</button>
+                    <div class="sim-breadcrumbs">Activity 1 &middot; Rectilinear Propagation</div>
+                    <button class="btn-next-sim" data-next="sim2">Next Activity &rarr;</button>
+                </div>
+
+                <!-- 1. Title + Aim -->
+                <div class="sim-header-block">
+                    <h2 class="sim-title">Activity 1: Light Travels in a Straight Line</h2>
+                    <p class="sim-aim"><strong>Aim:</strong> To observe that light travels along a straight line path (rectilinear propagation) using a rubber tube and candle.</p>
+                </div>
+
+                <!-- Sub-tabs for Bonus Window Slit -->
+                <div class="sim-subtabs">
+                    <button class="subtab-btn active" data-subtab="sim1-tube">Experiment 1: Rubber Tube</button>
+                    <button class="subtab-btn" data-subtab="sim1-slit">Bonus Demo: Window Slit & Sunbeam</button>
+                </div>
+
+                <!-- 2. Materials Required -->
+                <div class="materials-box">
+                    <span class="mat-label">Materials Required:</span>
+                    <span class="mat-chip">🕯️ Lighted Candle</span>
+                    <span class="mat-chip">〰️ Flexible Rubber Tube</span>
+                    <span class="mat-chip">🪵 Table Stand</span>
+                    <span class="mat-chip">👁️ Observer's Eye</span>
+                </div>
+
+                <!-- 3. Procedure Steps -->
+                <div class="procedure-box">
+                    <div class="proc-heading">Procedure:</div>
+                    <ol class="proc-list" id="proc-list-sim1">
+                        <li class="proc-step active" id="sim1-step1">1. Place the lighted candle on the table and align the rubber tube in a straight horizontal line.</li>
+                        <li class="proc-step" id="sim1-step2">2. Look through the tube at the candle flame with one eye. Observe if light passes through.</li>
+                        <li class="proc-step" id="sim1-step3">3. Drag the middle of the tube or click "Coil Tube" to bend it. Observe whether the flame is still visible.</li>
+                    </ol>
+                </div>
+
+                <!-- 4. Interactive Canvas -->
+                <div class="canvas-panel">
+                    <div class="canvas-header-bar">
+                        <span class="canvas-tag">INTERACTIVE OPTICAL STAGE</span>
+                        <span class="canvas-hint">Drag the tube handle up or down to bend it!</span>
+                    </div>
+                    <div class="canvas-wrap">
+                        <canvas id="canvas-sim1" width="840" height="360" aria-label="Rubber tube and candle simulation canvas"></canvas>
+                    </div>
+                </div>
+
+                <!-- 5. Controls -->
+                <div class="controls-panel">
+                    <div class="control-group">
+                        <label class="control-label">Tube Shape Preset:</label>
+                        <div class="btn-group-segmented">
+                            <button class="btn-seg active" id="sim1-btn-straight">Straight Tube</button>
+                            <button class="btn-seg" id="sim1-btn-coiled">Coiled / Bent Tube</button>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="sim1-bend-slider">Tube Curvature: <span id="sim1-bend-val">0° (Straight)</span></label>
+                        <input type="range" id="sim1-bend-slider" min="0" max="100" value="0" step="1" aria-label="Tube bend amount">
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="sim1-candle-y">Candle Flame Height:</label>
+                        <input type="range" id="sim1-candle-y" min="-40" max="40" value="0" step="1" aria-label="Candle flame height">
+                    </div>
+
+                    <button class="btn-reset-sim" id="sim1-btn-reset">Reset Setup</button>
+                </div>
+
+                <!-- 6. Live Observation Box -->
+                <div class="observation-box">
+                    <div class="obs-title"><span>👁️</span> Live Observation</div>
+                    <div class="obs-content" id="sim1-observation">
+                        The tube is perfectly straight. The light coming from the candle flame travels directly through the tube and is <strong>clearly visible</strong> to the observer's eye.
+                    </div>
+                </div>
+
+                <!-- 7. Conclusion Box (unlocked after testing both states) -->
+                <div class="conclusion-box locked" id="sim1-conclusion">
+                    <div class="concl-header">
+                        <span class="concl-icon">🏆</span>
+                        <span class="concl-badge">SCIENTIFIC CONCLUSION</span>
+                    </div>
+                    <p class="concl-text">
+                        <strong>Light travels along a straight line path.</strong> This fundamental property is called the <strong>rectilinear propagation of light</strong>. When the tube is bent or coiled, the light rays cannot turn or curve around the bend, so the flame is completely blocked.
+                    </p>
+                </div>
+
+                <!-- 8. Check Yourself MCQs -->
+                <div class="check-yourself-box" id="quiz-sim1">
+                    <div class="cy-header">
+                        <span>📝</span> Check Yourself (Activity 1)
+                    </div>
+                    <div class="mcq-card" data-answered="false">
+                        <div class="mcq-question">Q1. What is the property of light traveling in a straight line called?</div>
+                        <div class="mcq-options">
+                            <button class="mcq-opt" data-correct="true">A. Rectilinear propagation</button>
+                            <button class="mcq-opt" data-correct="false">B. Curvilinear refraction</button>
+                            <button class="mcq-opt" data-correct="false">C. Lateral inversion</button>
+                            <button class="mcq-opt" data-correct="false">D. Dispersion</button>
+                        </div>
+                        <div class="mcq-explanation hidden">Correct! "Rectilinear" comes from "recti" (straight) and "linear" (line). Light never bends on its own around an obstacle.</div>
+                    </div>
+
+                    <div class="mcq-card" data-answered="false">
+                        <div class="mcq-question">Q2. Why could the student NOT see the flame through the coiled rubber tube?</div>
+                        <div class="mcq-options">
+                            <button class="mcq-opt" data-correct="false">A. The tube was made of rubber, which absorbs all light.</button>
+                            <button class="mcq-opt" data-correct="true">B. Light travels only in straight lines and cannot turn around bends.</button>
+                            <button class="mcq-opt" data-correct="false">C. The flame automatically went off.</button>
+                            <button class="mcq-opt" data-correct="false">D. The eye lost its sight.</button>
+                        </div>
+                        <div class="mcq-explanation hidden">Correct! Because light cannot curve around obstacles, the rays strike the inner opaque wall of the bend and are absorbed.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════════════════
+             SIMULATION 2: IMAGE FORMED BY A PLANE MIRROR
+             ════════════════════════════════════════════════════════════════ -->
+        <section class="view-section" id="view-sim2">
+            <div class="sim-container">
+                <div class="sim-nav-bar">
+                    <button class="btn-back-hub">&larr; All Activities</button>
+                    <div class="sim-breadcrumbs">Activity 2 &middot; Plane Mirror Reflection</div>
+                    <button class="btn-next-sim" data-next="sim3">Next Activity &rarr;</button>
+                </div>
+
+                <!-- 1. Title + Aim -->
+                <div class="sim-header-block">
+                    <h2 class="sim-title">Activity 2: Image Formed by a Plane Mirror</h2>
+                    <p class="sim-aim"><strong>Aim:</strong> To investigate the characteristics of the image formed by a plane mirror: object vs. image distance, virtual nature on a screen, and lateral inversion.</p>
+                </div>
+
+                <!-- Sub-tabs for Lateral Inversion and Water Reflection -->
+                <div class="sim-subtabs">
+                    <button class="subtab-btn active" data-subtab="sim2-distance">Experiment: Object & Image Distance</button>
+                    <button class="subtab-btn" data-subtab="sim2-lateral">Lateral Inversion & Ambulance</button>
+                    <button class="subtab-btn" data-subtab="sim2-water">Reflection in Water (Vertical)</button>
+                </div>
+
+                <!-- 2. Materials Required -->
+                <div class="materials-box">
+                    <span class="mat-label">Materials Required:</span>
+                    <span class="mat-chip">🪞 Vertical Plane Mirror</span>
+                    <span class="mat-chip">🕯️ Lighted Candle (Object)</span>
+                    <span class="mat-chip">📏 Centimeter Ruler</span>
+                    <span class="mat-chip">📄 Cardboard Screen</span>
+                </div>
+
+                <!-- 3. Procedure Steps -->
+                <div class="procedure-box">
+                    <div class="proc-heading">Procedure:</div>
+                    <ol class="proc-list" id="proc-list-sim2">
+                        <li class="proc-step active" id="sim2-step1">1. Place the candle in front of the mirror. Observe the image formed behind the mirror.</li>
+                        <li class="proc-step" id="sim2-step2">2. Drag the candle closer and further away. Compare object distance (u) with image distance (v).</li>
+                        <li class="proc-step" id="sim2-step3">3. Drag the paper screen behind the mirror to test if the image can be caught on a screen.</li>
+                    </ol>
+                </div>
+
+                <!-- 4. Interactive Canvas -->
+                <div class="canvas-panel">
+                    <div class="canvas-header-bar">
+                        <span class="canvas-tag">OPTICAL BENCH &middot; PLANE MIRROR</span>
+                        <span class="canvas-hint">Drag the candle horizontally to change distance!</span>
+                    </div>
+                    <div class="canvas-wrap">
+                        <canvas id="canvas-sim2" width="840" height="380" aria-label="Plane mirror ray diagram canvas"></canvas>
+                    </div>
+                </div>
+
+                <!-- Live Metrics Bar -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <span class="metric-lbl">Object Distance (u)</span>
+                        <span class="metric-val" id="sim2-u-val">30.0 cm</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Image Distance (v)</span>
+                        <span class="metric-val" id="sim2-v-val">30.0 cm</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Object Height (hₒ)</span>
+                        <span class="metric-val" id="sim2-ho-val">8.0 cm</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Image Height (hᵢ)</span>
+                        <span class="metric-val" id="sim2-hi-val">8.0 cm</span>
+                    </div>
+                </div>
+
+                <!-- 5. Controls -->
+                <div class="controls-panel">
+                    <div class="control-group">
+                        <label class="control-label" for="sim2-u-slider">Candle Distance: <span id="sim2-u-slider-val">30 cm</span></label>
+                        <input type="range" id="sim2-u-slider" min="10" max="65" value="30" step="1">
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="sim2-screen-x">Screen Position: <span id="sim2-screen-val">Behind Mirror (+25 cm)</span></label>
+                        <input type="range" id="sim2-screen-x" min="5" max="65" value="30" step="1">
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">Cardboard Screen Mode:</label>
+                        <div class="btn-group-segmented">
+                            <button class="btn-seg active" id="sim2-btn-screen-on">Place Screen Behind Mirror</button>
+                            <button class="btn-seg" id="sim2-btn-screen-off">Remove Screen</button>
+                        </div>
+                    </div>
+
+                    <button class="btn-reset-sim" id="sim2-btn-reset">Reset Mirror</button>
+                </div>
+
+                <!-- 6. Live Observation Box -->
+                <div class="observation-box">
+                    <div class="obs-title"><span>👁️</span> Live Observation</div>
+                    <div class="obs-content" id="sim2-observation">
+                        Image is formed behind the mirror at exactly the same distance as the candle in front (<strong>u = v = 30 cm</strong>). The image is erect, of identical size, and cannot be captured on the cardboard screen placed behind the mirror.
+                    </div>
+                </div>
+
+                <!-- 7. Conclusion Box -->
+                <div class="conclusion-box locked" id="sim2-conclusion">
+                    <div class="concl-header">
+                        <span class="concl-icon">🏆</span>
+                        <span class="concl-badge">SCIENTIFIC CONCLUSION</span>
+                    </div>
+                    <p class="concl-text">
+                        The image formed by a plane mirror is always <strong>erect (upright)</strong>, <strong>virtual</strong> (cannot be obtained on a screen), of the <strong>same size as the object</strong>, and formed at the <strong>same distance behind the mirror</strong> as the object is in front of it. In addition, the image is <strong>laterally inverted</strong> (left becomes right and right becomes left).
+                    </p>
+                </div>
+
+                <!-- 8. Check Yourself MCQs -->
+                <div class="check-yourself-box" id="quiz-sim2">
+                    <div class="cy-header"><span>📝</span> Check Yourself (Activity 2)</div>
+                    <div class="mcq-card" data-answered="false">
+                        <div class="mcq-question">Q1. An object is placed 35 cm in front of a plane mirror. What is the distance between the object and its image?</div>
+                        <div class="mcq-options">
+                            <button class="mcq-opt" data-correct="false">A. 35 cm</button>
+                            <button class="mcq-opt" data-correct="true">B. 70 cm</button>
+                            <button class="mcq-opt" data-correct="false">C. 0 cm</button>
+                            <button class="mcq-opt" data-correct="false">D. 17.5 cm</button>
+                        </div>
+                        <div class="mcq-explanation hidden">Correct! The image is 35 cm behind the mirror. Total distance from object to image = 35 cm + 35 cm = 70 cm.</div>
+                    </div>
+
+                    <div class="mcq-card" data-answered="false">
+                        <div class="mcq-question">Q2. Why is the word AMBULANCE painted as 'ƎƆИAJUᗺMA' on the front of emergency vehicles?</div>
+                        <div class="mcq-options">
+                            <button class="mcq-opt" data-correct="false">A. To look stylish and modern</button>
+                            <button class="mcq-opt" data-correct="true">B. Due to lateral inversion, drivers ahead see it upright as 'AMBULANCE' in their rear-view mirror</button>
+                            <button class="mcq-opt" data-correct="false">C. Because printers print it reversed by mistake</button>
+                            <button class="mcq-opt" data-correct="false">D. It is written in a foreign language</button>
+                        </div>
+                        <div class="mcq-explanation hidden">Correct! A plane mirror laterally inverts left and right, so the pre-inverted lettering is seen right-side-up and easily readable by preceding drivers.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════════════════
+             SIMULATION 3: REAL IMAGE OF SUN BY CONCAVE MIRROR
+             ════════════════════════════════════════════════════════════════ -->
+        <section class="view-section" id="view-sim3">
+            <div class="sim-container">
+                <div class="sim-nav-bar">
+                    <button class="btn-back-hub">&larr; All Activities</button>
+                    <div class="sim-breadcrumbs">Activity 3 &middot; Concave Mirror Focus & Solar Burning</div>
+                    <button class="btn-next-sim" data-next="sim4">Next Activity &rarr;</button>
+                </div>
+
+                <!-- 1. Title + Aim -->
+                <div class="sim-header-block">
+                    <h2 class="sim-title">Activity 3: Real Image of the Sun by a Concave Mirror</h2>
+                    <p class="sim-aim"><strong>Aim:</strong> To obtain a real image of the distant Sun on a sheet of paper using a concave mirror and observe solar energy concentration at the focus.</p>
+                </div>
+
+                <!-- 2. Materials Required -->
+                <div class="materials-box">
+                    <span class="mat-label">Materials Required:</span>
+                    <span class="mat-chip">☀️ Parallel Sunbeams</span>
+                    <span class="mat-chip">🔘 Concave Mirror on Stand</span>
+                    <span class="mat-chip">📄 Sheet of Paper (Screen)</span>
+                    <span class="mat-chip">📏 Ruler (Focal Scale)</span>
+                </div>
+
+                <!-- 3. Procedure Steps -->
+                <div class="procedure-box">
+                    <div class="proc-heading">Procedure:</div>
+                    <ol class="proc-list" id="proc-list-sim3">
+                        <li class="proc-step active" id="sim3-step1">1. Point the concave mirror towards the distant Sun so parallel sunlight rays hit its reflective curved surface.</li>
+                        <li class="proc-step" id="sim3-step2">2. Move the paper sheet back and forth along the axis until you get the smallest, sharpest, and brightest spot.</li>
+                        <li class="proc-step" id="sim3-step3">3. Hold the paper steadily at this point (the principal focus) for 3-5 seconds and watch for smoke!</li>
+                    </ol>
+                </div>
+
+                <!-- 4. Interactive Canvas -->
+                <div class="canvas-panel">
+                    <div class="canvas-header-bar">
+                        <span class="canvas-tag">SUNLIGHT CONVERGENCE &middot; PRINCIPAL FOCUS</span>
+                        <span class="canvas-hint">Drag the paper to Focus F (20 cm) and hold steady!</span>
+                    </div>
+                    <div class="canvas-wrap">
+                        <canvas id="canvas-sim3" width="840" height="380" aria-label="Sunlight converging through concave mirror canvas"></canvas>
+                    </div>
+                </div>
+
+                <!-- Live Metrics Bar -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <span class="metric-lbl">Paper Distance from Mirror</span>
+                        <span class="metric-val" id="sim3-pos-val">32.0 cm</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Focal Length (f)</span>
+                        <span class="metric-val">20.0 cm</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Spot Brightness & Heat</span>
+                        <span class="metric-val" id="sim3-heat-val">35% (Warm)</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Hold Time at Focus</span>
+                        <span class="metric-val" id="sim3-timer-val">0.0 s</span>
+                    </div>
+                </div>
+
+                <!-- 5. Controls -->
+                <div class="controls-panel">
+                    <div class="control-group">
+                        <label class="control-label" for="sim3-paper-slider">Paper Position: <span id="sim3-slider-pos-val">32 cm</span></label>
+                        <input type="range" id="sim3-paper-slider" min="5" max="45" value="32" step="0.5">
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="sim3-hold-slider">Time Held Steady: <span id="sim3-slider-hold-val">0 s</span></label>
+                        <input type="range" id="sim3-hold-slider" min="0" max="6" value="0" step="0.2">
+                    </div>
+
+                    <div class="control-group">
+                        <button class="btn-primary-optics" id="sim3-btn-snap-focus">Snap Paper to Focus (20 cm)</button>
+                    </div>
+
+                    <button class="btn-reset-sim" id="sim3-btn-reset">Reset Experiment</button>
+                </div>
+
+                <!-- 6. Live Observation Box -->
+                <div class="observation-box">
+                    <div class="obs-title"><span>👁️</span> Live Observation</div>
+                    <div class="obs-content" id="sim3-observation">
+                        The paper is at 32 cm. The reflected sunrays form a wide, blurry circle of light. The heat is dispersed and the paper remains safe.
+                    </div>
+                </div>
+
+                <!-- 7. Conclusion Box -->
+                <div class="conclusion-box locked" id="sim3-conclusion">
+                    <div class="concl-header">
+                        <span class="concl-icon">🏆</span>
+                        <span class="concl-badge">SCIENTIFIC CONCLUSION</span>
+                    </div>
+                    <p class="concl-text">
+                        The sharp, bright spot of light is the <strong>real image of the Sun</strong> formed at the <strong>principal focus (F)</strong> of the concave mirror. Because it can be received on a paper screen, it is a <strong>REAL image</strong>. The concentrated solar heat gathered from the entire mirror surface into a tiny pinpoint causes the paper to smoke and catch fire.
+                    </p>
+                </div>
+
+                <!-- 8. Check Yourself MCQs -->
+                <div class="check-yourself-box" id="quiz-sim3">
+                    <div class="cy-header"><span>📝</span> Check Yourself (Activity 3)</div>
+                    <div class="mcq-card" data-answered="false">
+                        <div class="mcq-question">Q1. Why does the paper start burning only when placed at the focus of the concave mirror?</div>
+                        <div class="mcq-options">
+                            <button class="mcq-opt" data-correct="true">A. All parallel sunrays are converged to a single tiny point, concentrating enormous heat energy.</button>
+                            <button class="mcq-opt" data-correct="false">B. The mirror produces sparks of fire by itself.</button>
+                            <button class="mcq-opt" data-correct="false">C. The paper chemically reacts with the glass.</button>
+                            <button class="mcq-opt" data-correct="false">D. The distance is too short for air to cool the paper.</button>
+                        </div>
+                        <div class="mcq-explanation hidden">Correct! A concave mirror is a converging mirror. It focuses sunlight from its entire aperture onto the tiny focal spot.</div>
+                    </div>
+
+                    <div class="mcq-card" data-answered="false">
+                        <div class="mcq-question">Q2. An image that can be formed and captured on a physical screen is called a:</div>
+                        <div class="mcq-options">
+                            <button class="mcq-opt" data-correct="true">A. Real image</button>
+                            <button class="mcq-opt" data-correct="false">B. Virtual image</button>
+                            <button class="mcq-opt" data-correct="false">C. Lateral image</button>
+                            <button class="mcq-opt" data-correct="false">D. Imaginary image</button>
+                        </div>
+                        <div class="mcq-explanation hidden">Correct! By definition in physics, an image formed by actual intersecting rays that can be caught on a screen is a Real Image.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════════════════
+             SIMULATION 4: IMAGE FORMED BY A CONCAVE MIRROR (OPTICAL BENCH)
+             ════════════════════════════════════════════════════════════════ -->
+        <section class="view-section" id="view-sim4">
+            <div class="sim-container">
+                <div class="sim-nav-bar">
+                    <button class="btn-back-hub">&larr; All Activities</button>
+                    <div class="sim-breadcrumbs">Activity 4 &middot; Concave Mirror Optical Bench</div>
+                    <button class="btn-next-sim" data-next="sim5">Next Activity &rarr;</button>
+                </div>
+
+                <!-- 1. Title + Aim -->
+                <div class="sim-header-block">
+                    <h2 class="sim-title">Activity 4: Image Formed by a Concave Mirror</h2>
+                    <p class="sim-aim"><strong>Aim:</strong> To observe the nature, position, and relative size of the image formed by a concave mirror for different positions of the object, and verify with a screen and observation table.</p>
+                </div>
+
+                <!-- 2. Materials Required -->
+                <div class="materials-box">
+                    <span class="mat-label">Materials Required:</span>
+                    <span class="mat-chip">🔘 Concave Mirror on Stand (f = 15 cm)</span>
+                    <span class="mat-chip">🕯️ Lighted Candle (Object)</span>
+                    <span class="mat-chip">📄 White Paper Screen</span>
+                    <span class="mat-chip">📏 Optical Bench (0–100 cm scale)</span>
+                </div>
+
+                <!-- 3. Procedure Steps -->
+                <div class="procedure-box">
+                    <div class="proc-heading">Procedure:</div>
+                    <ol class="proc-list" id="proc-list-sim4">
+                        <li class="proc-step active" id="sim4-step1">1. Fix the concave mirror at 85 cm on the bench. Mark Focus F (15 cm away) and Center of Curvature C (30 cm away).</li>
+                        <li class="proc-step" id="sim4-step2">2. Place candle at 50 cm from mirror (beyond C). Adjust the paper screen until a sharp inverted flame appears.</li>
+                        <li class="proc-step" id="sim4-step3">3. Move the candle to: At C (30 cm), Between C & F (20 cm), At F (15 cm), and Inside F (10 cm). Record each reading!</li>
+                    </ol>
+                </div>
+
+                <!-- 4. Interactive Canvas -->
+                <div class="canvas-panel">
+                    <div class="canvas-header-bar">
+                        <span class="canvas-tag">OPTICAL BENCH RAY DIAGRAM (1/v + 1/u = 1/f)</span>
+                        <span class="canvas-hint">Drag candle or screen along the optical bench!</span>
+                    </div>
+                    <div class="canvas-wrap">
+                        <canvas id="canvas-sim4" width="840" height="400" aria-label="Concave mirror optical bench ray diagram canvas"></canvas>
+                    </div>
+                </div>
+
+                <!-- Live Metrics Bar -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <span class="metric-lbl">Object Distance (u)</span>
+                        <span class="metric-val" id="sim4-u-val">50.0 cm</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Image Distance (v)</span>
+                        <span class="metric-val" id="sim4-v-val">21.4 cm</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Magnification (m)</span>
+                        <span class="metric-val" id="sim4-m-val">-0.43</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Image Nature</span>
+                        <span class="metric-val" id="sim4-nature-val">Real, Inverted, Smaller</span>
+                    </div>
+                </div>
+
+                <!-- 5. Controls -->
+                <div class="controls-panel">
+                    <div class="control-group">
+                        <label class="control-label" for="sim4-u-slider">Object Distance (u): <span id="sim4-u-slider-val">50 cm</span></label>
+                        <input type="range" id="sim4-u-slider" min="6" max="70" value="50" step="0.5">
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="sim4-f-slider">Focal Length (f): <span id="sim4-f-val">15 cm (C = 30 cm)</span></label>
+                        <input type="range" id="sim4-f-slider" min="10" max="20" value="15" step="1">
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="sim4-screen-slider">Screen Position: <span id="sim4-screen-slider-val">21.4 cm (In Focus!)</span></label>
+                        <input type="range" id="sim4-screen-slider" min="5" max="80" value="21.4" step="0.5">
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">Quick Position Presets:</label>
+                        <div class="btn-group-presets">
+                            <button class="btn-preset" data-u="50">Beyond C (50cm)</button>
+                            <button class="btn-preset" data-u="30">At C (30cm)</button>
+                            <button class="btn-preset" data-u="20">Between C & F (20cm)</button>
+                            <button class="btn-preset" data-u="15">At F (15cm)</button>
+                            <button class="btn-preset" data-u="10">Inside F (10cm)</button>
+                        </div>
+                    </div>
+
+                    <div class="control-group btn-row-actions">
+                        <button class="btn-primary-optics" id="sim4-btn-snap-screen">Auto-Align Screen to Sharp Image</button>
+                        <button class="btn-accent-optics" id="sim4-btn-record">📋 Record this Reading in Table</button>
+                        <button class="btn-reset-sim" id="sim4-btn-reset">Reset Setup</button>
+                    </div>
+                </div>
+
+                <!-- 6. Live Observation Box -->
+                <div class="observation-box">
+                    <div class="obs-title"><span>👁️</span> Live Observation</div>
+                    <div class="obs-content" id="sim4-observation">
+                        At u = 50 cm (Beyond C), a <strong>real, inverted, and diminished (smaller)</strong> image is formed at v = 21.4 cm between C and F. The screen captures a crisp inverted flame.
+                    </div>
+                </div>
+
+                <!-- OBSERVATION TABLE (FROM TEXTBOOK) -->
+                <div class="table-container">
+                    <div class="table-header">
+                        <span class="table-title">📖 Textbook Observation Table (Concave Mirror)</span>
+                        <span class="table-badge" id="sim4-table-count">1 of 5 Readings Recorded</span>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="obs-table" id="sim4-table">
+                            <thead>
+                                <tr>
+                                    <th>S.No.</th>
+                                    <th>Distance of object (u)</th>
+                                    <th>Smaller than object</th>
+                                    <th>Larger than object</th>
+                                    <th>Inverted / Erect</th>
+                                    <th>Real / Virtual</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sim4-table-body">
+                                <tr>
+                                    <td>1</td>
+                                    <td>50 cm (Beyond C)</td>
+                                    <td>✓ Yes (Smaller)</td>
+                                    <td>—</td>
+                                    <td>Inverted</td>
+                                    <td>Real</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 7. Conclusion Box -->
+                <div class="conclusion-box locked" id="sim4-conclusion">
+                    <div class="concl-header">
+                        <span class="concl-icon">🏆</span>
+                        <span class="concl-badge">SCIENTIFIC CONCLUSION</span>
+                    </div>
+                    <p class="concl-text">
+                        <strong>The image formed by a concave mirror can be smaller or larger, real or virtual, and erect or inverted</strong>, depending strictly on the distance of the object from the mirror! When the object is far away (beyond F), the image is real and inverted. When the object is placed very close (inside focus F), the image becomes <strong>virtual, erect, and magnified</strong>.
+                    </p>
+                </div>
+
+                <!-- Applications / Info Panel -->
+                <div class="info-accordion">
+                    <div class="info-acc-title">💡 Important Practical Uses of Concave Mirrors</div>
+                    <div class="info-acc-content">
+                        <div class="uses-grid">
+                            <div class="use-card">
+                                <span class="use-icon">🦷</span>
+                                <strong>Dentist's Mirror:</strong> When held close to a tooth (inside F), it produces an erect and magnified image of teeth.
+                            </div>
+                            <div class="use-card">
+                                <span class="use-icon">🔦</span>
+                                <strong>Torches & Headlights:</strong> The bulb is placed at focus F, producing a powerful, parallel beam of light.
+                            </div>
+                            <div class="use-card">
+                                <span class="use-icon">🪒</span>
+                                <strong>Shaving / Makeup Mirror:</strong> Provides an enlarged upright view of the face when held close.
+                            </div>
+                            <div class="use-card">
+                                <span class="use-icon">☀️</span>
+                                <strong>Solar Furnaces:</strong> Huge concave mirrors concentrate sunlight at the focus to produce intense temperatures (>1000°C).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Check Yourself MCQs -->
+                <div class="check-yourself-box" id="quiz-sim4">
+                    <div class="cy-header"><span>📝</span> Check Yourself (Activity 4)</div>
+                    <div class="mcq-card" data-answered="false">
+                        <div class="mcq-question">Q1. If an object is placed at the center of curvature (C = 30 cm) of a concave mirror (f = 15 cm), where is the image formed?</div>
+                        <div class="mcq-options">
+                            <button class="mcq-opt" data-correct="true">A. At C (30 cm), same size, real and inverted</button>
+                            <button class="mcq-opt" data-correct="false">B. At F (15 cm), highly diminished</button>
+                            <button class="mcq-opt" data-correct="false">C. Behind the mirror, virtual and erect</button>
+                            <button class="mcq-opt" data-correct="false">D. At infinity</button>
+                        </div>
+                        <div class="mcq-explanation hidden">Correct! For an object at C, 1/v = 1/f - 1/u = 1/15 - 1/30 = 1/30, so v = 30 cm (at C), m = -1 (equal size).</div>
+                    </div>
+
+                    <div class="mcq-card" data-answered="false">
+                        <div class="mcq-question">Q2. When a dentist holds a concave mirror very close to a tooth (inside focal length F), the image is:</div>
+                        <div class="mcq-options">
+                            <button class="mcq-opt" data-correct="true">A. Virtual, erect, and magnified</button>
+                            <button class="mcq-opt" data-correct="false">B. Real, inverted, and diminished</button>
+                            <button class="mcq-opt" data-correct="false">C. Real, inverted, and magnified</button>
+                            <button class="mcq-opt" data-correct="false">D. Upside down and blurred</button>
+                        </div>
+                        <div class="mcq-explanation hidden">Correct! When u &lt; f, the reflected rays diverge and appear to meet behind the mirror, creating a virtual, upright, and magnified image.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════════════════
+             SIMULATION 5: CONVEX MIRROR (WIDE FIELD OF VIEW)
+             ════════════════════════════════════════════════════════════════ -->
+        <section class="view-section" id="view-sim5">
+            <div class="sim-container">
+                <div class="sim-nav-bar">
+                    <button class="btn-back-hub">&larr; All Activities</button>
+                    <div class="sim-breadcrumbs">Activity &middot; Convex Mirror & Field of View</div>
+                    <button class="btn-next-sim" data-next="sim6">Next Activity &rarr;</button>
+                </div>
+
+                <!-- 1. Title + Aim -->
+                <div class="sim-header-block">
+                    <h2 class="sim-title">Convex Mirror: Image Formation & Field of View</h2>
+                    <p class="sim-aim"><strong>Aim:</strong> To repeat the optical bench activity with a convex mirror, verify that the image is always virtual, erect, and diminished, and compare its wide field of view with a plane mirror.</p>
+                </div>
+
+                <!-- Sub-tabs for Field of View comparison and 5 Differences table -->
+                <div class="sim-subtabs">
+                    <button class="subtab-btn active" data-subtab="sim5-bench">Optical Bench & Table</button>
+                    <button class="subtab-btn" data-subtab="sim5-fov">Field of View: Convex vs Plane Mirror</button>
+                    <button class="subtab-btn" data-subtab="sim5-diff">5 Differences: Concave vs Convex</button>
+                </div>
+
+                <!-- 2. Materials Required -->
+                <div class="materials-box">
+                    <span class="mat-label">Materials Required:</span>
+                    <span class="mat-chip">🔘 Convex Mirror on Stand</span>
+                    <span class="mat-chip">🕯️ Candle (Object)</span>
+                    <span class="mat-chip">📄 Paper Screen</span>
+                    <span class="mat-chip">🚗 Traffic Street Scene</span>
+                </div>
+
+                <!-- 3. Procedure Steps -->
+                <div class="procedure-box">
+                    <div class="proc-heading">Procedure:</div>
+                    <ol class="proc-list" id="proc-list-sim5">
+                        <li class="proc-step active" id="sim5-step1">1. Place the convex mirror on the bench. Focus F lies virtually behind the reflective bulging surface.</li>
+                        <li class="proc-step" id="sim5-step2">2. Move the candle along the axis from 60 cm to 10 cm. Note the nature and size of the image.</li>
+                        <li class="proc-step" id="sim5-step3">3. Place a screen in front of and behind the mirror to test if an image can ever be caught.</li>
+                    </ol>
+                </div>
+
+                <!-- 4. Interactive Canvas -->
+                <div class="canvas-panel">
+                    <div class="canvas-header-bar">
+                        <span class="canvas-tag">CONVEX MIRROR DIVERGING RAY DIAGRAM</span>
+                        <span class="canvas-hint">Drag candle to see image form behind the mirror!</span>
+                    </div>
+                    <div class="canvas-wrap">
+                        <canvas id="canvas-sim5" width="840" height="380" aria-label="Convex mirror ray diagram canvas"></canvas>
+                    </div>
+                </div>
+
+                <!-- Live Metrics Bar -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <span class="metric-lbl">Object Distance (u)</span>
+                        <span class="metric-val" id="sim5-u-val">35.0 cm</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Virtual Image Dist (v)</span>
+                        <span class="metric-val" id="sim5-v-val">10.5 cm</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Magnification (m)</span>
+                        <span class="metric-val" id="sim5-m-val">+0.30</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Image Properties</span>
+                        <span class="metric-val">Virtual, Erect, Diminished</span>
+                    </div>
+                </div>
+
+                <!-- 5. Controls -->
+                <div class="controls-panel">
+                    <div class="control-group">
+                        <label class="control-label" for="sim5-u-slider">Candle Distance (u): <span id="sim5-u-slider-val">35 cm</span></label>
+                        <input type="range" id="sim5-u-slider" min="10" max="65" value="35" step="1">
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="sim5-screen-slider">Test Screen Position:</label>
+                        <input type="range" id="sim5-screen-slider" min="5" max="60" value="25" step="1">
+                    </div>
+
+                    <div class="control-group btn-row-actions">
+                        <button class="btn-accent-optics" id="sim5-btn-record">📋 Record Reading in Table</button>
+                        <button class="btn-reset-sim" id="sim5-btn-reset">Reset Setup</button>
+                    </div>
+                </div>
+
+                <!-- 6. Live Observation Box -->
+                <div class="observation-box">
+                    <div class="obs-title"><span>👁️</span> Live Observation</div>
+                    <div class="obs-content" id="sim5-observation">
+                        At u = 35 cm, the image is formed behind the mirror at v = 10.5 cm. It is <strong>virtual, upright (erect), and diminished (smaller)</strong>. No image can be caught on the screen.
+                    </div>
+                </div>
+
+                <!-- Observation Table -->
+                <div class="table-container">
+                    <div class="table-header">
+                        <span class="table-title">📖 Observation Table (Convex Mirror)</span>
+                        <span class="table-badge" id="sim5-table-count">1 of 4 Readings Recorded</span>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="obs-table" id="sim5-table">
+                            <thead>
+                                <tr>
+                                    <th>S.No.</th>
+                                    <th>Distance of object</th>
+                                    <th>Smaller / Larger</th>
+                                    <th>Inverted / Erect</th>
+                                    <th>Real / Virtual</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sim5-table-body">
+                                <tr>
+                                    <td>1</td>
+                                    <td>35 cm</td>
+                                    <td>Smaller (Diminished)</td>
+                                    <td>Erect</td>
+                                    <td>Virtual</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 7. Conclusion Box -->
+                <div class="conclusion-box locked" id="sim5-conclusion">
+                    <div class="concl-header">
+                        <span class="concl-icon">🏆</span>
+                        <span class="concl-badge">SCIENTIFIC CONCLUSION</span>
+                    </div>
+                    <p class="concl-text">
+                        <strong>Whatever the position of the object</strong>, the image formed by a convex mirror is <strong>always virtual, erect, and smaller than the object</strong>. Because it forms miniature upright images over a very broad angular sweep, convex mirrors provide a much <strong>wider field of view</strong> than plane mirrors of the same size.
+                    </p>
+                </div>
+
+                <!-- Practical Uses Grid -->
+                <div class="info-accordion">
+                    <div class="info-acc-title">🚗 Key Uses of Convex Mirrors</div>
+                    <div class="info-acc-content">
+                        <div class="uses-grid">
+                            <div class="use-card">
+                                <span class="use-icon">🚙</span>
+                                <strong>Vehicle Rear-View Mirrors:</strong> Gives drivers a wide panorama of traffic behind with upright (though diminished) images.
+                            </div>
+                            <div class="use-card">
+                                <span class="use-icon">↩️</span>
+                                <strong>Blind Turns & Hairpin Bends:</strong> Mounted on steep roads and parking ramps to let drivers see oncoming vehicles around blind corners.
+                            </div>
+                            <div class="use-card">
+                                <span class="use-icon">🏪</span>
+                                <strong>Supermarket & ATM Security:</strong> Lets shopkeepers and ATM users see a wide area behind them with a single dome mirror.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Check Yourself MCQs -->
+                <div class="check-yourself-box" id="quiz-sim5">
+                    <div class="cy-header"><span>📝</span> Check Yourself (Convex Mirror)</div>
+                    <div class="mcq-card" data-answered="false">
+                        <div class="mcq-question">Q1. Why are convex mirrors preferred as rear-view mirrors in cars?</div>
+                        <div class="mcq-options">
+                            <button class="mcq-opt" data-correct="true">A. They always form erect, diminished images giving a much wider field of view.</button>
+                            <button class="mcq-opt" data-correct="false">B. They form magnified real images on the windshield.</button>
+                            <button class="mcq-opt" data-correct="false">C. They make vehicles look colorful.</button>
+                            <button class="mcq-opt" data-correct="false">D. They invert the headlights of cars behind.</button>
+                        </div>
+                        <div class="mcq-explanation hidden">Correct! The convex curved surface bulges outwards, capturing rays from a wider cone so drivers can see multiple lanes of traffic.</div>
+                    </div>
+
+                    <div class="mcq-card" data-answered="false">
+                        <div class="mcq-question">Q2. Can a convex mirror ever form a real, inverted image of an object?</div>
+                        <div class="mcq-options">
+                            <button class="mcq-opt" data-correct="false">A. Yes, when the object is at focus</button>
+                            <button class="mcq-opt" data-correct="true">B. No, it always forms a virtual and erect image regardless of distance</button>
+                            <button class="mcq-opt" data-correct="false">C. Yes, when the object is beyond 1 meter</button>
+                            <button class="mcq-opt" data-correct="false">D. Only in sunlight</button>
+                        </div>
+                        <div class="mcq-explanation hidden">Correct! The rays always diverge after reflection from a convex mirror, so their extensions meet virtually behind the mirror.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════════════════
+             SIMULATION 6: CONVEX LENS (CONVERGING LENS)
+             ════════════════════════════════════════════════════════════════ -->
+        <section class="view-section" id="view-sim6">
+            <div class="sim-container">
+                <div class="sim-nav-bar">
+                    <button class="btn-back-hub">&larr; All Activities</button>
+                    <div class="sim-breadcrumbs">Textbook Lab &middot; Convex Lens Image Formation</div>
+                    <button class="btn-next-sim" data-next="sim7">Next Activity &rarr;</button>
+                </div>
+
+                <!-- 1. Title + Aim -->
+                <div class="sim-header-block">
+                    <h2 class="sim-title">Convex Lens: Image Formation & Converging Action</h2>
+                    <p class="sim-aim"><strong>Aim:</strong> To study the converging action of a convex lens, find images on a screen, use it as a magnifying glass, and burn paper with concentrated sunlight.</p>
+                </div>
+
+                <!-- Sub-tabs for Sun Burning and Magnifying Glass -->
+                <div class="sim-subtabs">
+                    <button class="subtab-btn active" data-subtab="sim6-bench">Optical Bench & Ray Diagram</button>
+                    <button class="subtab-btn" data-subtab="sim6-sun">Burn Paper with Convex Lens</button>
+                    <button class="subtab-btn" data-subtab="sim6-converge">Converging Action Demo</button>
+                </div>
+
+                <!-- 2. Materials Required -->
+                <div class="materials-box">
+                    <span class="mat-label">Materials Required:</span>
+                    <span class="mat-chip">🔍 Convex Lens on Stand (f = 15 cm)</span>
+                    <span class="mat-chip">🕯️ Candle (Object)</span>
+                    <span class="mat-chip">📄 Paper Screen</span>
+                    <span class="mat-chip">📏 Optical Bench (0–100 cm)</span>
+                </div>
+
+                <!-- 3. Procedure Steps -->
+                <div class="procedure-box">
+                    <div class="proc-heading">Procedure:</div>
+                    <ol class="proc-list" id="proc-list-sim6">
+                        <li class="proc-step active" id="sim6-step1">1. Mount the convex lens at 50 cm on the bench. Mark F (15 cm) and 2F (30 cm) on both sides.</li>
+                        <li class="proc-step" id="sim6-step2">2. Place candle beyond 2F (e.g. at 50 cm). Move the screen on the other side until a sharp inverted flame appears.</li>
+                        <li class="proc-step" id="sim6-step3">3. Move candle inside F (e.g. 10 cm). Notice that no screen image forms, but looking through the lens reveals a magnified upright image!</li>
+                    </ol>
+                </div>
+
+                <!-- 4. Interactive Canvas -->
+                <div class="canvas-panel">
+                    <div class="canvas-header-bar">
+                        <span class="canvas-tag">LENS FORMULA: 1/v - 1/u = 1/f</span>
+                        <span class="canvas-hint">Drag candle to see rays converge through the lens!</span>
+                    </div>
+                    <div class="canvas-wrap">
+                        <canvas id="canvas-sim6" width="840" height="400" aria-label="Convex lens ray diagram canvas"></canvas>
+                    </div>
+                </div>
+
+                <!-- Live Metrics Bar -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <span class="metric-lbl">Object Distance (u)</span>
+                        <span class="metric-val" id="sim6-u-val">45.0 cm</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Image Distance (v)</span>
+                        <span class="metric-val" id="sim6-v-val">22.5 cm</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Magnification (m)</span>
+                        <span class="metric-val" id="sim6-m-val">-0.50</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Image Nature</span>
+                        <span class="metric-val" id="sim6-nature-val">Real, Inverted, Diminished</span>
+                    </div>
+                </div>
+
+                <!-- 5. Controls -->
+                <div class="controls-panel">
+                    <div class="control-group">
+                        <label class="control-label" for="sim6-u-slider">Object Distance (u): <span id="sim6-u-slider-val">45 cm</span></label>
+                        <input type="range" id="sim6-u-slider" min="6" max="65" value="45" step="0.5">
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="sim6-f-slider">Focal Length (f): <span id="sim6-f-val">15 cm (2F = 30 cm)</span></label>
+                        <input type="range" id="sim6-f-slider" min="10" max="20" value="15" step="1">
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="sim6-screen-slider">Screen Position: <span id="sim6-screen-slider-val">22.5 cm (Sharp!)</span></label>
+                        <input type="range" id="sim6-screen-slider" min="5" max="80" value="22.5" step="0.5">
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">Quick Position Presets:</label>
+                        <div class="btn-group-presets">
+                            <button class="btn-preset" data-u="45">Beyond 2F (45cm)</button>
+                            <button class="btn-preset" data-u="30">At 2F (30cm)</button>
+                            <button class="btn-preset" data-u="20">Between 2F & F (20cm)</button>
+                            <button class="btn-preset" data-u="15">At F (15cm)</button>
+                            <button class="btn-preset" data-u="9">Inside F (9cm - Magnifier)</button>
+                        </div>
+                    </div>
+
+                    <div class="control-group btn-row-actions">
+                        <button class="btn-primary-optics" id="sim6-btn-snap-screen">Auto-Align Screen to Sharp Image</button>
+                        <button class="btn-accent-optics" id="sim6-btn-record">📋 Record Reading in Table</button>
+                        <button class="btn-reset-sim" id="sim6-btn-reset">Reset Lens</button>
+                    </div>
+                </div>
+
+                <!-- 6. Live Observation Box -->
+                <div class="observation-box">
+                    <div class="obs-title"><span>👁️</span> Live Observation</div>
+                    <div class="obs-content" id="sim6-observation">
+                        At u = 45 cm (beyond 2F), the refracted rays converge on the other side at v = 22.5 cm (between F and 2F), forming a <strong>real, inverted, and diminished</strong> image on the screen.
+                    </div>
+                </div>
+
+                <!-- Observation Table -->
+                <div class="table-container">
+                    <div class="table-header">
+                        <span class="table-title">📖 Observation Table (Convex Lens)</span>
+                        <span class="table-badge" id="sim6-table-count">1 of 5 Readings Recorded</span>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="obs-table" id="sim6-table">
+                            <thead>
+                                <tr>
+                                    <th>S.No.</th>
+                                    <th>Object Position</th>
+                                    <th>Smaller / Larger</th>
+                                    <th>Inverted / Erect</th>
+                                    <th>Real / Virtual</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sim6-table-body">
+                                <tr>
+                                    <td>1</td>
+                                    <td>45 cm (Beyond 2F)</td>
+                                    <td>Smaller (Diminished)</td>
+                                    <td>Inverted</td>
+                                    <td>Real</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 7. Conclusion Box -->
+                <div class="conclusion-box locked" id="sim6-conclusion">
+                    <div class="concl-header">
+                        <span class="concl-icon">🏆</span>
+                        <span class="concl-badge">SCIENTIFIC CONCLUSION</span>
+                    </div>
+                    <p class="concl-text">
+                        A <strong>convex lens is thicker in the middle</strong> than at the edges and acts as a <strong>converging lens</strong>. When the object is placed outside the focus, it forms a <strong>real and inverted image</strong> that can be caught on a screen. When placed close to the lens (inside F), it forms an <strong>erect, virtual, and magnified image</strong> — which is why it is used as a <strong>magnifying glass</strong>!
+                    </p>
+                </div>
+
+                <!-- 8. Check Yourself MCQs -->
+                <div class="check-yourself-box" id="quiz-sim6">
+                    <div class="cy-header"><span>📝</span> Check Yourself (Convex Lens)</div>
+                    <div class="mcq-card" data-answered="false">
+                        <div class="mcq-question">Q1. Why is a convex lens called a 'converging lens'?</div>
+                        <div class="mcq-options">
+                            <button class="mcq-opt" data-correct="true">A. It bends incoming parallel light rays inwards so they meet at a single focal point.</button>
+                            <button class="mcq-opt" data-correct="false">B. It scatters rays in all directions.</button>
+                            <button class="mcq-opt" data-correct="false">C. It absorbs all light completely.</button>
+                            <button class="mcq-opt" data-correct="false">D. It reflects rays backwards.</button>
+                        </div>
+                        <div class="mcq-explanation hidden">Correct! The shape bends parallel light rays inward towards the principal axis, converging them at the focus.</div>
+                    </div>
+
+                    <div class="mcq-card" data-answered="false">
+                        <div class="mcq-question">Q2. To use a convex lens as a magnifying glass to read tiny print, where must the print be placed?</div>
+                        <div class="mcq-options">
+                            <button class="mcq-opt" data-correct="true">A. Closer to the lens than its focal length (inside F)</button>
+                            <button class="mcq-opt" data-correct="false">B. Exactly at 2F</button>
+                            <button class="mcq-opt" data-correct="false">C. Beyond 2F</button>
+                            <button class="mcq-opt" data-correct="false">D. 10 meters away</button>
+                        </div>
+                        <div class="mcq-explanation hidden">Correct! When u &lt; f, the refracted rays diverge and their virtual back-extensions form an upright, magnified virtual image.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════════════════
+             SIMULATION 7: CONCAVE LENS (DIVERGING LENS)
+             ════════════════════════════════════════════════════════════════ -->
+        <section class="view-section" id="view-sim7">
+            <div class="sim-container">
+                <div class="sim-nav-bar">
+                    <button class="btn-back-hub">&larr; All Activities</button>
+                    <div class="sim-breadcrumbs">Textbook Lab &middot; Concave Lens Diverging Action</div>
+                    <button class="btn-next-sim" data-next="sim8">Next Activity &rarr;</button>
+                </div>
+
+                <!-- 1. Title + Aim -->
+                <div class="sim-header-block">
+                    <h2 class="sim-title">Concave Lens: Diverging Action & Properties</h2>
+                    <p class="sim-aim"><strong>Aim:</strong> To study the diverging action of a concave lens, observe that its image is always virtual, erect, and diminished, and investigate why it CANNOT burn paper.</p>
+                </div>
+
+                <!-- Sub-tabs for Paper Burn Challenge & 5 Differences -->
+                <div class="sim-subtabs">
+                    <button class="subtab-btn active" data-subtab="sim7-bench">Optical Bench & Ray Diagram</button>
+                    <button class="subtab-btn" data-subtab="sim7-burn">Can a Concave Lens Burn Paper?</button>
+                    <button class="subtab-btn" data-subtab="sim7-diff">5 Differences: Convex vs Concave Lens</button>
+                </div>
+
+                <!-- 2. Materials Required -->
+                <div class="materials-box">
+                    <span class="mat-label">Materials Required:</span>
+                    <span class="mat-chip">👓 Concave Lens on Stand</span>
+                    <span class="mat-chip">🕯️ Candle (Object)</span>
+                    <span class="mat-chip">📄 Paper Screen</span>
+                    <span class="mat-chip">☀️ Parallel Light Beam</span>
+                </div>
+
+                <!-- 3. Procedure Steps -->
+                <div class="procedure-box">
+                    <div class="proc-heading">Procedure:</div>
+                    <ol class="proc-list" id="proc-list-sim7">
+                        <li class="proc-step active" id="sim7-step1">1. Mount the concave lens (thinner in the middle) on the optical bench.</li>
+                        <li class="proc-step" id="sim7-step2">2. Move the candle to different distances. Look directly through the lens to observe the virtual image.</li>
+                        <li class="proc-step" id="sim7-step3">3. Switch to the 'Can it Burn Paper?' tab and observe how parallel rays diverge outward.</li>
+                    </ol>
+                </div>
+
+                <!-- 4. Interactive Canvas -->
+                <div class="canvas-panel">
+                    <div class="canvas-header-bar">
+                        <span class="canvas-tag">CONCAVE LENS: DIVERGING RAYS</span>
+                        <span class="canvas-hint">Drag candle to see virtual image formed on the same side!</span>
+                    </div>
+                    <div class="canvas-wrap">
+                        <canvas id="canvas-sim7" width="840" height="380" aria-label="Concave lens diverging ray diagram canvas"></canvas>
+                    </div>
+                </div>
+
+                <!-- Live Metrics Bar -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <span class="metric-lbl">Object Distance (u)</span>
+                        <span class="metric-val" id="sim7-u-val">30.0 cm</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Virtual Image Dist (v)</span>
+                        <span class="metric-val" id="sim7-v-val">-10.0 cm</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Magnification (m)</span>
+                        <span class="metric-val" id="sim7-m-val">+0.33</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Image Nature</span>
+                        <span class="metric-val">Virtual, Erect, Diminished</span>
+                    </div>
+                </div>
+
+                <!-- 5. Controls -->
+                <div class="controls-panel">
+                    <div class="control-group">
+                        <label class="control-label" for="sim7-u-slider">Object Distance (u): <span id="sim7-u-slider-val">30 cm</span></label>
+                        <input type="range" id="sim7-u-slider" min="10" max="60" value="30" step="1">
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="sim7-f-slider">Focal Length: <span id="sim7-f-val">15 cm</span></label>
+                        <input type="range" id="sim7-f-slider" min="10" max="25" value="15" step="1">
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="sim7-screen-slider">Test Screen Position:</label>
+                        <input type="range" id="sim7-screen-slider" min="5" max="60" value="20" step="1">
+                    </div>
+
+                    <div class="control-group btn-row-actions">
+                        <button class="btn-accent-optics" id="sim7-btn-record">📋 Record Reading in Table</button>
+                        <button class="btn-reset-sim" id="sim7-btn-reset">Reset Lens</button>
+                    </div>
+                </div>
+
+                <!-- 6. Live Observation Box -->
+                <div class="observation-box">
+                    <div class="obs-title"><span>👁️</span> Live Observation</div>
+                    <div class="obs-content" id="sim7-observation">
+                        At u = 30 cm, the concave lens diverges the rays. Their backward virtual extensions meet at v = 10 cm in front of the lens. The image is <strong>always virtual, upright (erect), and smaller</strong>. The screen placed anywhere catches nothing.
+                    </div>
+                </div>
+
+                <!-- 7. Conclusion Box -->
+                <div class="conclusion-box locked" id="sim7-conclusion">
+                    <div class="concl-header">
+                        <span class="concl-icon">🏆</span>
+                        <span class="concl-badge">SCIENTIFIC CONCLUSION</span>
+                    </div>
+                    <p class="concl-text">
+                        A <strong>concave lens is thinner in the middle</strong> and thicker at the edges. It is a <strong>diverging lens</strong> that spreads light rays outwards. It <strong>ALWAYS forms a virtual, erect, and diminished image</strong> that cannot be captured on a screen. Because it spreads light rather than concentrating it, <strong>a concave lens can NEVER burn paper</strong>!
+                    </p>
+                </div>
+
+                <!-- Practical Uses Grid -->
+                <div class="info-accordion">
+                    <div class="info-acc-title">👓 Everyday Applications of Lenses</div>
+                    <div class="info-acc-content">
+                        <div class="uses-grid">
+                            <div class="use-card">
+                                <span class="use-icon">👁️</span>
+                                <strong>Spectacles:</strong> Concave lenses correct myopia (short-sightedness); convex lenses correct hypermetropia (long-sightedness).
+                            </div>
+                            <div class="use-card">
+                                <span class="use-icon">🚪</span>
+                                <strong>Door Peephole:</strong> Uses a concave lens to provide a wide, miniature upright view of visitors standing outside.
+                            </div>
+                            <div class="use-card">
+                                <span class="use-icon">🔭</span>
+                                <strong>Telescopes & Binoculars:</strong> Combine multiple convex and concave lenses to magnify distant stars and landscapes.
+                            </div>
+                            <div class="use-card">
+                                <span class="use-icon">🔬</span>
+                                <strong>Microscopes & Projectors:</strong> High-powered convex lenses magnify microscopic cells or project movies onto large screens.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Check Yourself MCQs -->
+                <div class="check-yourself-box" id="quiz-sim7">
+                    <div class="cy-header"><span>📝</span> Check Yourself (Concave Lens)</div>
+                    <div class="mcq-card" data-answered="false">
+                        <div class="mcq-question">Q1. Can you burn paper with a concave lens placed in sunlight? Why or why not?</div>
+                        <div class="mcq-options">
+                            <button class="mcq-opt" data-correct="true">A. No, because it diverges (spreads out) light rays instead of concentrating them at a point.</button>
+                            <button class="mcq-opt" data-correct="false">B. Yes, if held steady for 10 minutes.</button>
+                            <button class="mcq-opt" data-correct="false">C. Yes, but only in winter.</button>
+                            <button class="mcq-opt" data-correct="false">D. No, because it turns sunlight cold.</button>
+                        </div>
+                        <div class="mcq-explanation hidden">Correct! Textbook question: Sunrays diverge after passing through a concave lens, scattering heat over a wide area so paper never heats up.</div>
+                    </div>
+
+                    <div class="mcq-card" data-answered="false">
+                        <div class="mcq-question">Q2. Which lens is thicker in the middle and thinner at the edges?</div>
+                        <div class="mcq-options">
+                            <button class="mcq-opt" data-correct="true">A. Convex lens</button>
+                            <button class="mcq-opt" data-correct="false">B. Concave lens</button>
+                            <button class="mcq-opt" data-correct="false">C. Cylindrical flat glass</button>
+                            <button class="mcq-opt" data-correct="false">D. Prismatic lens</button>
+                        </div>
+                        <div class="mcq-explanation hidden">Correct! By definition, a convex lens feels thicker in the center than at its edges.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════════════════
+             SIMULATION 8: DISPERSION OF LIGHT (PRISM & RAINBOW)
+             ════════════════════════════════════════════════════════════════ -->
+        <section class="view-section" id="view-sim8">
+            <div class="sim-container">
+                <div class="sim-nav-bar">
+                    <button class="btn-back-hub">&larr; All Activities</button>
+                    <div class="sim-breadcrumbs">Activity 5 &middot; Prism Dispersion & VIBGYOR</div>
+                    <button class="btn-next-sim" data-next="sim9">Next Activity &rarr;</button>
+                </div>
+
+                <!-- 1. Title + Aim -->
+                <div class="sim-header-block">
+                    <h2 class="sim-title">Activity 5: Light Consists of Different Colours (Dispersion)</h2>
+                    <p class="sim-aim"><strong>Aim:</strong> To demonstrate that white sunlight is composed of seven colours by passing a narrow beam through a glass prism (dispersion) and observe how natural rainbows form.</p>
+                </div>
+
+                <!-- Sub-tabs for Prism vs Rainbow -->
+                <div class="sim-subtabs">
+                    <button class="subtab-btn active" data-subtab="sim8-prism">Experiment: Glass Prism Dispersion</button>
+                    <button class="subtab-btn" data-subtab="sim8-rainbow">Nature's Prism: The Rainbow</button>
+                </div>
+
+                <!-- 2. Materials Required -->
+                <div class="materials-box">
+                    <span class="mat-label">Materials Required:</span>
+                    <span class="mat-chip">☀️ Narrow White Sunlight Beam</span>
+                    <span class="mat-chip">💎 Glass Triangular Prism</span>
+                    <span class="mat-chip">📄 White Paper Screen</span>
+                    <span class="mat-chip">🚪 Darkened Room with Slit</span>
+                </div>
+
+                <!-- 3. Procedure Steps -->
+                <div class="procedure-box">
+                    <div class="proc-heading">Procedure:</div>
+                    <ol class="proc-list" id="proc-list-sim8">
+                        <li class="proc-step active" id="sim8-step1">1. In a dark room, allow a narrow beam of white sunlight from a tiny window hole to fall on one face of a glass prism.</li>
+                        <li class="proc-step" id="sim8-step2">2. Turn the prism so the light exiting the other face falls onto a white cardboard screen.</li>
+                        <li class="proc-step" id="sim8-step3">3. Observe the band of seven colours (VIBGYOR). Note which colour bends the most and which bends the least!</li>
+                    </ol>
+                </div>
+
+                <!-- 4. Interactive Canvas -->
+                <div class="canvas-panel">
+                    <div class="canvas-header-bar">
+                        <span class="canvas-tag">SNELL'S LAW DISPERSION ENGINE</span>
+                        <span class="canvas-hint">Drag prism or adjust angle slider to refract the beam!</span>
+                    </div>
+                    <div class="canvas-wrap">
+                        <canvas id="canvas-sim8" width="840" height="380" aria-label="Glass prism dispersion and VIBGYOR spectrum canvas"></canvas>
+                    </div>
+                </div>
+
+                <!-- Live Metrics Bar -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <span class="metric-lbl">Incident Light</span>
+                        <span class="metric-val">White Sunlight</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Most Bent Colour</span>
+                        <span class="metric-val" style="color:#c084fc;">Violet (λ ≈ 400 nm, n = 1.536)</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Least Bent Colour</span>
+                        <span class="metric-val" style="color:#f87171;">Red (λ ≈ 700 nm, n = 1.512)</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Coloured Band</span>
+                        <span class="metric-val">VIBGYOR Spectrum</span>
+                    </div>
+                </div>
+
+                <!-- 5. Controls -->
+                <div class="controls-panel">
+                    <div class="control-group">
+                        <label class="control-label" for="sim8-angle-slider">Prism Rotation Angle: <span id="sim8-angle-val">0°</span></label>
+                        <input type="range" id="sim8-angle-slider" min="-25" max="25" value="0" step="1">
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="sim8-beam-width">Slit / Beam Width: <span id="sim8-beam-val">Narrow (3 mm)</span></label>
+                        <input type="range" id="sim8-beam-width" min="1" max="10" value="3" step="1">
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">Diagram Labels:</label>
+                        <div class="btn-group-segmented">
+                            <button class="btn-seg active" id="sim8-btn-labels-on">Show Labels</button>
+                            <button class="btn-seg" id="sim8-btn-labels-off">Hide Labels</button>
+                        </div>
+                    </div>
+
+                    <button class="btn-reset-sim" id="sim8-btn-reset">Reset Prism</button>
+                </div>
+
+                <!-- 6. Live Observation Box -->
+                <div class="observation-box">
+                    <div class="obs-title"><span>👁️</span> Live Observation</div>
+                    <div class="obs-content" id="sim8-observation">
+                        The white beam strikes the prism and splits inside into seven distinct colours. On the white screen, a beautiful band of <strong>VIBGYOR (Violet, Indigo, Blue, Green, Yellow, Orange, Red)</strong> is visible. <strong>Violet ray bends the most</strong> (maximum deviation) while <strong>Red ray bends the least</strong>.
+                    </div>
+                </div>
+
+                <!-- 7. Conclusion Box -->
+                <div class="conclusion-box locked" id="sim8-conclusion">
+                    <div class="concl-header">
+                        <span class="concl-icon">🏆</span>
+                        <span class="concl-badge">SCIENTIFIC CONCLUSION</span>
+                    </div>
+                    <p class="concl-text">
+                        <strong>White sunlight is not a single colour, but a mixture of seven colours: Violet, Indigo, Blue, Green, Yellow, Orange, and Red (VIBGYOR)</strong>. The phenomenon of splitting white light into its component colours when passing through a transparent medium is called <strong>DISPERSION</strong>. The resulting coloured band is called a <strong>SPECTRUM</strong>.
+                    </p>
+                </div>
+
+                <!-- 8. Check Yourself MCQs -->
+                <div class="check-yourself-box" id="quiz-sim8">
+                    <div class="cy-header"><span>📝</span> Check Yourself (Activity 5)</div>
+                    <div class="mcq-card" data-answered="false">
+                        <div class="mcq-question">Q1. When white light passes through a glass prism, which colour deviates (bends) the MOST?</div>
+                        <div class="mcq-options">
+                            <button class="mcq-opt" data-correct="true">A. Violet</button>
+                            <button class="mcq-opt" data-correct="false">B. Red</button>
+                            <button class="mcq-opt" data-correct="false">C. Green</button>
+                            <button class="mcq-opt" data-correct="false">D. Yellow</button>
+                        </div>
+                        <div class="mcq-explanation hidden">Correct! Violet light has the shortest wavelength and highest refractive index in glass, so it slows down and bends the most.</div>
+                    </div>
+
+                    <div class="mcq-card" data-answered="false">
+                        <div class="mcq-question">Q2. Where must the Sun be located for an observer to see a natural rainbow in the sky?</div>
+                        <div class="mcq-options">
+                            <button class="mcq-opt" data-correct="true">A. Behind the observer (observer stands with their back to the Sun)</button>
+                            <button class="mcq-opt" data-correct="false">B. Directly in front of the observer</button>
+                            <button class="mcq-opt" data-correct="false">C. Directly overhead at noon</button>
+                            <button class="mcq-opt" data-correct="false">D. Under the ground</button>
+                        </div>
+                        <div class="mcq-explanation hidden">Correct! A rainbow is produced when sunlight enters raindrops, undergoes internal reflection, and emerges towards the observer whose back is to the Sun.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════════════════
+             SIMULATION 9: NEWTON'S DISC (MAKE IT & SPIN IT)
+             ════════════════════════════════════════════════════════════════ -->
+        <section class="view-section" id="view-sim9">
+            <div class="sim-container">
+                <div class="sim-nav-bar">
+                    <button class="btn-back-hub">&larr; All Activities</button>
+                    <div class="sim-breadcrumbs">Activity &middot; Newton's Disc Builder & Spin</div>
+                    <button class="btn-next-sim" data-next="quiz">Chapter Quiz &rarr;</button>
+                </div>
+
+                <!-- 1. Title + Aim -->
+                <div class="sim-header-block">
+                    <h2 class="sim-title">Newton's Disc: Make It, Spin It & Combine Colours</h2>
+                    <p class="sim-aim"><strong>Aim:</strong> To construct Newton's disc step-by-step with 7 equal VIBGYOR segments, rotate it swiftly, and observe that the seven colours recombine to appear whitish.</p>
+                </div>
+
+                <!-- Sub-tabs for Builder vs Custom Colors -->
+                <div class="sim-subtabs">
+                    <button class="subtab-btn active" data-subtab="sim9-builder">Step-by-Step Disc Builder & Spin</button>
+                    <button class="subtab-btn" data-subtab="sim9-palette">Colour Palette Experiment (Test Wrong Colours!)</button>
+                </div>
+
+                <!-- 2. Materials Required -->
+                <div class="materials-box">
+                    <span class="mat-label">Materials Required:</span>
+                    <span class="mat-chip">✂️ Circular Cardboard Disc (~10 cm diameter)</span>
+                    <span class="mat-chip">📐 Protractor (7 Equal Segments, 51.4° each)</span>
+                    <span class="mat-chip">🎨 7 Rainbow Paints (VIBGYOR)</span>
+                    <span class="mat-chip">✏️ Center Spindle / Pencil / Motor</span>
+                </div>
+
+                <!-- 3. Procedure Steps -->
+                <div class="procedure-box">
+                    <div class="proc-heading">Construction Steps (Follow in order):</div>
+                    <div class="stepper-buttons" id="sim9-stepper-row">
+                        <button class="btn-step active" id="sim9-step-btn-1">Step 1: Cut Disc</button>
+                        <button class="btn-step" id="sim9-step-btn-2">Step 2: 7 Segments</button>
+                        <button class="btn-step" id="sim9-step-btn-3">Step 3: Paint VIBGYOR</button>
+                        <button class="btn-step" id="sim9-step-btn-4">Step 4: Fix Spindle</button>
+                        <button class="btn-step" id="sim9-step-btn-5">Step 5: Spin Swiftly!</button>
+                    </div>
+                </div>
+
+                <!-- 4. Interactive Canvas -->
+                <div class="canvas-panel">
+                    <div class="canvas-header-bar">
+                        <span class="canvas-tag">PERSISTENCE OF VISION SIMULATOR</span>
+                        <span class="canvas-hint">Drag spin slider to 2500+ RPM to see the disc turn white!</span>
+                    </div>
+                    <div class="canvas-wrap">
+                        <canvas id="canvas-sim9" width="840" height="420" aria-label="Newton disc interactive spinning canvas"></canvas>
+                    </div>
+                </div>
+
+                <!-- Live Metrics Bar -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <span class="metric-lbl">Rotational Speed</span>
+                        <span class="metric-val" id="sim9-rpm-val">0 RPM</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Visual Appearance</span>
+                        <span class="metric-val" id="sim9-appearance-val">Distinct 7 Colours</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Human Eye Persistence</span>
+                        <span class="metric-val">~1/16th second overlap</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-lbl">Colour Blending Level</span>
+                        <span class="metric-val" id="sim9-blend-val">0% (Unblended)</span>
+                    </div>
+                </div>
+
+                <!-- 5. Controls -->
+                <div class="controls-panel">
+                    <div class="control-group">
+                        <label class="control-label" for="sim9-rpm-slider">Spin Speed (RPM): <span id="sim9-slider-rpm-val">0 RPM</span></label>
+                        <input type="range" id="sim9-rpm-slider" min="0" max="3000" value="0" step="50" disabled>
+                    </div>
+
+                    <div class="control-group btn-row-actions">
+                        <button class="btn-primary-optics" id="sim9-btn-quick-spin" disabled>🚀 Fast Spin (2400 RPM)</button>
+                        <button class="btn-seg" id="sim9-btn-stop" disabled>⏹️ Stop Disc</button>
+                        <button class="btn-reset-sim" id="sim9-btn-reset">Reset Builder</button>
+                    </div>
+                </div>
+
+                <!-- 6. Live Observation Box -->
+                <div class="observation-box">
+                    <div class="obs-title"><span>👁️</span> Live Observation</div>
+                    <div class="obs-content" id="sim9-observation">
+                        Follow Step 1 to cut the circular cardboard disc. Click 'Step 1: Cut Disc' above to begin building!
+                    </div>
+                </div>
+
+                <!-- 7. Conclusion Box -->
+                <div class="conclusion-box locked" id="sim9-conclusion">
+                    <div class="concl-header">
+                        <span class="concl-icon">🏆</span>
+                        <span class="concl-badge">SCIENTIFIC CONCLUSION</span>
+                    </div>
+                    <p class="concl-text">
+                        <strong>When the disc is rotated swiftly, the seven colours overlap on the retina due to persistence of vision and appear whitish!</strong> This provides direct, undeniable experimental proof that <strong>the seven rainbow colours combine together to make white light</strong>.
+                    </p>
+                </div>
+
+                <!-- 8. Check Yourself MCQs -->
+                <div class="check-yourself-box" id="quiz-sim9">
+                    <div class="cy-header"><span>📝</span> Check Yourself (Newton's Disc)</div>
+                    <div class="mcq-card" data-answered="false">
+                        <div class="mcq-question">Q1. Why does Newton's disc appear whitish when rotated swiftly?</div>
+                        <div class="mcq-options">
+                            <button class="mcq-opt" data-correct="true">A. Because the rapid succession of 7 colours blends on the retina (persistence of vision) to produce white light.</button>
+                            <button class="mcq-opt" data-correct="false">B. The paint flies off due to centrifugal force.</button>
+                            <button class="mcq-opt" data-correct="false">C. Air friction bleaches the paints white.</button>
+                            <button class="mcq-opt" data-correct="false">D. The disc stops reflecting all light.</button>
+                        </div>
+                        <div class="mcq-explanation hidden">Correct! The eye retains each colour sensation for about 1/16th of a second. At high RPM, all seven colours blend into white.</div>
+                    </div>
+
+                    <div class="mcq-card" data-answered="false">
+                        <div class="mcq-question">Q2. What happens if you remove the green and violet sectors and replace them with black?</div>
+                        <div class="mcq-options">
+                            <button class="mcq-opt" data-correct="true">A. The disc will NOT appear white; it will look muddy grey-brown.</button>
+                            <button class="mcq-opt" data-correct="false">B. It still turns pure white.</button>
+                            <button class="mcq-opt" data-correct="false">C. It turns bright yellow.</button>
+                            <button class="mcq-opt" data-correct="false">D. It becomes completely transparent.</button>
+                        </div>
+                        <div class="mcq-explanation hidden">Correct! Only when all seven specific spectrum colours are combined in the correct proportion does the disc appear white.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════════════════════
+             CHAPTER QUIZ: 10 COMPREHENSIVE MCQS
+             ════════════════════════════════════════════════════════════════ -->
+        <section class="view-section" id="view-quiz">
+            <div class="sim-container">
+                <div class="sim-nav-bar">
+                    <button class="btn-back-hub">&larr; Back to Activities</button>
+                    <div class="sim-breadcrumbs">Final Assessment &middot; Chapter 11 Master Quiz</div>
+                    <button class="btn-primary-optics" id="btn-quiz-score-scroll">Scroll to Score</button>
+                </div>
+
+                <div class="sim-header-block">
+                    <h2 class="sim-title">Chapter 11: Light — Comprehensive Mastery Quiz</h2>
+                    <p class="sim-aim">Test your knowledge across all 9 textbook activities. Answer 10 carefully designed questions to see your final score and review detailed explanations.</p>
+                </div>
+
+                <div class="quiz-container" id="chapter-quiz-wrap">
+                    <!-- 10 Questions rendered by JS -->
+                </div>
+
+                <div class="quiz-results-card hidden" id="quiz-results-card">
+                    <div class="qrc-icon" id="qrc-icon">🏆</div>
+                    <h3 class="qrc-title" id="qrc-title">Great Job!</h3>
+                    <div class="qrc-score" id="qrc-score">Score: 10 / 10</div>
+                    <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:8px;">
+                        <button class="btn-primary-optics" id="btn-retake-quiz">Retake Quick Quiz</button>
+                        <a href="index.html#start-section" class="btn-accent-optics" style="text-decoration:none; display:inline-flex; align-items:center;">Take 30 Difficult MCQs Test &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         MODALS & OVERLAYS: FAST FACTS & GLOSSARY
+         ════════════════════════════════════════════════════════════════ -->
+    <!-- FAST FACTS MODAL -->
+    <div class="modal-overlay hidden" id="modal-fast-facts">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-icon">⚡</span>
+                    <h3 class="modal-title">Fascinating Fast Facts About Light</h3>
+                </div>
+                <button class="modal-close-btn" id="btn-close-facts">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="fact-card">
+                    <div class="fact-bullet">🚀</div>
+                    <div class="fact-text">
+                        <strong>Speed of Light in Vacuum:</strong> Light travels at an incredible speed of approximately <strong>300,000 kilometres per second (c ≈ 3 &times; 10⁸ m/s)</strong>. Nothing in the known universe can travel faster!
+                    </div>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-bullet">☀️</div>
+                    <div class="fact-text">
+                        <strong>Journey from the Sun:</strong> The Sun is nearly <strong>150 million kilometres</strong> away from Earth. Even at the speed of light, sunlight takes about <strong>8 minutes and 20 seconds</strong> to reach your eyes!
+                    </div>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-bullet">🪞</div>
+                    <div class="fact-text">
+                        <strong>Rear-View Mirror Warning:</strong> Convex mirrors make objects look smaller and further away than they actually are. That is why they are engraved with: <em>"Objects in the mirror are closer than they appear"</em>!
+                    </div>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-bullet">🌈</div>
+                    <div class="fact-text">
+                        <strong>Sir Isaac Newton's Discovery:</strong> In 1666, 23-year-old Isaac Newton used a glass prism in a dark room to prove that white sunlight is not pure white, but composed of the seven rainbow colours!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GLOSSARY MODAL -->
+    <div class="modal-overlay hidden" id="modal-glossary">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-icon">📖</span>
+                    <h3 class="modal-title">Optics Glossary (14 Key Terms)</h3>
+                </div>
+                <button class="modal-close-btn" id="btn-close-glossary">&times;</button>
+            </div>
+            <div class="modal-body glossary-body">
+                <div class="glossary-item">
+                    <span class="term">Ray:</span>
+                    <span class="def">A straight line with an arrow showing the direction in which light travels.</span>
+                </div>
+                <div class="glossary-item">
+                    <span class="term">Rectilinear Propagation:</span>
+                    <span class="def">The fundamental property of light traveling along straight-line paths.</span>
+                </div>
+                <div class="glossary-item">
+                    <span class="term">Reflection:</span>
+                    <span class="def">The bouncing back of light rays from the polished surface of an object into the same medium.</span>
+                </div>
+                <div class="glossary-item">
+                    <span class="term">Real Image:</span>
+                    <span class="def">An image formed by the actual intersection of reflected or refracted light rays that CAN be obtained on a physical screen.</span>
+                </div>
+                <div class="glossary-item">
+                    <span class="term">Virtual Image:</span>
+                    <span class="def">An image from which rays only appear to diverge and which CANNOT be obtained on a physical screen.</span>
+                </div>
+                <div class="glossary-item">
+                    <span class="term">Lateral Inversion:</span>
+                    <span class="def">The phenomenon in which the left side of an object appears as the right side in its mirror image, and vice-versa.</span>
+                </div>
+                <div class="glossary-item">
+                    <span class="term">Concave Mirror:</span>
+                    <span class="def">A spherical mirror whose reflecting surface is curved inwards like the inside of a spoon; acts as a converging mirror.</span>
+                </div>
+                <div class="glossary-item">
+                    <span class="term">Convex Mirror:</span>
+                    <span class="def">A spherical mirror whose reflecting surface is curved outwards like the back of a spoon; acts as a diverging mirror.</span>
+                </div>
+                <div class="glossary-item">
+                    <span class="term">Principal Focus (F):</span>
+                    <span class="def">The point on the principal axis where rays parallel to the axis converge or appear to diverge from after reflection/refraction.</span>
+                </div>
+                <div class="glossary-item">
+                    <span class="term">Converging Lens:</span>
+                    <span class="def">A lens (such as a convex lens) that is thicker in the middle and bends parallel rays inwards towards a common focal point.</span>
+                </div>
+                <div class="glossary-item">
+                    <span class="term">Diverging Lens:</span>
+                    <span class="def">A lens (such as a concave lens) that is thinner in the middle and spreads parallel rays outwards away from the axis.</span>
+                </div>
+                <div class="glossary-item">
+                    <span class="term">Dispersion:</span>
+                    <span class="def">The phenomenon of splitting of white light into its constituent seven colours upon passing through a prism.</span>
+                </div>
+                <div class="glossary-item">
+                    <span class="term">Spectrum:</span>
+                    <span class="def">The distinct coloured band of seven colours (VIBGYOR) obtained when white light undergoes dispersion.</span>
+                </div>
+                <div class="glossary-item">
+                    <span class="term">Persistence of Vision:</span>
+                    <span class="def">The ability of the human eye to retain an image for about 1/16th of a second, causing rapid color sequences to blend smoothly.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="light.js"></script>
+</body>
+</html>

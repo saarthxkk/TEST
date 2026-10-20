@@ -14,7 +14,7 @@ You do not need any build tools, compilers, or external dependencies. It runs di
    ```
    file:///Users/saar.thxkk/Desktop/TEST/light.html
    ```
-3. To open the main examination platform with the newly added **Chapter 11: 30 Difficult MCQs Test**, open `index.html`:
+3. To open the main examination platform with the newly added **Chapter 11: 40 Difficult MCQs Full Chapter Test**, open `index.html`:
    ```
    file:///Users/saar.thxkk/Desktop/TEST/index.html
    ```
@@ -27,7 +27,7 @@ python3 -m http.server 8089
 ```
 Then visit in your browser:
 - **Optics Lab (9 Interactive Simulations):** [http://localhost:8089/light.html](http://localhost:8089/light.html) or [http://localhost:8089/light/](http://localhost:8089/light/)
-- **Main Test Platform (30 Difficult MCQs Test):** [http://localhost:8089/index.html](http://localhost:8089/index.html)
+- **Main Test Platform (40 Difficult MCQs Full Chapter Test):** [http://localhost:8089/index.html](http://localhost:8089/index.html)
 
 ---
 
@@ -59,29 +59,35 @@ Every simulation follows a uniform educational layout:
 
 ---
 
-## 📝 Chapter 11: 30 Difficult MCQs Test (Newly Added)
+## 📝 Chapter 11: 40 Difficult MCQs Full Chapter Test (Newly Added)
 
-In addition to the quick MCQs within the simulation, a full 30-question exam-level test covering **PDF Pages 1–5** has been integrated into the platform:
+In addition to the quick MCQs within the simulation, a comprehensive 40-question exam-level test covering **all 9 pages of Chapter 11** has been integrated into the platform:
 
 - **Question Bank File:** [`questions_light.js`](questions_light.js)
-- **Topics Covered:**
-  - Rectilinear propagation of light & rubber tube experiment (Q1–Q3, Q16)
-  - Reflection from polished surfaces & plane mirrors (Q4, Q17, Q18)
-  - Virtual images & screen experiments (Q5, Q6, Q21, Q22)
-  - Lateral inversion & ambulance lettering (Q7, Q8, Q19)
-  - Object distance equals image distance ($u = v$) (Q8, Q20)
-  - Uses of plane mirrors: looking glasses, periscopes, kaleidoscopes, solar cookers (Q9)
-  - Speed of light ($c \approx 3 \times 10^8\text{ m/s}$) (Q10)
-  - Spherical mirrors & stainless-steel spoon comparison (Q11, Q12, Q23, Q29)
-  - Real image of the Sun & solar furnace heating (Q13, Q24, Q28)
-  - Concave mirror characteristics at different positions (Q14, Q25, Q30)
-  - Uses of concave mirrors: dentists, shaving mirrors, torches (Q15, Q26, Q27)
+- **Sections & Topics Covered:**
+  - **Section A (Q1–Q12): Difficult statement-based MCQs**
+    - Nature and visibility of light (Q1)
+    - Rectilinear propagation & rubber tube (Q2)
+    - Reflection of light (Q3)
+    - Images formed by plane mirrors (Q4)
+    - Real and virtual images (Q5)
+    - Lateral inversion & ambulance lettering (Q6)
+    - Identification of spherical mirrors & focal points (Q7)
+    - Comparing concave and convex mirrors (Q8)
+    - Uses of spherical and plane mirrors (Q9)
+    - Basic properties of converging and diverging lenses (Q10)
+    - Concave lenses & image formation (Q11)
+    - White light & dispersion (Q12)
+  - **Section B (Q13–Q30): Lengthy case-based MCQs**
+    - Case studies on bent tubes, plane mirror distances, screen projection failures, ambulance lettering, decorative room mirrors, concentrating sunlight at focus, shaving mirrors, side-view mirrors, spoon curvature, concave mirror distances, magnifying glasses, distant convex lens images, peepholes, lens identification, instrument lens selection, prism dark room dispersion, soap bubbles/CDs, and rainbow observation.
+  - **Section C (Q31–Q40): Lengthy application and integrated MCQs**
+    - Case studies on Newton's disc persistence of vision, supermarket security equipment, focal properties of spherical mirrors, lens-selection challenge, lens misconceptions, spectrum color reconstruction, relationship between dispersion and color recombination, multi-device selection, and comprehensive laboratory challenge matching.
 
-### How to Take the 30 MCQs Test:
+### How to Take the 40 MCQs Test:
 1. Open `index.html`.
-2. Scroll to the **Available Chapters** section and select **Ch. 11 — Light (30 Difficult MCQs)**, or choose it from the **Select Chapter** dropdown.
+2. Scroll to the **Available Chapters** section and select **Ch. 11 — Light (40 Difficult MCQs — Full Chapter)**, or choose it from the **Select Chapter** dropdown.
 3. Enter your student name and click **BEGIN TEST**.
-4. Complete the 30 questions with the 25-minute timer and anti-cheat protection.
+4. Complete the 40 questions with the 25-minute timer and anti-cheat protection.
 5. Receive an instant scored feedback card with a detailed question-by-question review!
 
 ---

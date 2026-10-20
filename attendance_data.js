@@ -9,6 +9,13 @@
 
 const ATTENDANCE_RECORDS = [
     {
+        date: "20 Oct 2026",
+        day: "Tuesday",
+        student: "Aradhya Joshi",
+        status: "Present",
+        topic: "Chapter 11: Light — Full Chapter 40 Difficult MCQs Practice & Review"
+    },
+    {
         date: "19 Oct 2026",
         day: "Monday",
         student: "Aradhya Joshi",

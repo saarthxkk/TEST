@@ -145,7 +145,8 @@ function handleStartForm(e) {
     const chapterMap = {
         'physical':       { questions: () => questions_physical,       label: 'Ch. 6 — Physical & Chemical Changes' },
         'heat':           { questions: () => questions_heat,           label: 'Ch. 3 — Heat' },
-        'forests':        { questions: () => questions_forests,        label: 'Ch. 12 — Forests: Our Lifeline' },
+        'forests':        { questions: () => questions_forests,        label: 'Ch. 12 — Forests: Our Lifeline (30 Difficult MCQs)' },
+        'forests_full':   { questions: () => typeof questions_forests_full !== 'undefined' ? questions_forests_full : questions_forests, label: 'Ch. 12 — Forests: Comprehensive (50 MCQs)' },
         'transportation': { questions: () => questions_transportation,  label: 'Ch. 7 — Transportation (Part 1)' },
         'transportation2':{ questions: () => questions_transportation2, label: 'Ch. 7 — Transportation (Part 2)' },
         'reproduction':   { questions: () => questions_reproduction,   label: 'Ch. 8 — Reproduction in Plants (Part 1)' },
@@ -296,6 +297,7 @@ function submitTest() {
             image: q.image,
             options: q.options,
             answer: q.answer,
+            explanation: q.explanation,
             selected,
             isCorrect
         });
@@ -415,6 +417,14 @@ function buildReview(results) {
             status.innerHTML = `<span class="status-skipped">— NOT ATTEMPTED — correct is ${r.answer}</span>`;
         }
         card.appendChild(status);
+
+        if (r.explanation) {
+            const exp = document.createElement('div');
+            exp.className = 'review-explanation';
+            exp.style.cssText = 'margin-top:12px; padding:12px 16px; background:rgba(16,185,129,0.06); border-left:3px solid #10b981; border-radius:4px; font-size:13px; color:#cbd5e1; line-height:1.5;';
+            exp.innerHTML = `<span style="font-family:var(--mono); font-size:10px; font-weight:700; color:#10b981; display:block; margin-bottom:4px; letter-spacing:0.06em;">EXPLANATION</span>${r.explanation}`;
+            card.appendChild(exp);
+        }
 
         container.appendChild(card);
     });

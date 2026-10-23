@@ -1,552 +1,362 @@
 const questions_forests = [
   {
     "id": 1,
-    "question": "Forests are often called the \"green lungs\" of nature mainly because they:",
+    "question": "During a classroom discussion, one student defines a forest merely as a place where many trees grow close together, while another argues that this definition leaves out the living relationships emphasised in the chapter. Which option most accurately corrects the first student's definition without adding an idea that the opening paragraph does not support?",
     "options": {
-      "A": "are always green in colour throughout the year",
-      "B": "absorb carbon dioxide and release oxygen, maintaining the atmospheric balance",
-      "C": "provide shelter to lungs-shaped leaves only",
-      "D": "are located near mountain ranges with fresh air"
+      "A": "A forest is an area with a high density of trees and a natural system comprising plants, animals and decomposers, with many kinds of organisms living there.",
+      "B": "A forest is any piece of land on which no animal is allowed to enter and only trees can grow.",
+      "C": "A forest is a collection of commercially useful trees; shrubs, mosses, microbes and animals are not part of its definition.",
+      "D": "A forest is any place where rainfall occurs, even if it has no vegetation or other living organisms."
     },
-    "answer": "B"
+    "answer": "A",
+    "explanation": "A forest includes trees, plants, animals and decomposers."
   },
   {
     "id": 2,
-    "question": "According to the latest Forest Survey of India (as given in the chapter), the forest cover in India is about:",
+    "question": "Consider the three statements below, each of which is presented in the opening section of the chapter:\n\nI. Forests cover about one-third of the world's land surface.\nII. India's forest cover is about 24.62% of its geographical area.\nIII. A cited report recorded an increase of 2,261 square kilometres in India's total forest cover, while warning that this was not enough for a growing population.\n\nWhich choice identifies the statements supported by the text?",
     "options": {
-      "A": "33.33% of the geographical area",
-      "B": "50% of the geographical area",
-      "C": "24.62% of the geographical area",
-      "D": "62.24% of the geographical area"
+      "A": "Only statements I and II are supported; statement III says forest cover declined.",
+      "B": "Only statements II and III are supported; the chapter gives no estimate for world forest cover.",
+      "C": "Only statements I and III are supported; the 24.62% figure is described as a share of the world's land surface.",
+      "D": "Statements I, II and III are all supported, with the world and India figures referring to different geographical bases."
     },
-    "answer": "C"
+    "answer": "D",
+    "explanation": "All three statements match the information presented in the chapter."
   },
   {
     "id": 3,
-    "question": "As per the chapter, the total forest cover of India is approximately:",
+    "question": "A student notices that India's reported forest cover increased by 2,261 square kilometres and concludes that the country must therefore have enough forest to meet every current and future need. The chapter itself makes a qualification immediately after reporting the increase. Which assessment best follows that qualification?",
     "options": {
-      "A": "2,261 sq. km",
-      "B": "22,610 sq. km",
-      "C": "7,26,100 sq. km",
-      "D": "7,26,10,000 sq. km"
+      "A": "The student's conclusion is correct because any increase automatically establishes that the total is sufficient.",
+      "B": "The report means that India's forest cover increased by 2,261 percent, not square kilometres.",
+      "C": "The increase is real according to the report, but the text explicitly cautions that it is still insufficient to sustain the growing population.",
+      "D": "The report proves that forest cover decreased, because the chapter does not support any increase."
     },
-    "answer": "A"
+    "answer": "C",
+    "explanation": "The reported increase does not mean forest cover is sufficient for a growing population."
   },
   {
     "id": 4,
-    "question": "Which statement about India's forest cover trend, as mentioned in the text, is CORRECT?",
+    "question": "A learner claims that forests are important as habitats only because large animals can hide among trees. Another learner points to the chapter's references to medicinal shrubs, industrially useful trees, grasses used for extracting oils, and numerous kinds of organisms. Which explanation best combines these points?",
     "options": {
-      "A": "Forest cover has decreased sharply in the last decade",
-      "B": "Forest cover has increased slightly, but is still not enough to sustain the growing population",
-      "C": "Forest cover has remained exactly unchanged for the last 50 years",
-      "D": "India has no official record of its forest cover"
+      "A": "Forests are useful only when they contain large mammals; plant products are unrelated to the importance of forests.",
+      "B": "Forests provide habitat for many plants and animals and also supply useful resources; trees such as teak, semal, sheesham, amla, bamboo and kachnar have industrial uses, while several other plants have medicinal uses.",
+      "C": "The chapter identifies every forest tree as a medicinal plant and says that industrial products come only from animals.",
+      "D": "Forests support only trees, because shrubs, mosses, reptiles, microbes and birds do not belong to forest life."
     },
-    "answer": "B"
+    "answer": "B",
+    "explanation": "Forests provide habitats and useful industrial and medicinal resources."
   },
   {
     "id": 5,
-    "question": "A forest is best described as:",
+    "question": "The chapter mentions large animals such as boar, porcupine, bison, elephants, tiger and lion, as well as snakes, lizards, monkeys and birds. It also says that camouflage can help protect smaller animals from predators. Which conclusion is the most careful reading of these details?",
     "options": {
-      "A": "an area with only tall trees and nothing else",
-      "B": "a system comprising a variety of living beings \u2014 plants, animals and decomposers",
-      "C": "a government-protected zoo",
-      "D": "a place with only herbivorous animals"
+      "A": "Camouflage guarantees that every small animal will never be attacked by a predator.",
+      "B": "Only large animals live in dense forests, while smaller animals live outside the forest.",
+      "C": "Forests support varied animal life, and camouflage can help some smaller animals remain protected from predators; the text does not claim that it guarantees complete safety.",
+      "D": "The mention of camouflage means that all animals in a forest have exactly the same colour as tree trunks."
     },
-    "answer": "B"
+    "answer": "C",
+    "explanation": "Camouflage may provide protection but does not guarantee complete safety."
   },
   {
     "id": 6,
-    "question": "Which of these is NOT listed in the chapter as a component of a forest's living beings?",
+    "question": "A student compares the upper and lower parts of a typical tree forest and writes: \"The highest trees form the overstorey or emergent layer and receive abundant sunlight; the understorey contains herbs and shrubs and may receive inadequate sunlight in a dense forest.\" Which evaluation of this description is best?",
     "options": {
-      "A": "shrubs and mosses",
-      "B": "reptiles and mammals",
-      "C": "microbes",
-      "D": "coral reefs"
+      "A": "It is consistent with the chapter's description of the two distinct layers and their different light conditions.",
+      "B": "It reverses the layers: herbs form the overstorey, while the tallest trees form the understorey.",
+      "C": "It is incorrect because a typical tree forest is said to have only one layer and no smaller plants.",
+      "D": "It is incorrect because the chapter says the understorey receives more sunlight than the tallest trees."
     },
-    "answer": "D"
+    "answer": "A",
+    "explanation": "The overstorey contains tall trees; the understorey contains herbs and shrubs."
   },
   {
     "id": 7,
-    "question": "A typical tree forest is described as being composed mainly of two distinct layers, namely:",
+    "question": "While labelling a drawing, a student needs to distinguish a single tree's structure from the collective structure made by many neighbouring trees. Which sequence correctly traces the chapter's explanation from the individual tree outward to the roof-like cover in a dense forest?",
     "options": {
-      "A": "canopy and roots",
-      "B": "overstorey and understorey",
-      "C": "trunk and branches",
-      "D": "topsoil and subsoil"
+      "A": "Canopy → forest floor → crown → branch → tree trunk.",
+      "B": "Roots → understorey → flower → forest floor → crown.",
+      "C": "Understorey → crown → trunk → roots → overstorey.",
+      "D": "A tree's branches form its crown; crowns of several trees together form the canopy, which can look like the roof of a dense forest."
     },
-    "answer": "B"
+    "answer": "D",
+    "explanation": "Branches form a crown; the crowns of neighbouring trees collectively form the canopy."
   },
   {
     "id": 8,
-    "question": "The overstorey (or emergent layer) of a forest is formed by:",
+    "question": "CASE-BASED QUESTION\n\nDuring a field observation, a student records two places. Site X is a lower forest layer containing herbs and shrubs, where sunlight may be poor in a dense forest. Site Y is dark and damp, with dead leaves, twigs and dead plants, and provides a home for insects, bugs and decomposers. Which pair of labels fits X and Y, respectively?",
     "options": {
-      "A": "shrubs and small herbs only",
-      "B": "the tallest trees whose crowns form the topmost, sunniest layer",
-      "C": "dead leaves and decomposing matter",
-      "D": "underground root systems"
+      "A": "Forest floor; overstorey.",
+      "B": "Understorey; forest floor.",
+      "C": "Canopy; understorey.",
+      "D": "Overstorey; canopy."
     },
-    "answer": "B"
+    "answer": "B",
+    "explanation": "Site X is the understorey; Site Y is the forest floor."
   },
   {
     "id": 9,
-    "question": "A tree's crown is made up of which two parts?",
+    "question": "Dead leaves and animal droppings do not simply disappear from a forest; the chapter describes microorganisms acting on this material and explains why the resulting substance matters to later plant growth. Which option accurately represents the process and its consequence?",
     "options": {
-      "A": "roots and trunk",
-      "B": "trunk and branches",
-      "C": "branches and leaves only",
-      "D": "canopy and floor"
+      "A": "Animals convert dead leaves directly into oxygen, so soil nutrients are no longer needed by plants.",
+      "B": "Tree crowns turn dead leaves into wax, which is then absorbed by the leaves of other trees.",
+      "C": "Decomposers such as bacteria and fungi break down dead material into useful humus, returning nutrients to the soil for plants to absorb through their roots.",
+      "D": "The forest floor remains permanently sterile because dead plant material prevents microorganisms from living there."
     },
-    "answer": "B"
+    "answer": "C",
+    "explanation": "Bacteria and fungi decompose dead material, producing humus and returning nutrients to soil."
   },
   {
     "id": 10,
-    "question": "The shape formed by the crowns of several trees together, as seen from above a dense forest, is called the:",
+    "question": "A school team is preparing a display titled \"Useful products obtained from forest plants.\" They want every example on the display to match the chapter correctly, rather than merely sound plausible. Which set contains only correct matches?",
     "options": {
-      "A": "understorey",
-      "B": "canopy",
-      "C": "emergent zone",
-      "D": "forest floor"
+      "A": "Bamboo – furniture, baskets and ladders; teak – furniture; neem – medicinal purposes.",
+      "B": "Bamboo – only medicines; teak – honey; neem – rubber tyres.",
+      "C": "Bamboo – wax; teak – animal fodder only; neem – paper pulp only.",
+      "D": "Bamboo – fruits such as apple; teak – lac; neem – the main source of all forest resins."
     },
-    "answer": "B"
+    "answer": "A",
+    "explanation": "Bamboo is used for furniture, baskets and ladders; teak for furniture; neem for medicinal purposes."
   },
   {
     "id": 11,
-    "question": "Which of the following is NOT one of the common crown shapes of trees mentioned in the chapter?",
+    "question": "A question asks which group consists entirely of forest products or raw materials explicitly mentioned in the chapter, rather than materials that may be useful in daily life but are not listed in these pages. Which group should be selected?",
     "options": {
-      "A": "Pyramidal",
-      "B": "Round",
-      "C": "Spreading",
-      "D": "Rectangular"
+      "A": "Cement, glass, steel and concrete.",
+      "B": "Paper, gum, wax, rubber and honey.",
+      "C": "Petrol, synthetic nylon, aluminium and cement.",
+      "D": "Computer chips, plastic screens, batteries and electric cables."
     },
-    "answer": "D"
+    "answer": "B",
+    "explanation": "Paper, gum, wax, rubber and honey are listed forest products."
   },
   {
     "id": 12,
-    "question": "The lower layer of a forest, found beneath the overstorey, is called the:",
+    "question": "CASE-BASED QUESTION\n\nA village household collects firewood and dry leaves for kitchen fuel, uses forest-derived fodder for its animals, eats fruits such as mango, litchi, apple and pear, and knows that tendu leaves, catechu, lac and resins are also useful forest produce. What is the best interpretation of the chapter's examples?",
     "options": {
-      "A": "canopy",
-      "B": "understorey",
-      "C": "topsoil",
-      "D": "crown zone"
+      "A": "Only timber counts as a forest product; fuel, fodder, fruits and other materials do not.",
+      "B": "Fruits are described as products of the forest floor, while fodder is said to be made from animal bones.",
+      "C": "The listed products are all used for exactly the same purpose and cannot have different uses.",
+      "D": "Forests supply a range of products with different uses, including fuel, fodder, fruits and materials such as tendu leaves, catechu, lac and resins."
     },
-    "answer": "B"
+    "answer": "D",
+    "explanation": "Forests provide fuel, fodder, fruits, tendu leaves, catechu, lac and resins."
   },
   {
     "id": 13,
-    "question": "Which statement about the understorey is TRUE?",
+    "question": "A student is asked to arrange the chapter's description of the water cycle into a logical sequence. Which sequence preserves the stated relationship between water uptake by plants, water vapour, cloud formation and rainfall?",
     "options": {
-      "A": "It receives more sunlight than the overstorey",
-      "B": "It is a different world in itself, composed of shrubs and smaller plants that don't get proper sunlight in dense forests",
-      "C": "It exists only in deserts, not forests",
-      "D": "It is always completely dry and lifeless"
+      "A": "Rainfall occurs first; plants then turn all rain directly into clouds, and transpiration happens only after precipitation ends.",
+      "B": "Clouds form underground, roots absorb the clouds, and the water table releases rain into the atmosphere.",
+      "C": "Plants absorb water through their roots; excess water is released as water vapour through transpiration; the vapour rises and condenses to form clouds; clouds move towards land and bring rain, called precipitation.",
+      "D": "Plants absorb water only from clouds, and precipitation is the name given to water leaving leaves as vapour."
     },
-    "answer": "B"
+    "answer": "C",
+    "explanation": "Water absorption is followed by transpiration, condensation and precipitation."
   },
   {
     "id": 14,
-    "question": "The layer of a forest that is dark, damp, and full of dead and decaying leaves and twigs is known as:",
+    "question": "The chapter gives the example that a single apple tree may lose as much as 30 litres of water in a day. A student interprets this as proof that the tree is producing 30 litres of new water from sunlight. Which term and interpretation best correct the student's misunderstanding?",
     "options": {
-      "A": "the canopy",
-      "B": "the understorey",
-      "C": "the forest floor",
-      "D": "the crown"
+      "A": "Transpiration: the plant releases excess water into the atmosphere as water vapour; the example is not a claim that sunlight creates new water.",
+      "B": "Precipitation: the tree makes rain droplets inside its trunk and releases them as fruit.",
+      "C": "Decomposition: the tree converts water into humus at a rate of 30 litres a day.",
+      "D": "Soil erosion: the tree loses water only because its roots remove all topsoil."
     },
-    "answer": "C"
+    "answer": "A",
+    "explanation": "Transpiration is the release of excess water as water vapour."
   },
   {
     "id": 15,
-    "question": "The forest floor plays an important role because it:",
+    "question": "After rainfall, some water enters spaces in the soil while some may flow over the surface. According to the chapter, what role do tree roots play in explaining how forests can both recharge groundwater and help reduce the danger of flash floods?",
     "options": {
-      "A": "reflects sunlight back into the atmosphere",
-      "B": "provides food and shelter to many insects, fungi and decomposers, which decompose leaves into humus",
-      "C": "is completely free of microorganisms",
-      "D": "is the tallest layer of the forest"
+      "A": "Roots seal the soil completely so that rainwater cannot enter it, forcing all water to remain at the surface.",
+      "B": "Roots make the soil porous; rainwater can seep through pores and recharge groundwater, while forests reduce excessive runoff and slow water movement.",
+      "C": "Roots convert groundwater into dry leaves, so the water table falls whenever trees grow.",
+      "D": "Roots increase the speed of all surface water, which is why forested areas always flood faster than bare areas."
     },
-    "answer": "B"
+    "answer": "B",
+    "explanation": "Roots help maintain soil porosity, groundwater recharge and slower runoff."
   },
   {
     "id": 16,
-    "question": "Which of the following is an example of an important forest produce mentioned in the chapter?",
+    "question": "The chapter calls forests the \"green lungs\" and links this description to photosynthesis and the balance of gases in the environment. Which statement best preserves the causal explanation given in the text?",
     "options": {
-      "A": "Diesel",
-      "B": "Gum, wax, rubber and honey",
-      "C": "Plastic",
-      "D": "Cement"
+      "A": "Forests are called green lungs because animals consume oxygen and make every forest completely free of carbon dioxide.",
+      "B": "Plants release carbon dioxide during photosynthesis and absorb all oxygen, so forests warm the atmosphere.",
+      "C": "Forests are called green lungs only because their leaves resemble human lungs in shape.",
+      "D": "Green plants use carbon dioxide during photosynthesis and release oxygen, helping maintain the balance of these gases; forests' absorption of carbon dioxide also helps check global warming."
     },
-    "answer": "B"
+    "answer": "D",
+    "explanation": "Plants absorb carbon dioxide during photosynthesis and release oxygen."
   },
   {
     "id": 17,
-    "question": "Tendu leaves, which are collected from forests, are mainly used for:",
+    "question": "A hillside has trees whose roots hold the topsoil in place. A student says this matters only for keeping the trees upright and has no connection with the surrounding soil. Which response most closely reflects the chapter's stated point about soil conservation?",
     "options": {
-      "A": "making paper only",
-      "B": "rolling bidis (a kind of local cigarette)",
-      "C": "making rubber tyres",
-      "D": "producing honey"
+      "A": "Roots are described as causing wind erosion, while leaves alone prevent all movement of soil.",
+      "B": "The only soil-related role of trees is to make the soil dry so that rainwater cannot reach it.",
+      "C": "Tree roots hold topsoil in place, helping prevent erosion by wind or running water; trees also help improve soil quality.",
+      "D": "Soil conservation is unrelated to forests because topsoil moves only through underground rivers."
     },
-    "answer": "B"
+    "answer": "C",
+    "explanation": "Tree roots help hold topsoil in place and reduce erosion."
   },
   {
     "id": 18,
-    "question": "Catechu and lac are examples of:",
+    "question": "In the chapter's discussion of a forest as a system, green plants prepare their own food through photosynthesis, whereas other animals depend directly or indirectly on plants for food. How are green plants classified in this explanation?",
     "options": {
-      "A": "fruits obtained from forests",
-      "B": "resins/substances obtained from forests, used by people",
-      "C": "forest animals",
-      "D": "types of forest soil"
+      "A": "Autotrophs or producers.",
+      "B": "Heterotrophs or consumers, because they obtain all food by eating herbivores.",
+      "C": "Decomposers, because they turn every living organism into humus while alive.",
+      "D": "Carnivores, because they consume carbon dioxide and oxygen from animals."
     },
-    "answer": "B"
+    "answer": "A",
+    "explanation": "Green plants are autotrophs or producers because they make their own food."
   },
   {
     "id": 19,
-    "question": "Which of the following is an example of a fruit obtained from forests, as per the chapter?",
+    "question": "Which description correctly distinguishes the food relationships described in the chapter, rather than treating all living things in a forest as if they obtain food in the same way?",
     "options": {
-      "A": "Mango, orange, litchi",
-      "B": "Wheat, rice, maize",
-      "C": "Potato, onion, garlic",
-      "D": "Cabbage, cauliflower"
+      "A": "Herbivores prepare their own food through photosynthesis, while green plants depend on lions.",
+      "B": "Animals are heterotrophs or consumers; herbivores take food directly from green plants, while carnivores obtain food from herbivores.",
+      "C": "Carnivores eat only soil, and herbivores obtain food only from decomposers.",
+      "D": "All animals are producers because they can move from one plant to another."
     },
-    "answer": "A"
+    "answer": "B",
+    "explanation": "Herbivores eat plants, while carnivores obtain food from other animals."
   },
   {
     "id": 20,
-    "question": "Plants release excess water absorbed from the soil into the atmosphere in the form of water vapour through a process called:",
+    "question": "CASE-BASED QUESTION\n\nA simplified food chain in the chapter is shown as:\n\nGrass → Deer → Lion\n\nIf the availability of grass were to decline sharply for an extended period, which prediction is the strongest inference from this chain and the chapter's statement that food chains represent energy flow and interdependence?",
     "options": {
-      "A": "precipitation",
-      "B": "transpiration",
-      "C": "condensation",
-      "D": "respiration only"
+      "A": "The lion would immediately become a producer and make its own food through photosynthesis.",
+      "B": "The deer would be unaffected because the chain shows no feeding relationship between grass and deer.",
+      "C": "The chain would prove that lions supply all the food needed by grass.",
+      "D": "Deer would have less food available, which could then affect lions that depend on deer; the effects can pass along the feeding relationship."
     },
-    "answer": "B"
+    "answer": "D",
+    "explanation": "Less grass can reduce food availability for deer and then affect lions."
   },
   {
     "id": 21,
-    "question": "According to the chapter, a single apple tree can release water vapour into the atmosphere in an amount as much as:",
+    "question": "A diagram contains several food chains that share plants and animals rather than remaining separate. The chapter gives this interconnected arrangement a specific name and warns that a disturbance in one chain can affect another. Which statement best captures that warning?",
     "options": {
-      "A": "3 litres",
-      "B": "30 litres",
-      "C": "300 litres",
-      "D": "3,000 litres"
+      "A": "Interlinked food chains form a food web, so a disturbance or removal of one component can affect other components of the forest system.",
+      "B": "A food web is simply a single straight chain and has no connections between different chains.",
+      "C": "A food web means that each animal eats every other animal in the forest.",
+      "D": "The chapter says that removing one component can never affect any other component."
     },
-    "answer": "B"
+    "answer": "A",
+    "explanation": "A food web links multiple food chains; disturbing one component can affect others."
   },
   {
     "id": 22,
-    "question": "The process by which water vapour rises, cools, and forms clouds which eventually bring rain, is termed:",
+    "question": "When a plant or animal dies, the chapter describes its remains rotting and turning into soil-like material through decomposition. Which statement correctly links the agents, the substance formed and the larger nutrient cycle in the forest?",
     "options": {
-      "A": "transpiration",
-      "B": "evaporation",
-      "C": "precipitation",
-      "D": "condensation only, with no rain involved"
+      "A": "Large carnivores carry out all decomposition, and the resulting substance prevents plants from absorbing nutrients.",
+      "B": "Decomposition removes nutrients permanently from the forest and sends them only into the atmosphere.",
+      "C": "Decomposers, usually microorganisms, break down dead remains; humus makes soil fertile, and nutrients return to the soil and can be absorbed by living plants again.",
+      "D": "Humus is the living canopy formed by crowns of trees, and it has no relationship with soil fertility."
     },
-    "answer": "C"
+    "answer": "C",
+    "explanation": "Decomposers form humus and return nutrients to the soil."
   },
   {
     "id": 23,
-    "question": "Forests help maintain groundwater level mainly because:",
+    "question": "CASE-BASED QUESTION\n\nAfter rain, a class observes water vapour rising from a forest, damp soil beneath trees, and less rapid surface flow than on a nearby exposed slope. One student argues that these observations must refer to unrelated forest functions. Which explanation most accurately brings together the mechanisms described in the chapter?",
     "options": {
-      "A": "tree roots make the soil porous, allowing rainwater to seep in and recharge groundwater",
-      "B": "trees absorb all the rainwater, leaving none for the ground",
-      "C": "tree leaves block rainwater from reaching the soil at all",
-      "D": "forests have no effect on groundwater"
+      "A": "Transpiration occurs only when plants absorb no water, while roots prevent rain from entering soil; therefore the observations are unrelated.",
+      "B": "Transpiration returns excess plant water to the atmosphere, while tree roots help create soil pores through which rainwater can seep and recharge groundwater; forest cover also helps slow runoff.",
+      "C": "The damp soil proves that forest roots manufacture rain clouds underground and push them into the sky.",
+      "D": "Surface flow is slowed because forest leaves make the ground impermeable and stop all groundwater recharge."
     },
-    "answer": "A"
+    "answer": "B",
+    "explanation": "Transpiration, groundwater recharge and reduced runoff are connected forest functions."
   },
   {
     "id": 24,
-    "question": "Which of the following is a direct benefit of forests preventing soil erosion, as mentioned in the text?",
+    "question": "CASE-BASED QUESTION\n\nA forested hillside is cleared. During later rainfall, the soil is more easily washed downslope, more water rushes over the surface, and less water seems to soak into the soil. Based only on the relationships described on these pages, which outcome is best supported?",
     "options": {
-      "A": "Roots bind the soil and prevent it from being washed away",
-      "B": "Trees repel rainwater completely",
-      "C": "Forest fires improve soil binding",
-      "D": "Deforestation strengthens the topsoil"
+      "A": "The removal must improve topsoil stability because no roots remain to hold it in place.",
+      "B": "The hillside will necessarily gain a thicker layer of humus immediately after every storm.",
+      "C": "Clearing trees will ensure that the water table rises, because rainwater can no longer be absorbed by roots.",
+      "D": "Reduced root support can increase soil erosion; faster runoff can reduce the forest's normal help in recharging groundwater and slowing water that may contribute to flash floods."
     },
-    "answer": "A"
+    "answer": "D",
+    "explanation": "Removing trees reduces root support, can increase erosion and may accelerate runoff."
   },
   {
     "id": 25,
-    "question": "In the process of photosynthesis, green plants primarily use:",
+    "question": "SECTION B – MENTAL ABILITY AND REASONING\n\nNUMBER SERIES\nA test setter gives the following sequence, in which each term is produced by a consistent rule rather than by randomly chosen values:\n\n2, 6, 12, 20, 30, __\n\nWhich number should occupy the blank if the same pattern continues?",
     "options": {
-      "A": "oxygen and water to release carbon dioxide",
-      "B": "carbon dioxide and water (with sunlight) to produce food and release oxygen",
-      "C": "nitrogen and carbon dioxide to release methane",
-      "D": "only sunlight, without needing any gases"
+      "A": "36",
+      "B": "40",
+      "C": "42",
+      "D": "44"
     },
-    "answer": "B"
+    "answer": "C",
+    "explanation": "The differences are +4, +6, +8 and +10; the next difference is +12, giving 42."
   },
   {
     "id": 26,
-    "question": "Why are forests described as helping to check global warming?",
+    "question": "LOGICAL CONCLUSIONS\nAssume that the following statements are absolutely true:\n\n1. Every Glim is a Rek.\n2. No Rek is a Vop.\n3. At least some Tars are Glims.\n\nConsider the conclusions:\n\nI. No Glim is a Vop.\nII. At least some Tars are not Vops.\n\nWhich option identifies the conclusions that must follow, without assuming anything beyond the statements?",
     "options": {
-      "A": "They release large amounts of carbon dioxide",
-      "B": "They absorb carbon dioxide from the atmosphere, reducing the greenhouse gas balance",
-      "C": "They increase the amount of methane in the air",
-      "D": "They have no relationship with atmospheric gases"
+      "A": "Only conclusion I follows.",
+      "B": "Both conclusions I and II follow.",
+      "C": "Only conclusion II follows.",
+      "D": "Neither conclusion follows."
     },
-    "answer": "B"
+    "answer": "B",
+    "explanation": "Glims are Recks and cannot be Vops. Some Tars are Glims, so some Tars cannot be Vops."
   },
   {
     "id": 27,
-    "question": "Forests are said to be a \"self-sustaining system\" mainly because:",
+    "question": "CODING AND DECODING\nIn a simple code, every letter in a word is replaced by the very next letter in the English alphabet, with Z wrapping around to A if it appears. No letter is reversed, removed or rearranged. Using exactly this rule, how would the word FOREST be encoded?",
     "options": {
-      "A": "every part of the forest is completely independent of every other part",
-      "B": "different parts of the forest depend on each other, forming an interlinked system",
-      "C": "forests need no sunlight, water, or soil to survive",
-      "D": "only animals in a forest depend on each other, not the plants"
+      "A": "ENQDRS",
+      "B": "GQSFUV",
+      "C": "HPSFTV",
+      "D": "GPSFTU"
     },
-    "answer": "B"
+    "answer": "D",
+    "explanation": "Shifting each letter forward one place gives F→G, O→P, R→S, E→F, S→T, T→U: GPSFTU."
   },
   {
     "id": 28,
-    "question": "Organisms that make their own food using sunlight, water, and carbon dioxide (such as green plants) are called:",
+    "question": "DIRECTION SENSE\nA person starts at point O, walks 8 metres north, turns right and walks 6 metres, turns right again and walks 8 metres, then turns right once more and walks 2 metres. Assuming every turn is exactly 90 degrees and every distance is measured correctly, where is the person located relative to O at the end?",
     "options": {
-      "A": "heterotrophs",
-      "B": "decomposers",
-      "C": "autotrophs",
-      "D": "carnivores"
+      "A": "4 metres east.",
+      "B": "4 metres west.",
+      "C": "6 metres north.",
+      "D": "Back at point O."
     },
-    "answer": "C"
+    "answer": "A",
+    "explanation": "North and south movements cancel. The person ends 6 − 2 = 4 metres east of O."
   },
   {
     "id": 29,
-    "question": "Organisms that depend on other organisms for food (herbivores and carnivores) are collectively known as:",
+    "question": "LOGICAL ORDERING\nIn a race, T finishes before R; R finishes before P; P finishes before Q; and Q finishes before S. If \"before\" means a strictly earlier finishing position and there are no ties, which runner must finish first among the five?",
     "options": {
-      "A": "autotrophs",
-      "B": "heterotrophs",
-      "C": "producers",
-      "D": "photosynthesisers"
+      "A": "S",
+      "B": "P",
+      "C": "T",
+      "D": "Q"
     },
-    "answer": "B"
+    "answer": "C",
+    "explanation": "The strict order is T → R → P → Q → S, so T finishes first."
   },
   {
     "id": 30,
-    "question": "A simple food chain existing in a forest, as per the chapter's example, follows the sequence:",
+    "question": "LETTER SERIES\nConsider the sequence:\n\nC, F, J, O, U, __\n\nThe letters are chosen by advancing through the alphabet by a number of positions that increases by one each time; after Z, the alphabet would continue again from A. Which letter must come next?",
     "options": {
-      "A": "Grass \u2192 Lion \u2192 Deer",
-      "B": "Grass \u2192 Deer \u2192 Lion",
-      "C": "Lion \u2192 Deer \u2192 Grass",
-      "D": "Deer \u2192 Grass \u2192 Lion"
+      "A": "A",
+      "B": "C",
+      "C": "D",
+      "D": "B"
     },
-    "answer": "B"
-  },
-  {
-    "id": 31,
-    "question": "A \"food web\" is best described as:",
-    "options": {
-      "A": "a single straight chain with no branching",
-      "B": "many interlinked food chains showing multiple feeding relationships",
-      "C": "a chain only found in aquatic ecosystems",
-      "D": "a web spun by spiders to catch insects for food"
-    },
-    "answer": "B"
-  },
-  {
-    "id": 32,
-    "question": "If any one component of a forest's food web is disturbed or removed, then:",
-    "options": {
-      "A": "it will have no effect on other components",
-      "B": "it will affect all other components equally, since the system is interdependent",
-      "C": "only the plants will be affected, not the animals",
-      "D": "only the top predator will be affected"
-    },
-    "answer": "B"
-  },
-  {
-    "id": 33,
-    "question": "Organisms such as fungi and bacteria, which break down dead plants and animals into simpler substances, are called:",
-    "options": {
-      "A": "producers",
-      "B": "herbivores",
-      "C": "decomposers",
-      "D": "carnivores"
-    },
-    "answer": "C"
-  },
-  {
-    "id": 34,
-    "question": "The dark, nutrient-rich substance formed after decomposition of dead organic matter in soil is known as:",
-    "options": {
-      "A": "humus",
-      "B": "canopy",
-      "C": "transpiration residue",
-      "D": "chlorophyll"
-    },
-    "answer": "A"
-  },
-  {
-    "id": 35,
-    "question": "Why is humus important for a forest ecosystem?",
-    "options": {
-      "A": "It makes the soil highly fertile by continuously cycling nutrients back to plants",
-      "B": "It prevents any new plant from growing in that area",
-      "C": "It is harmful and reduces soil quality",
-      "D": "It only exists in deserts, not forests"
-    },
-    "answer": "A"
-  },
-  {
-    "id": 36,
-    "question": "Large-scale cutting of trees for human use or to increase land for agriculture and population needs is termed:",
-    "options": {
-      "A": "afforestation",
-      "B": "deforestation",
-      "C": "precipitation",
-      "D": "reforestation"
-    },
-    "answer": "B"
-  },
-  {
-    "id": 37,
-    "question": "Which of these is a direct consequence of deforestation, as described in the chapter?",
-    "options": {
-      "A": "Increased soil fertility and reduced erosion",
-      "B": "Loss of soil quality due to increased soil erosion",
-      "C": "Rise in groundwater level",
-      "D": "Decrease in global temperature"
-    },
-    "answer": "B"
-  },
-  {
-    "id": 38,
-    "question": "Deforestation affects groundwater by:",
-    "options": {
-      "A": "increasing the rate of recharge of groundwater",
-      "B": "creating a shortage of drinking water due to disturbed natural recharge process",
-      "C": "having no effect on groundwater at all",
-      "D": "turning groundwater into surface water instantly"
-    },
-    "answer": "B"
-  },
-  {
-    "id": 39,
-    "question": "Loss of habitat due to deforestation puts many animals in danger mainly because:",
-    "options": {
-      "A": "animals prefer open, treeless land",
-      "B": "their natural living space and food sources are destroyed",
-      "C": "deforestation increases the population of predators",
-      "D": "it has no real impact, as animals easily adapt"
-    },
-    "answer": "B"
-  },
-  {
-    "id": 40,
-    "question": "Deforestation contributes to global warming primarily because:",
-    "options": {
-      "A": "fewer trees means less carbon dioxide is absorbed, so its atmospheric concentration rises",
-      "B": "cutting trees releases large amounts of oxygen suddenly",
-      "C": "trees convert oxygen into carbon dioxide when alive",
-      "D": "deforestation cools down the Earth's surface"
-    },
-    "answer": "A"
-  },
-  {
-    "id": 41,
-    "question": "Deforestation increases the risk of floods mainly because:",
-    "options": {
-      "A": "tree roots that normally slow down the flow of runoff water are removed",
-      "B": "more trees are left to absorb rainwater than before",
-      "C": "rainfall increases only in deforested areas",
-      "D": "floods are completely unrelated to tree cover"
-    },
-    "answer": "A"
-  },
-  {
-    "id": 42,
-    "question": "Forests help in pollination and seed dispersal mainly through:",
-    "options": {
-      "A": "wind and running water only, never animals",
-      "B": "birds, insects (bees, butterflies) and animals like monkeys that carry seeds on fur or in droppings",
-      "C": "artificial human intervention only",
-      "D": "volcanic activity"
-    },
-    "answer": "B"
-  },
-  {
-    "id": 43,
-    "question": "\"Sacred groves\" in India, as described in the chapter, refer to:",
-    "options": {
-      "A": "forest areas dedicated to a local deity and traditionally protected by communities",
-      "B": "government-owned commercial timber plantations",
-      "C": "forests used exclusively for grazing cattle",
-      "D": "newly planted urban parks"
-    },
-    "answer": "A"
-  },
-  {
-    "id": 44,
-    "question": "According to the chapter, sacred groves in India cover approximately how much land area?",
-    "options": {
-      "A": "100 square kilometres",
-      "B": "1,000 square kilometres",
-      "C": "10,000 square kilometres",
-      "D": "1,00,000 square kilometres"
-    },
-    "answer": "B"
-  },
-  {
-    "id": 45,
-    "question": "The Chipko Movement, mentioned as a Fast Fact, was started by villagers in which region to save trees from being cut down?",
-    "options": {
-      "A": "Garhwal region of Uttarakhand",
-      "B": "Western Ghats of Kerala",
-      "C": "Sundarbans of West Bengal",
-      "D": "Aravalli range of Rajasthan"
-    },
-    "answer": "A"
-  },
-  {
-    "id": 46,
-    "question": "In the acronym-based tip for remembering forest conservation points (T-R-E-E-S), which of the following is NOT one of the listed actions?",
-    "options": {
-      "A": "Teach others about the importance of forests",
-      "B": "Restore damaged green cover",
-      "C": "Establish national parks",
-      "D": "Eliminate all human settlements near forests"
-    },
-    "answer": "D"
-  },
-  {
-    "id": 47,
-    "question": "Which of the following is suggested in the chapter as a step to conserve forests?",
-    "options": {
-      "A": "Encourage large-scale, unrestricted grazing of cattle in forests",
-      "B": "Promote afforestation and special tree-planting programmes like Van Mahotsava",
-      "C": "Increase indiscriminate cutting of trees for fuel wood",
-      "D": "Discourage people's participation in forest conservation"
-    },
-    "answer": "B"
-  },
-  {
-    "id": 48,
-    "question": "According to the case study in the chapter, Guindy National Park is located in which city?",
-    "options": {
-      "A": "Bengaluru",
-      "B": "Chennai",
-      "C": "Mumbai",
-      "D": "Hyderabad"
-    },
-    "answer": "B"
-  },
-  {
-    "id": 49,
-    "question": "As per the case study, the biodiversity of Guindy National Park is surprising mainly because:",
-    "options": {
-      "A": "it is located far away from any city, in a remote forest",
-      "B": "despite being surrounded by houses in a small area within a metropolitan city, it hosts rich flora and fauna",
-      "C": "it has no plant life, only rocky terrain",
-      "D": "it is located at a higher altitude than the surrounding city"
-    },
-    "answer": "B"
-  },
-  {
-    "id": 50,
-    "question": "Which of the following animals is mentioned in the Guindy National Park case study as being found there?",
-    "options": {
-      "A": "Polar bear",
-      "B": "Snow leopard",
-      "C": "Blackbuck and jungle cat",
-      "D": "Kangaroo"
-    },
-    "answer": "C"
+    "answer": "D",
+    "explanation": "The jumps are +3, +4, +5, +6 and then +7. U advanced by seven positions wraps to B."
   }
 ];

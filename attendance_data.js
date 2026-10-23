@@ -9,6 +9,28 @@
 
 const ATTENDANCE_RECORDS = [
     {
+        date: "23 Oct 2026",
+        day: "Friday",
+        student: "Aradhya Joshi",
+        status: "Present",
+        topic: "Chapter 11: Light — Theory & MCQ Revision Practice"
+    },
+    {
+        date: "22 Oct 2026",
+        day: "Thursday",
+        student: "Aradhya Joshi",
+        status: "Absent",
+        topic: "No Class — Teacher not present due to college function",
+        reason: "Teacher not present due to college function"
+    },
+    {
+        date: "21 Oct 2026",
+        day: "Wednesday",
+        student: "Aradhya Joshi",
+        status: "Present",
+        topic: "Chapter 11: Light & Science Practice Session"
+    },
+    {
         date: "20 Oct 2026",
         day: "Tuesday",
         student: "Aradhya Joshi",

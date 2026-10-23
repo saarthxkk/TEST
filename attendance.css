@@ -129,6 +129,10 @@ body.attendance-body {
     color: var(--emerald);
 }
 
+.stat-val.status-absent {
+    color: var(--rose);
+}
+
 .stat-sub {
     font-size: 12px;
     color: var(--text-muted);

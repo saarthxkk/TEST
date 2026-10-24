@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 340" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <rect x="2" y="2" width="456" height="336" rx="8" fill="none" stroke="#e4e4e7" stroke-width="1.5"/>
+
+  <!-- Triangle ABC: A(230, 50), B(150, 275), C(310, 275) -->
+  <polygon points="230,50 150,275 310,275" fill="none" stroke="#18181b" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Vertices -->
+  <circle cx="230" cy="50" r="3.5" fill="#18181b"/>
+  <circle cx="150" cy="275" r="3.5" fill="#18181b"/>
+  <circle cx="310" cy="275" r="3.5" fill="#18181b"/>
+
+  <!-- Vertex Labels -->
+  <text x="230" y="38" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#18181b">A</text>
+  <text x="135" y="295" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#18181b">B</text>
+  <text x="325" y="295" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#18181b">C</text>
+
+  <!-- Tick Mark on AB: Midpoint (190, 162.5), slope = -225/80 = -2.81, normal slope = 80/225 = 0.355 -->
+  <line x1="180" y1="159" x2="200" y2="166" stroke="#18181b" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Tick Mark on AC: Midpoint (270, 162.5), normal slope = -0.355 -->
+  <line x1="260" y1="166" x2="280" y2="159" stroke="#18181b" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Angle ABC arc at B (80 deg) -->
+  <!-- Center (150, 275), R: 45. From side BC (0 deg) to side BA (up-right) -->
+  <path d="M 195 275 A 45 45 0 0 0 166 233" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <text x="195" y="248" font-family="'Inter', -apple-system, sans-serif" font-size="15" font-weight="600" fill="#2563eb">80°</text>
+
+  <!-- Angle ACB arc at C (x) -->
+  <!-- Center (310, 275), R: 45. From side CA (up-left) to side CB (180 deg) -->
+  <path d="M 294 233 A 45 45 0 0 0 265 275" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <text x="270" y="248" font-family="'Inter', -apple-system, sans-serif" font-size="16" font-weight="700" font-style="italic" fill="#dc2626">x</text>
+</svg>

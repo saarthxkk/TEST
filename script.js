@@ -153,7 +153,8 @@ function handleStartForm(e) {
         'reproduction2':  { questions: () => questions_reproduction2,  label: 'Ch. 8 — Reproduction in Plants (Part 2 — Very Hard)' },
         'motion':         { questions: () => questions_motion,         label: 'Ch. 9 — Motion & Time (30 Tough MCQs)' },
         'electric':       { questions: () => questions_electric,       label: 'Ch. 10 — Electric Current & Its Effects (30 Hard MCQs)' },
-        'light':          { questions: () => questions_light,          label: 'Ch. 11 — Light (40 Difficult MCQs — Full Chapter)' }
+        'light':          { questions: () => questions_light,          label: 'Ch. 11 — Light (40 Difficult MCQs — Full Chapter)' },
+        'triangles':      { questions: () => questions_triangles,      label: 'Math Ch. 11 — The Triangle and Its Properties (20 MCQs)' }
     };
 
     const selected = chapterMap[chapterVal];

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 320" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <rect x="2" y="2" width="456" height="316" rx="8" fill="none" stroke="#e4e4e7" stroke-width="1.5"/>
+
+  <!-- Right-angled triangle: Bottom-left vertex (110, 245), Top vertex (110, 105), Bottom-right vertex (355, 245) -->
+  <!-- Vertical side = 140 (proportional to 4), Horizontal side = 245 (proportional to 7) -->
+  <polygon points="110,105 110,245 355,245" fill="none" stroke="#18181b" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Right-angle symbol at (110, 245) -->
+  <path d="M 110 225 L 130 225 L 130 245" fill="none" stroke="#18181b" stroke-width="2"/>
+
+  <!-- Vertices -->
+  <circle cx="110" cy="105" r="3.5" fill="#18181b"/>
+  <circle cx="110" cy="245" r="3.5" fill="#18181b"/>
+  <circle cx="355" cy="245" r="3.5" fill="#18181b"/>
+
+  <!-- Vertical Side Label: 4 -->
+  <text x="80" y="180" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#18181b">4</text>
+
+  <!-- Horizontal Side Label: 7 -->
+  <text x="232" y="275" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#18181b">7</text>
+
+  <!-- Hypotenuse Label: x -->
+  <text x="245" y="160" font-family="'Inter', -apple-system, sans-serif" font-size="20" font-weight="700" font-style="italic" text-anchor="middle" fill="#dc2626">x</text>
+</svg>

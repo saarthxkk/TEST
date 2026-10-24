@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <rect x="2" y="2" width="496" height="396" rx="8" fill="none" stroke="#e4e4e7" stroke-width="1.5"/>
+
+  <!-- Shaded Square on Hypotenuse (Light Grey) -->
+  <polygon points="190,156 274,44 386,128 302,240" fill="#e2e8f0" stroke="#18181b" stroke-width="2.2" stroke-linejoin="round"/>
+
+  <!-- Square on Vertical Leg (36 cm²) -->
+  <rect x="106" y="156" width="84" height="84" fill="#ffffff" stroke="#18181b" stroke-width="2.2" stroke-linejoin="round"/>
+  <text x="148" y="204" font-family="'Inter', -apple-system, sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#18181b">36 cm²</text>
+
+  <!-- Square on Horizontal Leg (64 cm²) -->
+  <rect x="190" y="240" width="112" height="112" fill="#ffffff" stroke="#18181b" stroke-width="2.2" stroke-linejoin="round"/>
+  <text x="246" y="302" font-family="'Inter', -apple-system, sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#18181b">64 cm²</text>
+
+  <!-- Central Right Triangle -->
+  <polygon points="190,156 190,240 302,240" fill="#ffffff" stroke="#18181b" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Right Angle Marker at (190, 240) -->
+  <path d="M 190 224 L 206 224 L 206 240" fill="none" stroke="#18181b" stroke-width="1.8"/>
+
+  <!-- Optional Shaded Indicator Note or Clean Question Prompt -->
+  <text x="330" y="86" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="600" fill="#64748b" text-anchor="middle">Shaded Square</text>
+  <text x="330" y="102" font-family="'Inter', -apple-system, sans-serif" font-size="16" font-weight="700" fill="#2563eb" text-anchor="middle">Area = ?</text>
+</svg>

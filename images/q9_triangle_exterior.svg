@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <rect x="2" y="2" width="496" height="316" rx="8" fill="none" stroke="#e4e4e7" stroke-width="1.5"/>
+
+  <!-- Extended Line E-B-C -->
+  <line x1="50" y1="240" x2="440" y2="240" stroke="#18181b" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Triangle Sides AB and AC -->
+  <!-- A: (150, 100), B: (201, 240), C: (393, 240) -->
+  <polygon points="150,100 201,240 393,240" fill="none" stroke="#18181b" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Vertices Dots -->
+  <circle cx="150" cy="100" r="3.5" fill="#18181b"/>
+  <circle cx="201" cy="240" r="3.5" fill="#18181b"/>
+  <circle cx="393" cy="240" r="3.5" fill="#18181b"/>
+  <circle cx="65" cy="240" r="3.5" fill="#18181b"/>
+
+  <!-- Vertex Labels -->
+  <text x="150" y="80" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#18181b">A</text>
+  <text x="201" y="270" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#18181b">B</text>
+  <text x="405" y="270" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#18181b">C</text>
+  <text x="65" y="270" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#18181b">E</text>
+
+  <!-- Exterior Angle EBA arc (70 deg) -->
+  <!-- Center: (201, 240), R: 42. Ray BE is angle 180 (left), Ray BA is angle 110 (dx=-51, dy=-140) -->
+  <path d="M 159 240 A 42 42 0 0 1 187 201" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <text x="156" y="210" font-family="'Inter', -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="middle" fill="#2563eb">70°</text>
+
+  <!-- Interior Angle ACB arc (30 deg) -->
+  <!-- Center: (393, 240), R: 52. Ray CB is left (angle 180), Ray CA is towards (150, 100) (angle 210) -->
+  <path d="M 341 240 A 52 52 0 0 1 348 214" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <text x="325" y="232" font-family="'Inter', -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="middle" fill="#2563eb">30°</text>
+
+  <!-- Interior Angle BAC arc (x) -->
+  <!-- Center: (150, 100), R: 38 -->
+  <path d="M 163 136 A 38 38 0 0 0 183 119" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <text x="180" y="146" font-family="'Inter', -apple-system, sans-serif" font-size="16" font-weight="700" font-style="italic" text-anchor="middle" fill="#dc2626">x</text>
+</svg>

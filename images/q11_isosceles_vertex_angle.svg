@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <rect x="2" y="2" width="476" height="336" rx="8" fill="none" stroke="#e4e4e7" stroke-width="1.5"/>
+
+  <!-- Triangle ABC: A(90, 170), B(300, 75), C(300, 265) -->
+  <polygon points="90,170 300,75 300,265" fill="none" stroke="#18181b" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Vertices -->
+  <circle cx="90" cy="170" r="3.5" fill="#18181b"/>
+  <circle cx="300" cy="75" r="3.5" fill="#18181b"/>
+  <circle cx="300" cy="265" r="3.5" fill="#18181b"/>
+
+  <!-- Vertex Labels -->
+  <text x="65" y="176" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#18181b">A</text>
+  <text x="318" y="70" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" fill="#18181b">B</text>
+  <text x="318" y="275" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" fill="#18181b">C</text>
+
+  <!-- Tick Mark on AB: Midpoint (195, 122.5), dx=210, dy=-95, normal ~ (95, 210) -->
+  <line x1="188" y1="108" x2="202" y2="137" stroke="#18181b" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Tick Mark on AC: Midpoint (195, 217.5) -->
+  <line x1="188" y1="232" x2="202" y2="203" stroke="#18181b" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Angle BAC arc at A (x) -->
+  <!-- Center (90, 170), R: 46. Between AB and AC -->
+  <path d="M 132 151 A 46 46 0 0 1 132 189" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <text x="150" y="175" font-family="'Inter', -apple-system, sans-serif" font-size="16" font-weight="700" font-style="italic" fill="#dc2626">x</text>
+
+  <!-- Angle ABC arc at B (65 deg) -->
+  <!-- Center (300, 75), R: 42. Between BA (down-left) and BC (straight down) -->
+  <path d="M 262 92 A 42 42 0 0 0 300 117" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <text x="272" y="132" font-family="'Inter', -apple-system, sans-serif" font-size="15" font-weight="600" fill="#2563eb">65°</text>
+</svg>

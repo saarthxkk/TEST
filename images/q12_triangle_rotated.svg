@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <rect x="2" y="2" width="476" height="336" rx="8" fill="none" stroke="#e4e4e7" stroke-width="1.5"/>
+
+  <!-- Triangle ABC: B(210, 60), A(380, 170), C(210, 280) -->
+  <!-- BA and AC are equal -->
+  <polygon points="210,60 380,170 210,280" fill="none" stroke="#18181b" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Vertices -->
+  <circle cx="210" cy="60" r="3.5" fill="#18181b"/>
+  <circle cx="380" cy="170" r="3.5" fill="#18181b"/>
+  <circle cx="210" cy="280" r="3.5" fill="#18181b"/>
+
+  <!-- Vertex Labels -->
+  <text x="200" y="52" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#18181b">B</text>
+  <text x="402" y="176" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" fill="#18181b">A</text>
+  <text x="200" y="302" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#18181b">C</text>
+
+  <!-- Tick Mark on BA: Midpoint (295, 115), dx=170, dy=110 -->
+  <line x1="288" y1="126" x2="302" y2="104" stroke="#18181b" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Tick Mark on AC: Midpoint (295, 225) -->
+  <line x1="288" y1="214" x2="302" y2="236" stroke="#18181b" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Angle BAC arc at A (80 deg) -->
+  <!-- Center (380, 170), R: 44. Between AB (up-left) and AC (down-left) -->
+  <path d="M 346 148 A 44 44 0 0 0 346 192" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <text x="325" y="175" font-family="'Inter', -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="middle" fill="#2563eb">80°</text>
+
+  <!-- Angle ABC arc at B (x) -->
+  <!-- Center (210, 60), R: 44. Between BC (straight down) and BA (down-right) -->
+  <path d="M 210 104 A 44 44 0 0 0 247 84" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <text x="236" y="118" font-family="'Inter', -apple-system, sans-serif" font-size="16" font-weight="700" font-style="italic" fill="#dc2626">x</text>
+</svg>

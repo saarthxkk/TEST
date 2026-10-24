@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <rect x="2" y="2" width="476" height="336" rx="8" fill="none" stroke="#e4e4e7" stroke-width="1.5"/>
+
+  <!-- Triangle ABC: A(240, 70), B(100, 270), C(380, 270) -->
+  <polygon points="240,70 100,270 380,270" fill="none" stroke="#18181b" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Vertices -->
+  <circle cx="240" cy="70" r="3.5" fill="#18181b"/>
+  <circle cx="100" cy="270" r="3.5" fill="#18181b"/>
+  <circle cx="380" cy="270" r="3.5" fill="#18181b"/>
+
+  <!-- Vertex Labels -->
+  <text x="240" y="52" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#18181b">A</text>
+  <text x="80" y="285" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" fill="#18181b">B</text>
+  <text x="395" y="285" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" fill="#18181b">C</text>
+
+  <!-- Side Length Labels -->
+  <!-- AB = 6, Midpoint (170, 170) -->
+  <text x="145" y="165" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" fill="#18181b">6</text>
+
+  <!-- AC = x, Midpoint (310, 170) -->
+  <text x="325" y="165" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" font-style="italic" fill="#dc2626">x</text>
+
+  <!-- Angle ABC arc at B (55 deg) -->
+  <!-- Center (100, 270), R: 46. From BC (0 deg) to BA (up-right) -->
+  <path d="M 146 270 A 46 46 0 0 0 126 232" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <text x="154" y="254" font-family="'Inter', -apple-system, sans-serif" font-size="15" font-weight="600" fill="#2563eb">55°</text>
+
+  <!-- Angle ACB arc at C (55 deg) -->
+  <!-- Center (380, 270), R: 46. From CA (up-left) to CB (180 deg) -->
+  <path d="M 354 232 A 46 46 0 0 0 334 270" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <text x="326" y="254" font-family="'Inter', -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="end" fill="#2563eb">55°</text>
+</svg>

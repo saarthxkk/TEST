@@ -9,6 +9,13 @@
 
 const ATTENDANCE_RECORDS = [
     {
+        date: "24 Oct 2026",
+        day: "Saturday",
+        student: "Aradhya Joshi",
+        status: "Present",
+        topic: "Chapter 11: The Triangle and Its Properties — Mathematics Chapter Test & Theory Revision"
+    },
+    {
         date: "23 Oct 2026",
         day: "Friday",
         student: "Aradhya Joshi",

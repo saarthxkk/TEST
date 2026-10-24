@@ -154,7 +154,7 @@ function handleStartForm(e) {
         'motion':         { questions: () => questions_motion,         label: 'Ch. 9 — Motion & Time (30 Tough MCQs)' },
         'electric':       { questions: () => questions_electric,       label: 'Ch. 10 — Electric Current & Its Effects (30 Hard MCQs)' },
         'light':          { questions: () => questions_light,          label: 'Ch. 11 — Light (40 Difficult MCQs — Full Chapter)' },
-        'triangles':      { questions: () => questions_triangles,      label: 'Math Ch. 11 — The Triangle and Its Properties (20 MCQs)' }
+        'triangles':      { questions: () => questions_triangles,      label: 'Math Ch. 11 — The Triangle and Its Properties (20 MCQs)', duration: 40 }
     };
 
     const selected = chapterMap[chapterVal];
@@ -187,7 +187,8 @@ function handleStartForm(e) {
 
     testStarted   = true;
     testSubmitted = false;
-    timeLeft      = 25 * 60;
+    const testDuration = selected.duration || 25;
+    timeLeft      = testDuration * 60;
     timeUsed      = 0;
     startTimer();
 }

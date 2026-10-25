@@ -154,7 +154,8 @@ function handleStartForm(e) {
         'motion':         { questions: () => questions_motion,         label: 'Ch. 9 — Motion & Time (30 Tough MCQs)' },
         'electric':       { questions: () => questions_electric,       label: 'Ch. 10 — Electric Current & Its Effects (30 Hard MCQs)' },
         'light':          { questions: () => questions_light,          label: 'Ch. 11 — Light (40 Difficult MCQs — Full Chapter)' },
-        'triangles':      { questions: () => questions_triangles,      label: 'Math Ch. 11 — The Triangle and Its Properties (20 MCQs)', duration: 40 }
+        'triangles':      { questions: () => questions_triangles,      label: 'Math Ch. 11 — The Triangle and Its Properties (20 MCQs)', duration: 40 },
+        'wastewater':     { questions: () => questions_wastewater,     label: 'Ch. 13 — Wastewater Story (40 Difficult MCQs)' }
     };
 
     const selected = chapterMap[chapterVal];

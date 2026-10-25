@@ -9,6 +9,13 @@
 
 const ATTENDANCE_RECORDS = [
     {
+        date: "25 Oct 2026",
+        day: "Sunday",
+        student: "Aradhya Joshi",
+        status: "Present",
+        topic: "Chapter 13: Wastewater Story — Difficult MCQ Test (40 Questions) & Conceptual Revision"
+    },
+    {
         date: "24 Oct 2026",
         day: "Saturday",
         student: "Aradhya Joshi",
